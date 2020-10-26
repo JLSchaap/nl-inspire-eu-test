@@ -1,0 +1,4174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Features Overview</title>
+
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                1656,
+                142,
+                321,
+                0,
+                0
+            ],
+            backgroundColor: [
+                "#00B000",
+                "#FF3030",
+                "#88AAFF",
+                "#F5F28F",
+                "#F5B975"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed",
+            "Skipped",
+            "Pending",
+            "Undefined"
+        ]
+    };
+
+    var context = document.getElementById("steps-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Steps"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 2119) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  $(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                81,
+                142
+            ],
+            backgroundColor: [
+                "#00B000",
+                "#FF3030"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed"
+        ]
+    };
+
+    var context = document.getElementById("scenarios-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Scenarios"
+            },
+            circumference: Math.PI,
+            rotation: Math.PI,
+            cutoutPercentage: 70,
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 223) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  $(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                   81,
+                   142
+               ],
+               backgroundColor: [
+                "#00B000",
+                "#FF3030"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed"
+        ]
+    };
+
+    var context = document.getElementById("features-chart");
+    window.myBar = new Chart(context, {
+        type: "pie",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Features"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 223) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  </script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"  class="active" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>NLTEST</td>
+            <td>26 Oct 2020, 15:59</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Features Statistics</h2>
+          <p>The following graphs show passing and failing statistics for features</p>
+      </div>
+</div>
+
+
+  <div class="container-fluid" id="charts">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div id="featureChartCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#featureChartCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#featureChartCarousel" data-slide-to="1"></li>
+            <li data-target="#featureChartCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <canvas id="features-chart" height="120"></canvas>
+            </div>
+
+            <div class="item">
+              <canvas id="scenarios-chart" height="120"></canvas>
+            </div>
+
+            <div class="item">
+              <canvas id="steps-chart" height="120"></canvas>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#featureChartCarousel" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#featureChartCarousel" role="button" data-slide="next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      
+<table id="tablesorter" class="stats-table table-hover">
+  
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+  <tbody>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Statistical-Units-Grid-download-Statistical-Units-Grid--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature.html">tmp/junit9120100322591026098/Beheer-PDOK/Statistical-Units-Grid/download/Statistical-Units-Grid--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="410781296">0.410</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Stiltegebieden-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_1.html">tmp/junit9120100322591026098/Beheer-PDOK/Stiltegebieden/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="394183133">0.394</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Vierkantstatistieken-100m-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_2.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Vierkantstatistieken-100m/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408078073">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie-view-TOP10NL-WMS-checkViewUrl-feature_3.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie/view/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397416765">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2016--nacht-gemiddelde--download-Geluidskaarten-Rijkswegen-WFS-checkdownloadurl-feature_4.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2016--nacht-gemiddelde-/download/Geluidskaarten-Rijkswegen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400105810">0.400</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2018-versie-3-view-CBS-Wijken-en-Buurten-2018-versie-1-WMS-checkViewUrl-feature_5.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2018-versie-3/view/CBS-Wijken-en-Buurten-2018-versie-1-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="600739905">0.600</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Provinciale-monumenten-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_6.html">tmp/junit9120100322591026098/Beheer-PDOK/Provinciale-monumenten/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="495958360">0.495</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Stroomgebieddistricten-Nederland-2019-vlakken-view-Kaderrichtlijn-Water-actueel-WMS-checkViewUrl-feature_7.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Stroomgebieddistricten-Nederland-2019-vlakken/view/Kaderrichtlijn-Water-actueel-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406366900">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Schelpdierpercelen-download-Schelpdierenpercelen-WFS-checkdownloadurl-feature_8.html">tmp/junit9120100322591026098/Beheer-PDOK/Schelpdierpercelen/download/Schelpdierenpercelen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411303211">0.411</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Administratieve-Eenheden--INSPIRE-geharmoniseerd--download-Administratieve-Eenheden--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_9.html">tmp/junit9120100322591026098/Beheer-PDOK/Administratieve-Eenheden--INSPIRE-geharmoniseerd-/download/Administratieve-Eenheden--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397323978">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kadastrale-kaart-v4-download-Kadastrale-Kaart-v4-WFS-checkdownloadurl-feature_10.html">tmp/junit9120100322591026098/Beheer-PDOK/Kadastrale-kaart-v4/download/Kadastrale-Kaart-v4-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="457052185">0.457</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Invasieve-Exoten--INSPIRE-Geharmoniseerd--view-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_11.html">tmp/junit9120100322591026098/Beheer-PDOK/Invasieve-Exoten--INSPIRE-Geharmoniseerd-/view/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393819508">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-gebiedsindelingen-view-CBS-Gebiedsindelingen-WMS-checkViewUrl-feature_12.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-gebiedsindelingen/view/CBS-Gebiedsindelingen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="468875924">0.468</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_templateTests-download-checkdownloadurl-feature_13.html">templateTests/download/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1356449876">1.356</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Provinciale-monumenten-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_14.html">tmp/junit9120100322591026098/Beheer-PDOK/Provinciale-monumenten/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="424819980">0.424</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationaal-Hydrologisch-Instrumentarium--NHI----netwerkschematisatie-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_15.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationaal-Hydrologisch-Instrumentarium--NHI----netwerkschematisatie/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="439578119">0.439</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Luchtfoto-2017-25cm-CIR-open-data-view-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_16.html">tmp/junit9120100322591026098/Beheer-PDOK/Luchtfoto-2017-25cm-CIR-open-data/view/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409399913">0.409</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreidingsgebied-van-habitattypen-download-Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WFS-checkdownloadurl-feature_17.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreidingsgebied-van-habitattypen/download/Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398222045">0.398</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Mossel--en-oesterhabitats--AS-IS--download-Mossel--en-oesterhabitats-WFS-checkdownloadurl-feature_18.html">tmp/junit9120100322591026098/Beheer-PDOK/Mossel--en-oesterhabitats--AS-IS-/download/Mossel--en-oesterhabitats-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="422265283">0.422</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-INSPIRE-geharmoniseerde-Beschermde-Gebieden---Cultuur-Historie-download-INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM-checkdownloadurl-feature_19.html">tmp/junit9120100322591026098/Beheer-PDOK/INSPIRE-geharmoniseerde-Beschermde-Gebieden---Cultuur-Historie/download/INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="361076916">0.361</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Mariene-Strategie---Rapportage-eenheden-Nederland-EU2018-view-Kaderrichtlijn-Mariene-Strategie-2018-WMS-checkViewUrl-feature_20.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Mariene-Strategie---Rapportage-eenheden-Nederland-EU2018/view/Kaderrichtlijn-Mariene-Strategie-2018-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="508027736">0.508</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationale-Landschappen-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_21.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationale-Landschappen/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411105776">0.411</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----RWS-view-Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_22.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----RWS/view/Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="410794212">0.410</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2017-versie-3-download-CBS-Wijken-en-Buurten-2017-WFS-checkdownloadurl-feature_23.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2017-versie-3/download/CBS-Wijken-en-Buurten-2017-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="421550621">0.421</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-vlakken-download-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_24.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-vlakken/download/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="573183172">0.573</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie---Netwerk--INSPIRE-geharmoniseerd----WT-download-Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_25.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie---Netwerk--INSPIRE-geharmoniseerd----WT/download/Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411847171">0.411</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Mosselzaadinvanginstallaties-download-Mosselzaadinvanginstallaties-WFS-checkdownloadurl-feature_26.html">tmp/junit9120100322591026098/Beheer-PDOK/Mosselzaadinvanginstallaties/download/Mosselzaadinvanginstallaties-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430561740">0.430</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----RWS-download-Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_27.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----RWS/download/Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406306086">0.406</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Natuurnetwerk-Nederland-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_28.html">tmp/junit9120100322591026098/Beheer-PDOK/Natuurnetwerk-Nederland/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="674050092">0.674</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationaal-Beschermde-Gebieden--CDDA---INSPIRE-geharmoniseerd--download-Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_29.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationaal-Beschermde-Gebieden--CDDA---INSPIRE-geharmoniseerd-/download/Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409301076">0.409</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015-download-Richtlijn-Stedelijk-Afvalwater-EU2015-WFS-checkdownloadurl-feature_30.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="450505004">0.450</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie-waterschappen-INSPIRE-view-Waterschappen-Hydrografie-INSPIRE-WMS-checkViewUrl-feature_31.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie-waterschappen-INSPIRE/view/Waterschappen-Hydrografie-INSPIRE-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="807968613">0.807</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kadastrale-Percelen--INSPIRE-geharmoniseerd--view-Kadastrale-Percelen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_32.html">tmp/junit9120100322591026098/Beheer-PDOK/Kadastrale-Percelen--INSPIRE-geharmoniseerd-/view/Kadastrale-Percelen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >5</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393055377">0.393</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Vierkantstatistieken-500m-view-CBS-Vierkantstatistieken-500m-WMS-checkViewUrl-feature_33.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Vierkantstatistieken-500m/view/CBS-Vierkantstatistieken-500m-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="562278173">0.562</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geografische-Namen-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_34.html">tmp/junit9120100322591026098/Beheer-PDOK/Geografische-Namen/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="425190368">0.425</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreidingsgebied-van-soorten-view-Habitatrichtlijn-verspreidingsgebied-van-soorten-WMS-checkViewUrl-feature_35.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreidingsgebied-van-soorten/view/Habitatrichtlijn-verspreidingsgebied-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412182219">0.412</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2016--nacht-gemiddelde--view-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_36.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2016--nacht-gemiddelde-/view/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404254623">0.404</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vaarwegmarkeringen-Nederland-download-Noordzee-Vaarwegmarkeringen-WFS-checkdownloadurl-feature_37.html">tmp/junit9120100322591026098/Beheer-PDOK/Vaarwegmarkeringen-Nederland/download/Noordzee-Vaarwegmarkeringen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="445205266">0.445</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Bodemkaart50000-versie2014-view-BRO---Bodemkaart-WMS-checkViewUrl-feature_38.html">tmp/junit9120100322591026098/Beheer-PDOK/Bodemkaart50000-versie2014/view/BRO---Bodemkaart-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="435773908">0.435</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geografische-Namen--INSPIRE-geharmoniseerd--download-Geografische-Namen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_39.html">tmp/junit9120100322591026098/Beheer-PDOK/Geografische-Namen--INSPIRE-geharmoniseerd-/download/Geografische-Namen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="383559258">0.383</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Natura-2000--INSPIRE-geharmoniseerd--view-Natura2000--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_40.html">tmp/junit9120100322591026098/Beheer-PDOK/Natura-2000--INSPIRE-geharmoniseerd-/view/Natura2000--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430072975">0.430</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Natuurnetwerk-Nederland-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_41.html">tmp/junit9120100322591026098/Beheer-PDOK/Natuurnetwerk-Nederland/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409948193">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Population-Distribution-NL-other-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherUrl-feature_42.html">tmp/junit9120100322591026098/Beheer-PDOK/Population-Distribution-NL/other/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="563571649">0.563</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vogelrichtlijn-verspreiding-van-soorten-view-Vogelrichtlijn-verspreiding-van-soorten-WMS-checkViewUrl-feature_43.html">tmp/junit9120100322591026098/Beheer-PDOK/Vogelrichtlijn-verspreiding-van-soorten/view/Vogelrichtlijn-verspreiding-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1531732016">1.531</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Aardkundige-waarden-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_44.html">tmp/junit9120100322591026098/Beheer-PDOK/Aardkundige-waarden/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408096819">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Administratieve-Eenheden-view-Bestuurlijke-grenzen-WMS-checkViewUrl-feature_45.html">tmp/junit9120100322591026098/Beheer-PDOK/Administratieve-Eenheden/view/Bestuurlijke-grenzen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="489127806">0.489</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-BAG-download-BAG-WFS-checkdownloadurl-feature_46.html">tmp/junit9120100322591026098/Beheer-PDOK/BAG/download/BAG-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="435915259">0.435</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Adressen--INSPIRE-geharmoniseerd--view-Adressen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_47.html">tmp/junit9120100322591026098/Beheer-PDOK/Adressen--INSPIRE-geharmoniseerd-/view/Adressen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397164430">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd--view-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WMS-checkViewUrl-feature_48.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd-/view/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="427491903">0.427</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--download-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_49.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd-/download/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400730556">0.400</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-lijnen-download-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_50.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-lijnen/download/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="534736711">0.534</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Windsnelheden-op-100m-hoogte--m-s--view-Windsnelheden-100m-hoogte-WMS-checkViewUrl-feature_51.html">tmp/junit9120100322591026098/Beheer-PDOK/Windsnelheden-op-100m-hoogte--m/s-/view/Windsnelheden-100m-hoogte-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="450441778">0.450</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Human-Health-NL-NUTS2-view-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_52.html">tmp/junit9120100322591026098/Beheer-PDOK/Human-Health-NL-NUTS2/view/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="365426640">0.365</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vogelrichtlijn-verspreidingsgebied-van-soorten-view-Vogelrichtlijn-verspreidingsgebied-van-soorten-WMS-checkViewUrl-feature_53.html">tmp/junit9120100322591026098/Beheer-PDOK/Vogelrichtlijn-verspreidingsgebied-van-soorten/view/Vogelrichtlijn-verspreidingsgebied-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="4681193093">4.681</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Land-Use-2015-view-Statistics-Netherlands-Land-Use-2015-WMS--BBG-2015-INSPIRE-geharmoniseerd--checkViewUrl-feature_54.html">tmp/junit9120100322591026098/Beheer-PDOK/Land-Use-2015/view/Statistics-Netherlands-Land-Use-2015-WMS--BBG-2015-INSPIRE-geharmoniseerd-/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="440445409">0.440</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Ruimtelijke-plannen-Wro--Ruimtelijkeplannen-nl-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_55.html">tmp/junit9120100322591026098/Beheer-PDOK/Ruimtelijke-plannen-Wro--Ruimtelijkeplannen-nl/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416311545">0.416</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ-ha-jaar--view-Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ-ha-jaar--WMS-checkViewUrl-feature_56.html">tmp/junit9120100322591026098/Beheer-PDOK/Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ/ha-jaar-/view/Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ/ha-jaar--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="458115011">0.458</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Natura-2000--INSPIRE-geharmoniseerd--download-Natura2000--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_57.html">tmp/junit9120100322591026098/Beheer-PDOK/Natura-2000--INSPIRE-geharmoniseerd-/download/Natura2000--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392620150">0.392</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-INSPIRE-geharmoniseerde-Beschermde-Gebieden---Cultuur-Historie-view-Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_58.html">tmp/junit9120100322591026098/Beheer-PDOK/INSPIRE-geharmoniseerde-Beschermde-Gebieden---Cultuur-Historie/view/Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="369399738">0.369</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-lijnen-view-Kaderrichtlijn-Water-EU2009-WMS-checkViewUrl-feature_59.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-lijnen/view/Kaderrichtlijn-Water-EU2009-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398375437">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Luchtfoto-2016-25cm-CIR-open-data-view-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_60.html">tmp/junit9120100322591026098/Beheer-PDOK/Luchtfoto-2016-25cm-CIR-open-data/view/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="432983604">0.432</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Actueel-Hoogtebestand-Nederland-1--AHN1--download-Actueel-Hoogtebestand-Nederland-1--AHN1--WCS-checkdownloadurl-feature_61.html">tmp/junit9120100322591026098/Beheer-PDOK/Actueel-Hoogtebestand-Nederland-1--AHN1-/download/Actueel-Hoogtebestand-Nederland-1--AHN1--WCS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404187723">0.404</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Register-Beschermd-Gebied---Schelpdierwater-2008-download-Schelpdierwater-WFS-checkdownloadurl-feature_62.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Register-Beschermd-Gebied---Schelpdierwater-2008/download/Schelpdierwater-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397765694">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2016-versie-3-download-CBS-Wijken-en-Buurten-2016-WFS-checkdownloadurl-feature_63.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2016-versie-3/download/CBS-Wijken-en-Buurten-2016-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413028190">0.413</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Adressen--INSPIRE-geharmoniseerd--download-Adressen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_64.html">tmp/junit9120100322591026098/Beheer-PDOK/Adressen--INSPIRE-geharmoniseerd-/download/Adressen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="425067194">0.425</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Spoorwegen--INSPIRE-geharmoniseerd--view-Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_65.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Spoorwegen--INSPIRE-geharmoniseerd-/view/Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406445338">0.406</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-Schiphol-2016--Lden--view-Geluidskaarten-Schiphol-2016-lden-WMS-checkViewUrl-feature_66.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-Schiphol-2016--Lden-/view/Geluidskaarten-Schiphol-2016-lden-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401707056">0.401</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2006--nacht-gemiddelde--view-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_67.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2006--nacht-gemiddelde-/view/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408734499">0.408</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_68.html">tmp/junit9120100322591026098/Beheer-PDOK/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd-/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398288698">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2011--nacht-gemiddelde--view-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_69.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2011--nacht-gemiddelde-/view/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="452341642">0.452</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---rioolwaterzuiveringsinstallaties-Nederland-EU2015-view-Richtlijn-Stedelijk-Afvalwater-EU2015-WMS-checkViewUrl-feature_70.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---rioolwaterzuiveringsinstallaties-Nederland-EU2015/view/Richtlijn-Stedelijk-Afvalwater-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="423162371">0.423</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Statistical-Units-Grid-view-Statistical-Units-Grid--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_71.html">tmp/junit9120100322591026098/Beheer-PDOK/Statistical-Units-Grid/view/Statistical-Units-Grid--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="467876225">0.467</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Actueel-Hoogtebestand-Nederland-1--AHN1--download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_72.html">tmp/junit9120100322591026098/Beheer-PDOK/Actueel-Hoogtebestand-Nederland-1--AHN1-/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411850066">0.411</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geografische-Namen-view-TOP10NL-WMS-checkViewUrl-feature_73.html">tmp/junit9120100322591026098/Beheer-PDOK/Geografische-Namen/view/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="423935264">0.423</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_74.html">tmp/junit9120100322591026098/Beheer-PDOK/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd-/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406648643">0.406</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2011--nacht-gemiddelde--download-Geluidskaarten-Rijkswegen-WFS-checkdownloadurl-feature_75.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2011--nacht-gemiddelde-/download/Geluidskaarten-Rijkswegen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="438312459">0.438</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Vierkantstatistieken-500m-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_76.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Vierkantstatistieken-500m/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="488529315">0.488</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationale-Landschappen-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_77.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationale-Landschappen/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="423437071">0.423</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Mariene-Strategie---Mariene-wateren-Nederland-EU2018-view-Kaderrichtlijn-Mariene-Strategie-2018-WMS-checkViewUrl-feature_78.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Mariene-Strategie---Mariene-wateren-Nederland-EU2018/view/Kaderrichtlijn-Mariene-Strategie-2018-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406478529">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----RWS-download-Inspire-nl-vervoersnetwerken---gemeenschappelijk-elementen-WFS-checkdownloadurl-feature_79.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----RWS/download/Inspire-nl-vervoersnetwerken---gemeenschappelijk-elementen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >5</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >4</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="419496262">0.419</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015-download-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_80.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="451998285">0.451</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Actueel-Hoogtebestand-Nederland-2--AHN2--download-Actueel-Hoogtebestand-Nederland-2--AHN2--WCS-checkdownloadurl-feature_81.html">tmp/junit9120100322591026098/Beheer-PDOK/Actueel-Hoogtebestand-Nederland-2--AHN2-/download/Actueel-Hoogtebestand-Nederland-2--AHN2--WCS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408330607">0.408</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Spoorwegen--INSPIRE-geharmoniseerd--download-Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_82.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Spoorwegen--INSPIRE-geharmoniseerd-/download/Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="422363238">0.422</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2011--24-uurs-gemiddelde--download-Geluidskaarten-Rijkswegen-WFS-checkdownloadurl-feature_83.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2011--24-uurs-gemiddelde-/download/Geluidskaarten-Rijkswegen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="427119916">0.427</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--view-Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_84.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd-/view/Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401198658">0.401</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-hoofdspoornet-2016--Lnight--view-Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WMS-checkViewUrl-feature_85.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-hoofdspoornet-2016--Lnight-/view/Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399918102">0.399</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Overheidsdiensten-view-Overheidsdiensten-WMS-checkViewUrl-feature_86.html">tmp/junit9120100322591026098/Beheer-PDOK/Overheidsdiensten/view/Overheidsdiensten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="463458057">0.463</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Provincies-2012-download-CBS-Provincies-WFS-checkdownloadurl-feature_87.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Provincies-2012/download/CBS-Provincies-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="438922749">0.438</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Stiltegebieden-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_88.html">tmp/junit9120100322591026098/Beheer-PDOK/Stiltegebieden/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="423834391">0.423</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-RDinfo-view-RD-info-WMS-checkViewUrl-feature_89.html">tmp/junit9120100322591026098/Beheer-PDOK/RDinfo/view/RD-info-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412851851">0.412</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreiding-van-habitattypen-view-Habitatrichtlijn-verspreiding-van-habitattypen-WMS-checkViewUrl-feature_90.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreiding-van-habitattypen/view/Habitatrichtlijn-verspreiding-van-habitattypen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="475757718">0.475</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-TOP10NL-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_91.html">tmp/junit9120100322591026098/Beheer-PDOK/TOP10NL/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="407696508">0.407</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Deelstroomgebieden-Nederland-2019-vlakken-download-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_92.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Deelstroomgebieden-Nederland-2019-vlakken/download/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416479618">0.416</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-hoofdspoornet-2016--Lnight--download-Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WFS-checkdownloadurl-feature_93.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-hoofdspoornet-2016--Lnight-/download/Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416318239">0.416</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Statistical-Units-Vector-download-CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_94.html">tmp/junit9120100322591026098/Beheer-PDOK/Statistical-Units-Vector/download/CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413103365">0.413</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Invasieve-Exoten--INSPIRE-Geharmoniseerd--other-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherUrl-feature_95.html">tmp/junit9120100322591026098/Beheer-PDOK/Invasieve-Exoten--INSPIRE-Geharmoniseerd-/other/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="419974078">0.419</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Human-Health-NL-NUTS2-download-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_96.html">tmp/junit9120100322591026098/Beheer-PDOK/Human-Health-NL-NUTS2/download/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="368017052">0.368</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Ruimtelijke-plannen-Wro--Ruimtelijkeplannen-nl-view-Ruimtelijke-plannen-WMS-checkViewUrl-feature_97.html">tmp/junit9120100322591026098/Beheer-PDOK/Ruimtelijke-plannen-Wro--Ruimtelijkeplannen-nl/view/Ruimtelijke-plannen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="534722411">0.534</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-NWB---Wegen-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_98.html">tmp/junit9120100322591026098/Beheer-PDOK/NWB---Wegen/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400866286">0.400</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Adressen-view-Adressen-V2-WMS-checkViewUrl-feature_99.html">tmp/junit9120100322591026098/Beheer-PDOK/Adressen/view/Adressen-V2-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398446041">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-Schiphol-2016--Lnight--download-Geluidskaarten-Schiphol-2016-lnight-WFS-checkdownloadurl-feature_100.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-Schiphol-2016--Lnight-/download/Geluidskaarten-Schiphol-2016-lnight-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414907623">0.414</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreidingsgebied-van-soorten-download-Habitatrichtlijn-verspreidingsgebied-van-soorten-WFS-checkdownloadurl-feature_101.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreidingsgebied-van-soorten/download/Habitatrichtlijn-verspreidingsgebied-van-soorten-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="606131435">0.606</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--view-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_102.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd-/view/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409992227">0.409</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT-view-Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_103.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT/view/Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="443624007">0.443</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Mariene-Strategie---Rapportage-eenheden-Nederland-EU2018-download-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_104.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Mariene-Strategie---Rapportage-eenheden-Nederland-EU2018/download/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="736368362">0.736</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Deelstroomgebieden-Nederland-2019-vlakken-view-Kaderrichtlijn-Water-actueel-WMS-checkViewUrl-feature_105.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Deelstroomgebieden-Nederland-2019-vlakken/view/Kaderrichtlijn-Water-actueel-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403534318">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vogelrichtlijn-verspreiding-van-soorten-download-Vogelrichtlijn-verspreiding-van-soorten-WFS-checkdownloadurl-feature_106.html">tmp/junit9120100322591026098/Beheer-PDOK/Vogelrichtlijn-verspreiding-van-soorten/download/Vogelrichtlijn-verspreiding-van-soorten-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="437804468">0.437</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Bestand-Bodemgebruik-2015-download-CBS-Bestand-Bodemgebruik-2015-WFS-checkdownloadurl-feature_107.html">tmp/junit9120100322591026098/Beheer-PDOK/Bestand-Bodemgebruik-2015/download/CBS-Bestand-Bodemgebruik-2015-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392210904">0.392</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2006--nacht-gemiddelde--download-Geluidskaarten-Rijkswegen-WFS-checkdownloadurl-feature_108.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2006--nacht-gemiddelde-/download/Geluidskaarten-Rijkswegen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404884784">0.404</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Adressen-download-Adressen-V2-WFS-checkdownloadurl-feature_109.html">tmp/junit9120100322591026098/Beheer-PDOK/Adressen/download/Adressen-V2-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399809551">0.399</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vogelrichtlijn-verspreidingsgebied-van-soorten-download-Vogelrichtlijn-verspreidingsgebied-van-soorten-WFS-checkdownloadurl-feature_110.html">tmp/junit9120100322591026098/Beheer-PDOK/Vogelrichtlijn-verspreidingsgebied-van-soorten/download/Vogelrichtlijn-verspreidingsgebied-van-soorten-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="537818547">0.537</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---agglomeraties-Nederland-EU2015-download-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_111.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---agglomeraties-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401095305">0.401</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---agglomeraties-Nederland-EU2015-view-Richtlijn-Stedelijk-Afvalwater-EU2015-WMS-checkViewUrl-feature_112.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---agglomeraties-Nederland-EU2015/view/Richtlijn-Stedelijk-Afvalwater-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391406344">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_templateTests-other-checkOtherUrl-feature_113.html">templateTests/other/checkOtherUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="431812095">0.431</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Population-Distribution-NL-view-Population-Distribution--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_114.html">tmp/junit9120100322591026098/Beheer-PDOK/Population-Distribution-NL/view/Population-Distribution--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="360614484">0.360</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Stroomgebieddistricten-Nederland-2019-vlakken-download-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_115.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Stroomgebieddistricten-Nederland-2019-vlakken/download/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403375209">0.403</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-gebiedsindelingen-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_116.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-gebiedsindelingen/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397427249">0.397</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wet-Ammoniak-en-Veehouderij-gebieden-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_117.html">tmp/junit9120100322591026098/Beheer-PDOK/Wet-Ammoniak-en-Veehouderij-gebieden/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="467264364">0.467</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Zeegebieden--INSPIRE-geharmoniseerd--view-Zeegebieden--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_118.html">tmp/junit9120100322591026098/Beheer-PDOK/Zeegebieden--INSPIRE-geharmoniseerd-/view/Zeegebieden--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="464161793">0.464</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationale-Parken--INSPIRE-Geharmoniseerd--download-Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_119.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationale-Parken--INSPIRE-Geharmoniseerd-/download/Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="421237449">0.421</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Ligging-industrie-en-CO2-emissies-view-Potentiekaart-restwarmte-WMS-checkViewUrl-feature_120.html">tmp/junit9120100322591026098/Beheer-PDOK/Ligging-industrie-en-CO2-emissies/view/Potentiekaart-restwarmte-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="451666685">0.451</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-Schiphol-2016--Lden--download-Geluidskaarten-Schiphol-2016-lden-WFS-checkdownloadurl-feature_121.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-Schiphol-2016--Lden-/download/Geluidskaarten-Schiphol-2016-lden-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393013802">0.393</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-lijnen-download-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_122.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-lijnen/download/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412571455">0.412</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Zeegebieden--INSPIRE-geharmoniseerd--download-Zeegebieden--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_123.html">tmp/junit9120100322591026098/Beheer-PDOK/Zeegebieden--INSPIRE-geharmoniseerd-/download/Zeegebieden--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408503926">0.408</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wetlands--RAMSAR---INSPIRE-Geharmoniseerd--view-Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_124.html">tmp/junit9120100322591026098/Beheer-PDOK/Wetlands--RAMSAR---INSPIRE-Geharmoniseerd-/view/Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396195244">0.396</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-BAG-view-BAG-WMS-checkViewUrl-feature_125.html">tmp/junit9120100322591026098/Beheer-PDOK/BAG/view/BAG-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413492070">0.413</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd--download-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WFS-checkdownloadurl-feature_126.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd-/download/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401523952">0.401</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Gebouwen--INSPIRE-geharmoniseerd--download-Gebouwen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_127.html">tmp/junit9120100322591026098/Beheer-PDOK/Gebouwen--INSPIRE-geharmoniseerd-/download/Gebouwen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391580828">0.391</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--view-Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_128.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd-/view/Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411636369">0.411</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---agglomeraties-Nederland-EU2015-download-Richtlijn-Stedelijk-Afvalwater-EU2015-WFS-checkdownloadurl-feature_129.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---agglomeraties-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="470896641">0.470</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Ligging-industrie-en-CO2-emissies-download-Potentiekaart-restwarmte-WFS-checkdownloadurl-feature_130.html">tmp/junit9120100322591026098/Beheer-PDOK/Ligging-industrie-en-CO2-emissies/download/Potentiekaart-restwarmte-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="444731839">0.444</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2019-versie-2-download-CBS-Wijken-en-Buurten-2019-versie-1-WFS-checkdownloadurl-feature_131.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2019-versie-2/download/CBS-Wijken-en-Buurten-2019-versie-1-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="434928396">0.434</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Aardkundige-waarden-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_132.html">tmp/junit9120100322591026098/Beheer-PDOK/Aardkundige-waarden/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="490030167">0.490</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--view-Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_133.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd-/view/Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409759633">0.409</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geografische-Namen--INSPIRE-geharmoniseerd--view-Geografische-Namen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_134.html">tmp/junit9120100322591026098/Beheer-PDOK/Geografische-Namen--INSPIRE-geharmoniseerd-/view/Geografische-Namen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="425129981">0.425</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-hoofdspoornet-2016--Lden--view-Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WMS-checkViewUrl-feature_135.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-hoofdspoornet-2016--Lden-/view/Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="612406864">0.612</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Vierkantstatistieken-100m-view-CBS-Vierkantstatistieken-100m-WMS-checkViewUrl-feature_136.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Vierkantstatistieken-100m/view/CBS-Vierkantstatistieken-100m-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="525085006">0.525</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Zeegebieden-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_137.html">tmp/junit9120100322591026098/Beheer-PDOK/Zeegebieden/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="617556116">0.617</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2018-versie-3-download-CBS-Wijken-en-Buurten-2018-versie-1-WFS-checkdownloadurl-feature_138.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2018-versie-3/download/CBS-Wijken-en-Buurten-2018-versie-1-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="435307669">0.435</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kadastrale-Percelen--INSPIRE-geharmoniseerd--download-Kadastrale-Percelen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_139.html">tmp/junit9120100322591026098/Beheer-PDOK/Kadastrale-Percelen--INSPIRE-geharmoniseerd-/download/Kadastrale-Percelen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408656284">0.408</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-TOP10NL-view-TOP10NL-WMS-checkViewUrl-feature_140.html">tmp/junit9120100322591026098/Beheer-PDOK/TOP10NL/view/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393409719">0.393</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-vlakken-view-Kaderrichtlijn-Water-EU2015-WMS-checkViewUrl-feature_141.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-vlakken/view/Kaderrichtlijn-Water-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="410861314">0.410</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationaal-Hydrologisch-Instrumentarium--NHI----netwerkschematisatie-view-Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WMS-checkViewUrl-feature_142.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationaal-Hydrologisch-Instrumentarium--NHI----netwerkschematisatie/view/Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="478951132">0.478</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Zeegebieden-view-TOP10NL-WMS-checkViewUrl-feature_143.html">tmp/junit9120100322591026098/Beheer-PDOK/Zeegebieden/view/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="425990185">0.425</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Mariene-Strategie---Mariene-wateren-Nederland-EU2018-download-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_144.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Mariene-Strategie---Mariene-wateren-Nederland-EU2018/download/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="482932720">0.482</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2019-versie-2-view-CBS-Wijken-en-Buurten-2019-versie-1-WMS-checkViewUrl-feature_145.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2019-versie-2/view/CBS-Wijken-en-Buurten-2019-versie-1-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="465896340">0.465</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationaal-Hydrologisch-Instrumentarium--NHI----netwerkschematisatie-download-Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WFS-checkdownloadurl-feature_146.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationaal-Hydrologisch-Instrumentarium--NHI----netwerkschematisatie/download/Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414687917">0.414</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2006--24-uurs-gemiddelde--download-Geluidskaarten-Rijkswegen-WFS-checkdownloadurl-feature_147.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2006--24-uurs-gemiddelde-/download/Geluidskaarten-Rijkswegen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="389424961">0.389</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreiding-van-habitattypen-view-Habitatrichtlijn-verspreiding-van-typen-WMS-checkViewUrl-feature_148.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreiding-van-habitattypen/view/Habitatrichtlijn-verspreiding-van-typen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="787491081">0.787</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Register-Beschermd-Gebied---Schelpdierwater-2008-view-Schelpdierwater-WMS-checkViewUrl-feature_149.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Register-Beschermd-Gebied---Schelpdierwater-2008/view/Schelpdierwater-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="433148026">0.433</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-NB-wetgebieden-buiten-Natura-2000-view-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_150.html">tmp/junit9120100322591026098/Beheer-PDOK/NB-wetgebieden-buiten-Natura-2000/view/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="426989152">0.426</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Bestand-Bodemgebruik-2015-view-CBS-Bestand-Bodemgebruik-2015-WMS-checkViewUrl-feature_151.html">tmp/junit9120100322591026098/Beheer-PDOK/Bestand-Bodemgebruik-2015/view/CBS-Bestand-Bodemgebruik-2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398367907">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreiding-van-habitattypen-download-Habitatrichtlijn-verspreiding-van-typen-WFS-checkdownloadurl-feature_152.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreiding-van-habitattypen/download/Habitatrichtlijn-verspreiding-van-typen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412677278">0.412</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Actueel-Hoogtebestand-Nederland-1--AHN1--view-Actueel-Hoogtebestand-Nederland-1--AHN1--WMS-checkViewUrl-feature_153.html">tmp/junit9120100322591026098/Beheer-PDOK/Actueel-Hoogtebestand-Nederland-1--AHN1-/view/Actueel-Hoogtebestand-Nederland-1--AHN1--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393329459">0.393</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Population-Distribution-NL-download-Population-Distribution--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_154.html">tmp/junit9120100322591026098/Beheer-PDOK/Population-Distribution-NL/download/Population-Distribution--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="382123458">0.382</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT-download-Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_155.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT/download/Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397141462">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Invasieve-Exoten--INSPIRE-Geharmoniseerd--download-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_156.html">tmp/junit9120100322591026098/Beheer-PDOK/Invasieve-Exoten--INSPIRE-Geharmoniseerd-/download/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400613266">0.400</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kadastrale-Percelen--INSPIRE-geharmoniseerd--download-Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_157.html">tmp/junit9120100322591026098/Beheer-PDOK/Kadastrale-Percelen--INSPIRE-geharmoniseerd-/download/Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="373084441">0.373</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--view-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_158.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd-/view/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="405524443">0.405</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vaarwegmarkeringen-Nederland-view-Noordzee-Vaarwegmarkeringen-WMS-checkViewUrl-feature_159.html">tmp/junit9120100322591026098/Beheer-PDOK/Vaarwegmarkeringen-Nederland/view/Noordzee-Vaarwegmarkeringen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403636717">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Provincies-2012-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_160.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Provincies-2012/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403166133">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie-waterschappen-INSPIRE-download-Waterschappen-Hydrografie-INSPIRE-ATOM-checkdownloadurl-feature_161.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie-waterschappen-INSPIRE/download/Waterschappen-Hydrografie-INSPIRE-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="745115183">0.745</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_templateTests-view-checkViewUrl-feature_162.html">templateTests/view/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="422281217">0.422</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-vlakken-download-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_163.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-vlakken/download/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402338867">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Provincies-2012-view-CBS-Provincies-WMS-checkViewUrl-feature_164.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Provincies-2012/view/CBS-Provincies-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="455572539">0.455</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-lijnen-view-Kaderrichtlijn-Water-EU2015-WMS-checkViewUrl-feature_165.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2015-lijnen/view/Kaderrichtlijn-Water-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="421994283">0.421</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-INSPIRE-geharmoniseerde-Beschermde-Gebieden---Cultuur-Historie-download-Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_166.html">tmp/junit9120100322591026098/Beheer-PDOK/INSPIRE-geharmoniseerde-Beschermde-Gebieden---Cultuur-Historie/download/Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="374423386">0.374</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Adressen-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_167.html">tmp/junit9120100322591026098/Beheer-PDOK/Adressen/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408538614">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wet-Ammoniak-en-Veehouderij-gebieden-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_168.html">tmp/junit9120100322591026098/Beheer-PDOK/Wet-Ammoniak-en-Veehouderij-gebieden/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="508484087">0.508</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2011--24-uurs-gemiddelde--view-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_169.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2011--24-uurs-gemiddelde-/view/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404462949">0.404</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Mossel--en-oesterhabitats--AS-IS--view-Mossel--en-oesterhabitats-WMS-checkViewUrl-feature_170.html">tmp/junit9120100322591026098/Beheer-PDOK/Mossel--en-oesterhabitats--AS-IS-/view/Mossel--en-oesterhabitats-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="438147079">0.438</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Bodemgebruik-view-TOP10NL-WMS-checkViewUrl-feature_171.html">tmp/junit9120100322591026098/Beheer-PDOK/Bodemgebruik/view/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400499584">0.400</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Overstromingsrisico---historische-overstromingen-EU2018-download-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_172.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Overstromingsrisico---historische-overstromingen-EU2018/download/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="533060704">0.533</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ-ha-jaar--download-Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ-ha-jaar--WFS-checkdownloadurl-feature_173.html">tmp/junit9120100322591026098/Beheer-PDOK/Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ/ha-jaar-/download/Potentieel-koude-en-warmte-uit-open-en-gesloten-WKO-systemen--GJ/ha-jaar--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404567082">0.404</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Schelpdierpercelen-view-Schelpdierenpercelen-WMS-checkViewUrl-feature_174.html">tmp/junit9120100322591026098/Beheer-PDOK/Schelpdierpercelen/view/Schelpdierenpercelen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="506761173">0.506</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Actueel-Hoogtebestand-Nederland-2--AHN2--view-Actueel-Hoogtebestand-Nederland-2--AHN2--WMS-checkViewUrl-feature_175.html">tmp/junit9120100322591026098/Beheer-PDOK/Actueel-Hoogtebestand-Nederland-2--AHN2-/view/Actueel-Hoogtebestand-Nederland-2--AHN2--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396795132">0.396</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-vlakken-view-Kaderrichtlijn-Water-EU2009-WMS-checkViewUrl-feature_176.html">tmp/junit9120100322591026098/Beheer-PDOK/Kaderrichtlijn-Water---Oppervlaktewaterlichamen-Nederland-EU2009-vlakken/view/Kaderrichtlijn-Water-EU2009-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="433852112">0.433</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationale-Parken--INSPIRE-Geharmoniseerd--view-Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_177.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationale-Parken--INSPIRE-Geharmoniseerd-/view/Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406480369">0.406</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2016--24-uurs-gemiddelde--view-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_178.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2016--24-uurs-gemiddelde-/view/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430791130">0.430</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--download-Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_179.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd-/download/Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412212854">0.412</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-NWB---Wegen-view-NWB---Wegen--Nationaal-Wegen-Bestand--WMS-checkViewUrl-feature_180.html">tmp/junit9120100322591026098/Beheer-PDOK/NWB---Wegen/view/NWB---Wegen--Nationaal-Wegen-Bestand--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412799445">0.412</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kadastrale-Percelen--INSPIRE-geharmoniseerd--view-Cadastral-parcels--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_181.html">tmp/junit9120100322591026098/Beheer-PDOK/Kadastrale-Percelen--INSPIRE-geharmoniseerd-/view/Cadastral-parcels--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="370491522">0.370</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Kadastrale-kaart-v4-view-Kadastrale-Kaart-v4-WMS-checkViewUrl-feature_182.html">tmp/junit9120100322591026098/Beheer-PDOK/Kadastrale-kaart-v4/view/Kadastrale-Kaart-v4-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402325484">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Windsnelheden-op-100m-hoogte--m-s--download-Windsnelheden-100m-hoogte-WFS-checkdownloadurl-feature_183.html">tmp/junit9120100322591026098/Beheer-PDOK/Windsnelheden-op-100m-hoogte--m/s-/download/Windsnelheden-100m-hoogte-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411263898">0.411</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Publiekrechtelijke-beperkingen-view-Publiekrechtelijke-Beperking-WMS-checkViewUrl-feature_184.html">tmp/junit9120100322591026098/Beheer-PDOK/Publiekrechtelijke-beperkingen/view/Publiekrechtelijke-Beperking-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="458834175">0.458</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Overheidsdiensten-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_185.html">tmp/junit9120100322591026098/Beheer-PDOK/Overheidsdiensten/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403011907">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-CBS-Vierkantstatistieken-500m-download-CBS-Vierkantstatistieken-500m-WFS-checkdownloadurl-feature_186.html">tmp/junit9120100322591026098/Beheer-PDOK/CBS-Vierkantstatistieken-500m/download/CBS-Vierkantstatistieken-500m-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430594301">0.430</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--download-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_187.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd-/download/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397253090">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-Schiphol-2016--Lnight--view-Geluidskaarten-Schiphol-2016-lnight-WMS-checkViewUrl-feature_188.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-Schiphol-2016--Lnight-/view/Geluidskaarten-Schiphol-2016-lnight-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="443404333">0.443</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-NB-wetgebieden-buiten-Natura-2000-download-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_189.html">tmp/junit9120100322591026098/Beheer-PDOK/NB-wetgebieden-buiten-Natura-2000/download/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411354863">0.411</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Administratieve-Eenheden--INSPIRE-geharmoniseerd--view-Administratieve-Eenheden--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_190.html">tmp/junit9120100322591026098/Beheer-PDOK/Administratieve-Eenheden--INSPIRE-geharmoniseerd-/view/Administratieve-Eenheden--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="448387464">0.448</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--download-Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_191.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd-/download/Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="390918103">0.390</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2017-versie-3-view-CBS-Wijken-en-Buurten-2017-WMS-checkViewUrl-feature_192.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2017-versie-3/view/CBS-Wijken-en-Buurten-2017-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="483940356">0.483</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Luchtfoto-2019-25cm-CIR-open-data-view-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_193.html">tmp/junit9120100322591026098/Beheer-PDOK/Luchtfoto-2019-25cm-CIR-open-data/view/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="387684340">0.387</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---rioolwaterzuiveringsinstallaties-Nederland-EU2015-download-Richtlijn-Stedelijk-Afvalwater-EU2015-WFS-checkdownloadurl-feature_194.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---rioolwaterzuiveringsinstallaties-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="465189432">0.465</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidkaart-hoofdspoornet-2016--Lden--download-Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WFS-checkdownloadurl-feature_195.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidkaart-hoofdspoornet-2016--Lden-/download/Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401095556">0.401</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Bodemgebruik-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_196.html">tmp/junit9120100322591026098/Beheer-PDOK/Bodemgebruik/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408763127">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---rioolwaterzuiveringsinstallaties-Nederland-EU2015-download-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_197.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---rioolwaterzuiveringsinstallaties-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="476960433">0.476</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreiding-van-soorten-view-Habitatrichtlijn-verspreiding-van-soorten-WMS-checkViewUrl-feature_198.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreiding-van-soorten/view/Habitatrichtlijn-verspreiding-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="646605845">0.646</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Overstromingsrisico---gebieden-met-Potentieel-Significant-Overstromingsrisico-EU2018-lijnen-view-Richtlijn-Overstromingsrisico-EU2018-WMS-checkViewUrl-feature_199.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Overstromingsrisico---gebieden-met-Potentieel-Significant-Overstromingsrisico-EU2018-lijnen/view/Richtlijn-Overstromingsrisico-EU2018-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398322172">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Nationaal-Beschermde-Gebieden--CDDA---INSPIRE-geharmoniseerd--view-Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_200.html">tmp/junit9120100322591026098/Beheer-PDOK/Nationaal-Beschermde-Gebieden--CDDA---INSPIRE-geharmoniseerd-/view/Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406745652">0.406</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-RDinfo-download-RD-info-WFS-checkdownloadurl-feature_201.html">tmp/junit9120100322591026098/Beheer-PDOK/RDinfo/download/RD-info-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398086152">0.398</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_202.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402741455">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreidingsgebied-van-habitattypen-view-Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WMS-checkViewUrl-feature_203.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreidingsgebied-van-habitattypen/view/Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="730875853">0.730</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Gebouwen--INSPIRE-geharmoniseerd--view-Gebouwen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_204.html">tmp/junit9120100322591026098/Beheer-PDOK/Gebouwen--INSPIRE-geharmoniseerd-/view/Gebouwen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395483956">0.395</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Habitatrichtlijn-verspreiding-van-soorten-download-Habitatrichtlijn-verspreiding-van-soorten-WFS-checkdownloadurl-feature_205.html">tmp/junit9120100322591026098/Beheer-PDOK/Habitatrichtlijn-verspreiding-van-soorten/download/Habitatrichtlijn-verspreiding-van-soorten-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416427899">0.416</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Mosselzaadinvanginstallaties-view-Mosselzaadinvanginstallaties-WMS-checkViewUrl-feature_206.html">tmp/junit9120100322591026098/Beheer-PDOK/Mosselzaadinvanginstallaties/view/Mosselzaadinvanginstallaties-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="446482023">0.446</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Bestand-Bodemgebruik-2015-download-CBS-Bestand-Bodemgebruik-2015-ATOM-checkdownloadurl-feature_207.html">tmp/junit9120100322591026098/Beheer-PDOK/Bestand-Bodemgebruik-2015/download/CBS-Bestand-Bodemgebruik-2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td      class="failed"    >1</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395217590">0.395</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Vervoersnetwerken-view-TOP10NL-WMS-checkViewUrl-feature_208.html">tmp/junit9120100322591026098/Beheer-PDOK/Vervoersnetwerken/view/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="426394809">0.426</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie---Netwerk--INSPIRE-geharmoniseerd----WT-view-Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_209.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie---Netwerk--INSPIRE-geharmoniseerd----WT/view/Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="464345400">0.464</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Administratieve-Eenheden-download-Bestuurlijke-Grenzen-WFS-checkdownloadurl-feature_210.html">tmp/junit9120100322591026098/Beheer-PDOK/Administratieve-Eenheden/download/Bestuurlijke-Grenzen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430340502">0.430</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Publiekrechtelijke-beperkingen-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_211.html">tmp/junit9120100322591026098/Beheer-PDOK/Publiekrechtelijke-beperkingen/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412923647">0.412</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Human-Health-NL-NUTS2-other-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherUrl-feature_212.html">tmp/junit9120100322591026098/Beheer-PDOK/Human-Health-NL-NUTS2/other/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="371955074">0.371</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2006--24-uurs-gemiddelde--view-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_213.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2006--24-uurs-gemiddelde-/view/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="417347217">0.417</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Luchtfoto-2018-25cm-CIR-open-data-view-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_214.html">tmp/junit9120100322591026098/Beheer-PDOK/Luchtfoto-2018-25cm-CIR-open-data/view/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412763983">0.412</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--download-Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_215.html">tmp/junit9120100322591026098/Beheer-PDOK/Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd-/download/Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392506227">0.392</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Land-Use-2015-download-Statistics-Netherlands-Land-Use-2015-WFS--BBG-2015-INSPIRE-geharmoniseerd--checkdownloadurl-feature_216.html">tmp/junit9120100322591026098/Beheer-PDOK/Land-Use-2015/download/Statistics-Netherlands-Land-Use-2015-WFS--BBG-2015-INSPIRE-geharmoniseerd-/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397782958">0.397</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2016-versie-3-view-CBS-Wijken-en-Buurten-2016-WMS-checkViewUrl-feature_217.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2016-versie-3/view/CBS-Wijken-en-Buurten-2016-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="511169498">0.511</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Statistical-Units-Vector-view-CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_218.html">tmp/junit9120100322591026098/Beheer-PDOK/Statistical-Units-Vector/view/CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414077653">0.414</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wetlands--RAMSAR---INSPIRE-Geharmoniseerd--download-Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WFS-checkdownloadurl-feature_219.html">tmp/junit9120100322591026098/Beheer-PDOK/Wetlands--RAMSAR---INSPIRE-Geharmoniseerd-/download/Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="390515814">0.390</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015-view-Richtlijn-Stedelijk-Afvalwater-EU2015-WMS-checkViewUrl-feature_220.html">tmp/junit9120100322591026098/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015/view/Richtlijn-Stedelijk-Afvalwater-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="427341773">0.427</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Geluidbelasting-rijkswegen-in-Nederland-2016--24-uurs-gemiddelde--download-Geluidskaarten-Rijkswegen-WFS-checkdownloadurl-feature_221.html">tmp/junit9120100322591026098/Beheer-PDOK/Geluidbelasting-rijkswegen-in-Nederland-2016--24-uurs-gemiddelde-/download/Geluidskaarten-Rijkswegen-WFS/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="405841425">0.405</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_tmp-junit9120100322591026098-Beheer-PDOK-Wijk--en-Buurtkaart-2016-versie-3-download-INSPIRE-download-service-PDOK-checkdownloadurl-feature_222.html">tmp/junit9120100322591026098/Beheer-PDOK/Wijk--en-Buurtkaart-2016-versie-3/download/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >10</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">10</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414208294">0.414</td>
+        <td class="passed">Passed</td>
+      </tr>
+      </tbody>
+
+  <tfoot class="total">
+    <tr>
+      <td></td>
+            <td>1656</td>
+      <td>142</td>
+      <td>321</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2119</td>
+
+      <td>81</td>
+      <td>142</td>
+      <td>223</td>
+
+      <td class="duration">1:43.779</td>
+      <td>223</td>
+    </tr>
+    <tr>
+      <td></td>
+            <td>78.15%</td>
+      <td>6.70%</td>
+      <td>15.15%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>36.32%</td>
+      <td>63.68%</td>
+      <td></td>
+      <td></td>
+      <td>36.32%</td>
+    </tr>
+  </tfoot>
+</table>
+
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
