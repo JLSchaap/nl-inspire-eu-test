@@ -1,3 +1,4 @@
+@Service=view
 Feature:  check url for view service
 
   Background:

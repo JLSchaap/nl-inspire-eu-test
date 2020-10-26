@@ -1,3 +1,4 @@
+@Service=other
 Feature:  check url for other service
 
   Background:

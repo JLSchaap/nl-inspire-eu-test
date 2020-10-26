@@ -1,3 +1,4 @@
+@Service=download
 Feature:  check url for download
 
   Background:

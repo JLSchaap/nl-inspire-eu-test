@@ -14,6 +14,7 @@ import org.apache.commons.io.FileUtils;
 
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +34,12 @@ class TestAllTemplates {
     static File defdir;
     @TempDir
     static File gentestdir;
+
+    @AfterAll
+    public static void oneTimeTearDown() {
+        generateReport("target/surefire-reports");
+
+    }
 
     @Test
     @Order(1)
@@ -68,7 +75,7 @@ class TestAllTemplates {
         List<String> tags = List.of("~@ignore");
         final Results results = Runner.parallel(tags, featurepaths, 4, "target/surefire-reports");
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
-        generateReport("target/surefire-reports");
+
     }
 
 
