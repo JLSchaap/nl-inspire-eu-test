@@ -1,0 +1,18 @@
+<testsuite failures="1" name="tmp/junit15628981019954503578/Beheer-PDOK/Bestand-Bodemgebruik-2015/download/CBS-Bestand-Bodemgebruik-2015-ATOM/checkdownloadurl.feature" skipped="0" tests="1" time="0.418998">
+  <testcase classname="tmp.junit15628981019954503578.Beheer-PDOK.Bestand-Bodemgebruik-2015.download.CBS-Bestand-Bodemgebruik-2015-ATOM.checkdownloadurl" name="check service url" time="0.418998">
+    <failure message="checkdownloadurl.feature:18 - assert evaluated to false: filesize &gt; 2000">* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. passed
+And match responseHeaders['Content-Type'][0] == 'text/xml' ................ passed
+And def filesize =  responseHeaders['Content-Length'][0] .................. passed
+* assert filesize &gt; 2000 .................................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: checkdownloadurl.feature:18 - assert evaluated to false: filesize &gt; 2000
+	at ✽.* assert filesize &gt; 2000 (checkdownloadurl.feature:18)</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,10 @@
+<testsuite failures="0" name="tmp/junit15628981019954503578/Beheer-PDOK--Rijkswaterstaat--Rijkswaterstaat--Rijkswaterstaat--Beheer-PDOK/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT/other/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT-WFS/checklink.feature" skipped="0" tests="1" time="0.388395">
+  <testcase classname="tmp.junit15628981019954503578.Beheer-PDOK--Rijkswaterstaat--Rijkswaterstaat--Rijkswaterstaat--Beheer-PDOK.Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT.other.Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd----WT-WFS.checklink" name="check service url" time="0.388395">
+    <system-out>* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

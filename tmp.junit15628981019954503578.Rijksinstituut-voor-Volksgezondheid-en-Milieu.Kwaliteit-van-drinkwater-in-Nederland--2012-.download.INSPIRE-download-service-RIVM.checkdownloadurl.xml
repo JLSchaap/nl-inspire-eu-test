@@ -1,0 +1,14 @@
+<testsuite failures="0" name="tmp/junit15628981019954503578/Rijksinstituut-voor-Volksgezondheid-en-Milieu/Kwaliteit-van-drinkwater-in-Nederland--2012-/download/INSPIRE-download-service-RIVM/checkdownloadurl.feature" skipped="0" tests="1" time="0.313525">
+  <testcase classname="tmp.junit15628981019954503578.Rijksinstituut-voor-Volksgezondheid-en-Milieu.Kwaliteit-van-drinkwater-in-Nederland--2012-.download.INSPIRE-download-service-RIVM.checkdownloadurl" name="check service url" time="0.313525">
+    <system-out>* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. passed
+And match responseHeaders['Content-Type'][0] == 'text/xml' ................ passed
+And def filesize =  responseHeaders['Content-Length'][0] .................. passed
+* assert filesize &gt; 2000 .................................................. passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,19 @@
+<testsuite failures="1" name="tmp/junit15628981019954503578/Beheer-PDOK/Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015/download/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkdownloadurl.feature" skipped="0" tests="1" time="0.415094">
+  <testcase classname="tmp.junit15628981019954503578.Beheer-PDOK.Richtlijn-Stedelijk-Afvalwater---lozingspunten-Nederland-EU2015.download.Richtlijn-Stedelijk-Afvalwater-EU2015-WFS.checkdownloadurl" name="check service url" time="0.415094">
+    <failure message="checkdownloadurl.feature:16 - path: $['Content-Type'][0], actual: 'text/html; charset=UTF-8', expected: 'text/xml', reason: not equal">* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. passed
+And match responseHeaders['Content-Type'][0] == 'text/xml' ................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: checkdownloadurl.feature:16 - path: $['Content-Type'][0], actual: 'text/html; charset=UTF-8', expected: 'text/xml', reason: not equal
+	at ✽.And match responseHeaders['Content-Type'][0] == 'text/xml' (checkdownloadurl.feature:16)
+
+And def filesize =  responseHeaders['Content-Length'][0] .................. skipped
+* assert filesize &gt; 2000 .................................................. skipped</failure>
+  </testcase>
+</testsuite>

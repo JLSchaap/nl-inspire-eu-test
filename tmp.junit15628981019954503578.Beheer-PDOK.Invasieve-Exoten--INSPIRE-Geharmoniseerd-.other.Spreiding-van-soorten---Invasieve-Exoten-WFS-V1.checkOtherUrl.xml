@@ -1,0 +1,13 @@
+<testsuite failures="0" name="tmp/junit15628981019954503578/Beheer-PDOK/Invasieve-Exoten--INSPIRE-Geharmoniseerd-/other/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherUrl.feature" skipped="0" tests="1" time="0.424833">
+  <testcase classname="tmp.junit15628981019954503578.Beheer-PDOK.Invasieve-Exoten--INSPIRE-Geharmoniseerd-.other.Spreiding-van-soorten---Invasieve-Exoten-WFS-V1.checkOtherUrl" name="check service url" time="0.424833">
+    <system-out>* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. passed
+And def filesize =  responseHeaders['Content-Length'][0] .................. passed
+* assert filesize &gt; 50 .................................................... passed</system-out>
+  </testcase>
+</testsuite>

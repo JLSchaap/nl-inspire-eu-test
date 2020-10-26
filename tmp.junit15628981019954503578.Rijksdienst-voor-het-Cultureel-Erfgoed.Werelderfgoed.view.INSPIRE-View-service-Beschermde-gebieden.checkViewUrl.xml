@@ -1,0 +1,17 @@
+<testsuite failures="1" name="tmp/junit15628981019954503578/Rijksdienst-voor-het-Cultureel-Erfgoed/Werelderfgoed/view/INSPIRE-View-service-Beschermde-gebieden/checkViewUrl.feature" skipped="0" tests="1" time="0.219852">
+  <testcase classname="tmp.junit15628981019954503578.Rijksdienst-voor-het-Cultureel-Erfgoed.Werelderfgoed.view.INSPIRE-View-service-Beschermde-gebieden.checkViewUrl" name="check view service url" time="0.219852">
+    <failure message="checkViewUrl.feature:17 - assert evaluated to false: filesize &gt; 50">* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. passed
+And def filesize =  responseHeaders['Content-Length'][0] .................. passed
+* assert filesize &gt; 50 .................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: checkViewUrl.feature:17 - assert evaluated to false: filesize &gt; 50
+	at ✽.* assert filesize &gt; 50 (checkViewUrl.feature:17)</failure>
+  </testcase>
+</testsuite>

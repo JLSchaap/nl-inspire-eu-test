@@ -1,0 +1,18 @@
+<testsuite failures="1" name="tmp/junit15628981019954503578/Rijksinstituut-voor-Volksgezondheid-en-Milieu/Afgevoerde-hoeveelheid-afval-in-2015-vanuit-de-industrie/view/Afgevoerde-hoeveelheid-afval-in-2015-vanuit-de-industrie--WMS-/checkViewUrl.feature" skipped="0" tests="1" time="0.358341">
+  <testcase classname="tmp.junit15628981019954503578.Rijksinstituut-voor-Volksgezondheid-en-Milieu.Afgevoerde-hoeveelheid-afval-in-2015-vanuit-de-industrie.view.Afgevoerde-hoeveelheid-afval-in-2015-vanuit-de-industrie--WMS-.checkViewUrl" name="check view service url" time="0.358341">
+    <failure message="checkViewUrl.feature:15 - path: $['Content-Length'][0], actual: null, expected: '#notnull', reason: actual json-path does not exist">* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: checkViewUrl.feature:15 - path: $['Content-Length'][0], actual: null, expected: '#notnull', reason: actual json-path does not exist
+	at ✽.And match responseHeaders['Content-Length'][0] == '#notnull' (checkViewUrl.feature:15)
+
+And def filesize =  responseHeaders['Content-Length'][0] .................. skipped
+* assert filesize &gt; 50 .................................................... skipped</failure>
+  </testcase>
+</testsuite>

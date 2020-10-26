@@ -1,0 +1,18 @@
+<testsuite failures="1" name="tmp/junit15628981019954503578/Ministerie-van-Defensie--Koninklijke-Marine--Dienst-der-Hydrografie/Amplitude-van-het-getij-op-de-Noordzee/view/Amplitude-van-het-getij-op-de-Noordzee-Downloadservice/checkViewUrl.feature" skipped="0" tests="1" time="0.312427">
+  <testcase classname="tmp.junit15628981019954503578.Ministerie-van-Defensie--Koninklijke-Marine--Dienst-der-Hydrografie.Amplitude-van-het-getij-op-de-Noordzee.view.Amplitude-van-het-getij-op-de-Noordzee-Downloadservice.checkViewUrl" name="check view service url" time="0.312427">
+    <failure message="checkViewUrl.feature:14 - status code was: 503, expected: 200, response time: 306, url: https://inspire.caris.nl/server/services/ows/download/feature/amplitude-getij_IDS?request=GetCapabilities&amp;service=WFS&amp;version=2.0.0, response: ">* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: checkViewUrl.feature:14 - status code was: 503, expected: 200, response time: 306, url: https://inspire.caris.nl/server/services/ows/download/feature/amplitude-getij_IDS?request=GetCapabilities&amp;service=WFS&amp;version=2.0.0, response: 
+	at ✽.Then status 200 (checkViewUrl.feature:14)
+
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. skipped
+And def filesize =  responseHeaders['Content-Length'][0] .................. skipped
+* assert filesize &gt; 50 .................................................... skipped</failure>
+  </testcase>
+</testsuite>
