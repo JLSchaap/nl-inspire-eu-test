@@ -21,16 +21,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 13
-
-      - name: Checkout tools repo
-        uses: actions/checkout@v2
-        with:
-          repository: https://github.com/JLSchaap/nl-ngr-validation/tree/gh-pages
-          path: def
-         
-       
+     
       - name: Build with Maven
-        run: mvn --file pom.xml test
+        run: mvn --file pom.xml clean test
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: always()
