@@ -1,0 +1,13 @@
+<testsuite failures="0" name="tmp/junit17863174098671850733/TNO-Geologische-Dienst-Nederland/Oppervlaktegeologie--Geologische-kaart-onder-INSPIRE/view/Oppervlaktegeologie--Geologische-kaart-onder-INSPIRE--viewservice/checkViewUrl.feature" skipped="0" tests="1" time="0.295239">
+  <testcase classname="tmp.junit17863174098671850733.TNO-Geologische-Dienst-Nederland.Oppervlaktegeologie--Geologische-kaart-onder-INSPIRE.view.Oppervlaktegeologie--Geologische-kaart-onder-INSPIRE--viewservice.checkViewUrl" name="check view service url" time="0.295239">
+    <system-out>* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. passed
+And def filesize =  responseHeaders['Content-Length'][0] .................. passed
+* assert filesize &gt; 50 .................................................... passed</system-out>
+  </testcase>
+</testsuite>

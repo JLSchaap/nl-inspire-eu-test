@@ -1,0 +1,19 @@
+<testsuite failures="1" name="tmp/junit17863174098671850733/Interprovinciaal-Overleg/Landelijk-grondwaterregister---Faciliteiten-voor-productie-en-industrie/download/INSPIRE-Download-service-voor-Faciliteiten-voor-productie-en-industrie/checkdownloadurl.feature" skipped="0" tests="1" time="0.316063">
+  <testcase classname="tmp.junit17863174098671850733.Interprovinciaal-Overleg.Landelijk-grondwaterregister---Faciliteiten-voor-productie-en-industrie.download.INSPIRE-Download-service-voor-Faciliteiten-voor-productie-en-industrie.checkdownloadurl" name="check service url" time="0.316063">
+    <failure message="checkdownloadurl.feature:15 - status code was: 400, expected: 200, response time: 309, url: http://services.inspire-provincies.nl/ProductionAndIndustrialFacilities/services/download_PF?request=GetCapabilities, response: ">* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: checkdownloadurl.feature:15 - status code was: 400, expected: 200, response time: 309, url: http://services.inspire-provincies.nl/ProductionAndIndustrialFacilities/services/download_PF?request=GetCapabilities, response: 
+	at ✽.Then status 200 (checkdownloadurl.feature:15)
+
+And match responseHeaders['Content-Length'][0] == '#notnull' .............. skipped
+And match responseHeaders['Content-Type'][0] == 'text/xml' ................ skipped
+And def filesize =  responseHeaders['Content-Length'][0] .................. skipped
+* assert filesize &gt; 2000 .................................................. skipped</failure>
+  </testcase>
+</testsuite>

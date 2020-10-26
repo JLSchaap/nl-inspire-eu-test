@@ -1,5 +1,5 @@
-<testsuite failures="0" name="templateTests/download/checkdownloadurl.feature" skipped="0" tests="1" time="0.868557">
-  <testcase classname="templateTests.download.checkdownloadurl" name="check service url" time="0.868557">
+<testsuite failures="0" name="templateTests/download/checkdownloadurl.feature" skipped="0" tests="1" time="0.920768">
+  <testcase classname="templateTests.download.checkdownloadurl" name="check service url" time="0.920768">
     <system-out>* def metadata = read('metadata.Service.json') ............................ passed
 * print metadata .......................................................... passed
 * print "testing url:" + metadata.url ..................................... passed
