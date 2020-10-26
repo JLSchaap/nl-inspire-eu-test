@@ -3,6 +3,8 @@ package templateTests;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -24,8 +26,8 @@ import net.masterthought.cucumber.ReportBuilder;
 import org.junit.jupiter.api.io.TempDir;
 
 class TestAllTemplates {
-    @TempDir
-    File gentestdir;
+    @TempDir static  File defdir;
+    @TempDir static File gentestdir;
 
     @Test
     @Order(1)
@@ -38,25 +40,29 @@ class TestAllTemplates {
     @Test
     @Order(2)
     void Createtests() throws IOException {
-        loadtestdata();
+        loadtestdata(defdir);
         Templatedir templatepath = new Templatedir();
         File temp = new File (".");
         System.out.println("templatedir:"+ temp.getAbsolutePath());
         assertTrue(temp.exists());
         templatepath.builder(temp, ".feature");
-         DatasetList.INSTANCE.getInstance().createdirstructure(gentestdir, templatepath);
+        DatasetList.INSTANCE.getInstance().createdirstructure(gentestdir, templatepath);
+        System.out.println("templatedir:"+ gentestdir.getAbsolutePath());
         assertTrue(gentestdir.exists());
 
     }
 
-    private void loadtestdata() throws FileNotFoundException {
+    private void loadtestdata(File defdir) throws IOException {
         String root = java.lang.System.getenv("MAVEN_PROJECTBASEDIR");
-        File file = new File(root + "/def/T02_Datasets/datasets.csv");
+        URL url = new URL("https://raw.githubusercontent.com/JLSchaap/nl-ngr-validation/gh-pages/T02_Datasets/datasets.csv");
+        File file = new File(defdir+  File.separator + "datasets.csv");
+        FileUtils.copyURLToFile(url, file);
         System.out.println(file.getAbsolutePath());
-        assertTrue(file.exists());
+         assertTrue(file.exists());
         DatasetList.INSTANCE.getInstance().loadDataset(file.getAbsolutePath(), true);
-        File servicefile = new File(root + "/def/T02_Services/services.csv");
-        assertTrue(servicefile.exists());
+        URL url2 = new URL("https://raw.githubusercontent.com/JLSchaap/nl-ngr-validation/gh-pages/T02_Services/services.csv");
+        File servicefile= new File(defdir + File.separator + "services.csv");
+        FileUtils.copyURLToFile(url2, servicefile);
         System.out.println(servicefile.getAbsolutePath());
         DatasetList.INSTANCE.getInstance().loadService(servicefile.getAbsolutePath());
     }
