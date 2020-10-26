@@ -30,4 +30,4 @@ jobs:
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/surefire-reports
+          publish_dir: ./target/surefire-reports/cucumber-html-reports

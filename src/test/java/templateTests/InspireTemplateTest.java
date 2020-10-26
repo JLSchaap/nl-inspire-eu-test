@@ -87,7 +87,7 @@ class TestAllTemplates {
         System.out.println(file.getAbsolutePath());
         assertTrue(file.exists());
         DatasetList.INSTANCE.getInstance().loadDataset(file.getAbsolutePath(), true);
-        URL url2 = new URL("https://raw.githubusercontent.com/JLSchaap/nl-ngr-validation/gh-pages/T02_Services/services.csv");
+        URL url2 = new URL("https://raw.githubusercontent.com/JLSchaap/nl-ngr-validation/gh-pages/T02_Services/services-Beheer%20PDOK.csv");
         File servicefile = new File(defdir + File.separator + "services.csv");
         FileUtils.copyURLToFile(url2, servicefile);
         System.out.println(servicefile.getAbsolutePath());
