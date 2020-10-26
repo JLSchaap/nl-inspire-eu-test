@@ -1,0 +1,10 @@
+<testsuite failures="0" name="templateTests/other/checklink.feature" skipped="0" tests="1" time="0.412064">
+  <testcase classname="templateTests.other.checklink" name="check service url" time="0.412064">
+    <system-out>* def metadata = read('metadata.Service.json') ............................ passed
+* print metadata .......................................................... passed
+* print "testing url:" + metadata.url ..................................... passed
+Given url metadata.url .................................................... passed
+When method HEAD .......................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

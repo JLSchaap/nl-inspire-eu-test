@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: templateTests.TestAllTemplates
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.063 s <<< FAILURE! - in templateTests.TestAllTemplates
+templateTests.TestAllTemplates.Createtests  Time elapsed: 0.835 s  <<< ERROR!
+java.lang.NullPointerException
+	at templateTests.TestAllTemplates.Createtests(InspireTemplateTest.java:49)
+
