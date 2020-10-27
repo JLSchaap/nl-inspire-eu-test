@@ -95,7 +95,6 @@ class TestAllTemplates {
 
     }
 
-
     private void loadtestdata(File defdir) throws IOException {
 
         URL url = new URL("https://raw.githubusercontent.com/JLSchaap/nl-ngr-validation/gh-pages/T02_Datasets/datasets.csv");
@@ -110,7 +109,6 @@ class TestAllTemplates {
         System.out.println(servicefile.getAbsolutePath());
         DatasetList.INSTANCE.getInstance().loadService(servicefile.getAbsolutePath());
     }
-
 
     private static void generateReport(final String karateOutputPath) {
         final Collection<File> jsonFiles = listFiles(new File(karateOutputPath), new String[]{"json"},
