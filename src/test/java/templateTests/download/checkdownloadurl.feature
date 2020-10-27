@@ -1,4 +1,5 @@
 @Service=download
+@Test=downloadExists
 Feature:  check url for download
 
   Background:

@@ -10,6 +10,8 @@ import java.util.*;
 
 import filestructure.Templatedir;
 import metadata.DatasetList;
+import storage.DataStorage;
+
 import org.apache.commons.io.FileUtils;
 
 import org.apache.commons.io.filefilter.TrueFileFilter;
@@ -37,7 +39,12 @@ class TestAllTemplates {
     static File gentestdir;
 
     @BeforeAll
-    public static void oneTimeBeforeAll() {
+    public static void oneTimeBeforeAll() throws IOException
+    //throws IOException
+     {
+
+
+
     }    
 
     @AfterAll
@@ -48,7 +55,12 @@ class TestAllTemplates {
 
     @Test
     @Order(1)
-    void testTemplateParallel() {
+    void testTemplateParallel() throws IOException {
+        DataStorage db = new DataStorage();
+        db.writeln("test started", gentestdir+ File.separator+ "log.file");
+        System.out.println(db.outputdir());
+        db.ensureDirectory(db.outputdir());
+
         final Results results = Runner.parallel(getClass(), 1, "target/surefire-reports");
 
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
@@ -109,5 +121,7 @@ class TestAllTemplates {
         final ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
+
+    
 
 }
