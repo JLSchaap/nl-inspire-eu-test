@@ -13,7 +13,6 @@ Feature:  check url for view service
     Given url metadata.url
     When method HEAD
     Then status 200
-    And match responseHeaders['Content-Length'][0] == '#notnull'
-    And def filesize =  responseHeaders['Content-Length'][0]
-    * assert filesize > 50
+    # get capabilities type = xml 
+    And match responseHeaders['Content-Type'][0] == 'text/xml'
 

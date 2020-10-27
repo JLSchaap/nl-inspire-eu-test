@@ -15,6 +15,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +35,10 @@ class TestAllTemplates {
     static File defdir;
     @TempDir
     static File gentestdir;
+
+    @BeforeAll
+    public static void oneTimeBeforeAll() {
+    }    
 
     @AfterAll
     public static void oneTimeTearDown() {
