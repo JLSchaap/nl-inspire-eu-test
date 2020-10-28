@@ -1,4 +1,4 @@
-@Service=Download
+@Service=download
 @Test=downloadInspireValidation
 
 Feature: Service test Inspire validator
@@ -96,7 +96,7 @@ Feature: Service test Inspire validator
     * def json = get[0] response.EtfItemCollection.referencedItems.testTaskResults
     * def jsonfailedStep = $json.TestTaskResult.testModuleResults.TestModuleResult[*].testCaseResults.TestCaseResult[*].testStepResults.TestStepResult[?(@.status=='FAILED')]
     * def jsonFailedStepmessages = $jsonfailedStep[*].messages.message.ref
-    * print jsonFailedStepmessages
+    # * print jsonFailedStepmessages
     * def jsonfailedAssert = $jsonfailedStep[*].testAssertionResults.TestAssertionResult[?(@.status=='FAILED')]
     * def jsonfailedMessages = $jsonfailedAssert[*].messages.message
     * def tmpref = $jsonfailedMessages[*].ref
@@ -124,8 +124,11 @@ Feature: Service test Inspire validator
     * def db = new mystorage
     * def LocalDateTime = Java.type('java.time.LocalDateTime')
     * eval db.writeln('- Test: '+ karate.info.scenarioName+ '\n  Time: '+ LocalDateTime.now() +'\n  title: ' + metadata.title  +'\n  url: ' + metadata.url + '\n  Errors: ' +  sortedrefs  , db.outputdir()+ separator +  'Inspirevalidator.yaml')
+    * def db = db.setfeature(karate.info.featureFileName)
+    * def outfile = db.outputdir() + separator +  'Inspirevalidator.csv'
+    * db.storeInspireResults(metadata.serviceIdentifierCode, metadata.title, metadata.url, sortedrefs)
 
 
     Examples:
-      | testsuite                               | label                                                                                                   | ETFexpected                                              |
+      | testsuite                               | label                                                 | ETFexpected                                              |
       | EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93 | Conformance Class Download Service - Pre-defined Atom | read('classpath:InspireTest/ETFexpected/atomerror.json') |

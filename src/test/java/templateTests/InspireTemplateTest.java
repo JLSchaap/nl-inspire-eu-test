@@ -8,6 +8,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 
+import com.opencsv.exceptions.CsvDataTypeMismatchException;
+import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
 import filestructure.Templatedir;
 import metadata.DatasetList;
 import storage.DataStorage;
@@ -55,20 +57,26 @@ class TestAllTemplates {
 
     @Test
     @Order(1)
-    void testTemplateParallel() throws IOException {
+    void testTemplateParallel() throws IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
         DataStorage db = new DataStorage();
-        db.writeln("test started", gentestdir+ File.separator+ "log.file");
+                db.writeln("test started", gentestdir+ File.separator+ "log.file");
+        DatasetList datasetListEnumSingleton1 = DatasetList.INSTANCE.getInstance();
+
+
+
         System.out.println(db.outputdir());
         db.ensureDirectory(db.outputdir());
 
         final Results results = Runner.parallel(getClass(), 1, "target/surefire-reports");
+        String filename = db.outputdir() + File.separator + "TemplateInspireResults.csv";
+        datasetListEnumSingleton1.writeValidationCSV(filename);
 
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 
     @Test
     @Order(2)
-    void Createtests() throws IOException {
+    void Createtests() throws IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
         loadtestdata(defdir);
         Templatedir templatepath = new Templatedir();
 
@@ -91,6 +99,9 @@ class TestAllTemplates {
 
         List<String> tags = List.of("~@ignore");
         final Results results = Runner.parallel(tags, featurepaths, 4, "target/surefire-reports");
+        DataStorage db = new DataStorage();
+        String filename = db.outputdir() + File.separator + "InspireResults.csv";
+        DatasetList.INSTANCE.getInstance().writeValidationCSV(filename);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
 
     }
