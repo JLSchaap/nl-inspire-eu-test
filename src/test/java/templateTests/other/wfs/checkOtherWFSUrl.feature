@@ -1,4 +1,4 @@
-@Service=other
+@Service=Other @Protocol=WFS
 Feature:  check url for other service
 
   Background:

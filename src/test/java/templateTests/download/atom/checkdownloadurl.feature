@@ -1,4 +1,4 @@
-@Service=download
+@Service=Download @Protocol=ATOM
 Feature:  check url for download
 
   Background:

@@ -1,4 +1,4 @@
-@Service=download
+@ServiceDownload @Protocol=ATOM
 @Test=downloadInspireValidation
 
 Feature: Service test Inspire validator
@@ -10,8 +10,8 @@ Feature: Service test Inspire validator
 
 
 
-  Scenario Outline: <label> <testsuite>
-
+  Scenario Outline: <label> Inspire testsuite id: <testsuite>
+    * def resultmessage = karate.info.scenarioName + " " + karate.tagValues
     * def testRunRequest =
       """
       {
@@ -126,7 +126,7 @@ Feature: Service test Inspire validator
     * eval db.writeln('- Test: '+ karate.info.scenarioName+ '\n  Time: '+ LocalDateTime.now() +'\n  title: ' + metadata.title  +'\n  url: ' + metadata.url + '\n  Errors: ' +  sortedrefs  , db.outputdir()+ separator +  'Inspirevalidator.yaml')
     * def db = db.setfeature(karate.info.featureFileName)
     * def outfile = db.outputdir() + separator +  'Inspirevalidator.csv'
-    * db.storeInspireResults(metadata.serviceIdentifierCode, metadata.title, metadata.url, sortedrefs)
+    * db.storeInspireResults(metadata.serviceIdentifierCode, resultmessage, metadata.title, metadata.url, sortedrefs)
 
 
     Examples:

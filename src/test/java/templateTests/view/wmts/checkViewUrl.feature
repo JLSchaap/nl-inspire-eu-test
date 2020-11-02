@@ -1,5 +1,4 @@
-@Service=view
-@parallel=false
+@Service=View @Protocol=WMTS
 Feature:  check url for view service
 
   Background:
