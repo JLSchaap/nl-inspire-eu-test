@@ -1,0 +1,80 @@
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:16:46.822663
+  title: Spreiding van soorten - Invasieve Exoten (INSPIRE geharmoniseerd) ATOM V1
+  url: https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml
+  Errors: ["TR.incorrectFeedSelfReference","TR.missingElement","TR.missingElement","TR.missingElement"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:17:16.592318
+  title: CBS Bestand Bodemgebruik 2015 ATOM
+  url: https://geodata.nationaalgeoregister.nl/bestandbodemgebruik2015/atom/bestandbodemgebruik2015.xml
+  Errors: ["TR.invalidDatasetFeedLinks","TR.missingLinkToDatasetMetadataRecord","TR.missingLinkToMetadataRecordForDownloadService","TR.missingOpenSearchDescriptionDocumentLink","TR.missingSpatialDatasetIdentifierCode","TR.missingSpatialDatasetIdentifierNamespace"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:18:34.047328
+  title: Beschermde gebieden - Provincies (INSPIRE geharmoniseerd) ATOM V1
+  url: https://geodata.nationaalgeoregister.nl/provincies/ps/atom/v1/index.xml
+  Errors: ["TR.incorrectFeedSelfReference","TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:19:55.587315
+  title: Richtlijn Overstromingsrisico EU2018 ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml
+  Errors: ["TR.missingElement","TR.missingElement","TR.missingElement"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:20:00.638336
+  title: Kaderrichtlijn Mariene Strategie EU2018 ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+  Errors: ["TR.missingElement","TR.missingElement","TR.missingElement","TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:20:23.476415
+  title: Kaderrichtlijn Water EU2009 ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml
+  Errors: ["TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:20:40.956489
+  title: Kaderrichtlijn Water actueel ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
+  Errors: ["TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:20:48.858052
+  title: Kaderrichtlijn Water EU2015 ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+  Errors: ["TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:21:19.646717
+  title: Richtlijn Stedelijk Afvalwater EU2015 ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
+  Errors: ["TR.missingElement","TR.missingElement","TR.missingElement","TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:22:02.380873
+  title: Waterschappen Hydrografie INSPIRE ATOM
+  url: https://service.pdok.nl/hwh/hydrografie/atom/v1_0/index.xml
+  Errors: ["TR.missingElement","TR.missingElement","TR.missingElement","TR.missingLinkToRegistry"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:22:08.435107
+  title: INSPIRE download service PDOK
+  url: https://geodata.nationaalgeoregister.nl/atom/index.xml
+  Errors: ["TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.incorrectFeedSelfReference","TR.missingElement","TR.missingElement","TR.missingElement","TR.missingElement","TR.missingElement","TR.missingFeedRootElement","TR.missingFeedRootElement","TR.missingFeedRootElement","TR.missingFeedRootElement","TR.missingFeedUpdatedInformation","TR.missingLinkToMetadataRecordForDownloadService","TR.missingLinkToRegistry","TR.missingOneFeedEntryWithDlFile","TR.uniqueDatasetIdentifiers"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:22:32.478231
+  title: INSPIRE download service PDOK
+  url: https://geodata.nationaalgeoregister.nl/atom/index.xml
+  Errors: ["TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.fallbackInfo","TR.incorrectFeedSelfReference","TR.missingElement","TR.missingElement","TR.missingElement","TR.missingElement","TR.missingElement","TR.missingFeedRootElement","TR.missingFeedRootElement","TR.missingFeedRootElement","TR.missingFeedRootElement","TR.missingFeedUpdatedInformation","TR.missingLinkToMetadataRecordForDownloadService","TR.missingLinkToRegistry","TR.missingOneFeedEntryWithDlFile","TR.uniqueDatasetIdentifiers"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:22:32.479476
+  title: Beschermde gebieden - Provincies (INSPIRE geharmoniseerd) ATOM V1
+  url: https://geodata.nationaalgeoregister.nl/provincies/ps/atom/v1/index.xml
+  Errors: ["TR.incorrectFeedSelfReference","TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:22:33.878119
+  title: Human Health Statistics Netherlands (INSPIRE geharmoniseerd) ATOM
+  url: https://service.pdok.nl/cbs/hh/atom/v1_0/index.xml
+  Errors: ["TR.missingElement","TR.missingElement","TR.missingElement"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:26:37.647064
+  title: Beschermde gebieden - Provincies (INSPIRE geharmoniseerd) ATOM V1
+  url: https://geodata.nationaalgeoregister.nl/provincies/ps/atom/v1/index.xml
+  Errors: ["TR.incorrectFeedSelfReference","TR.missingLinkToMetadataRecordForDownloadService"]
+- Test: Conformance Class Download Service - Pre-defined Atom EID11571c92-3940-4f42-a6cd-5e2b1c6f4d93
+  Time: 2020-11-02T05:26:41.382312
+  title: Richtlijn Stedelijk Afvalwater EU2015 ATOM
+  url: https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
+  Errors: ["TR.missingElement","TR.missingElement","TR.missingElement","TR.missingLinkToMetadataRecordForDownloadService"]
