@@ -1,3 +1,4 @@
+@Ignore
 @ServiceDownload @Protocol=ATOM
 @Test=downloadInspireValidation
 

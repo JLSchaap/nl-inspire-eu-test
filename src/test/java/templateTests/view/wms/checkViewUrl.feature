@@ -18,5 +18,5 @@ Feature:  check url for view service
     Given url metadata.url
     When method HEAD
     Then status 200
-    And match responseHeaders['Content-Type'][0] == 'text/xml'
+    And match responseHeaders['Content-Type'][0] == 'text/xml; charset=UTF-8'
 

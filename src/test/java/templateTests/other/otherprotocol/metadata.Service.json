@@ -5,9 +5,9 @@
     "operatesOn": "https://www.nationaalgeoregister.nl/geonetwork/srv/dut/csw?service=CSW\u0026request=GetRecordById\u0026version=2.0.2\u0026outputSchema=http://www.isotc211.org/2005/gmd\u0026elementSetName=full\u0026id=12bb57cd-73e0-41ba-a1e9-6d986b9109d3#MD_DataIdentification",
     "organisation": "Beheer PDOK",
     "protocol": "null",
-    "serviceIdentifierCode": "f0c6fbfe-a172-4223-8af3-58f6a28c881d",
+    "serviceIdentifierCode": "8129296b-b9c1-489f-990a-df4a879e12b2",
     "serviceprotocol": "unknown",
-    "servicetype": "view",
-    "title": "Human Health Statistics Netherlands (INSPIRE geharmoniseerd) WMS",
-    "url": "https://service.pdok.nl/cbs/hh/wms/v1_0?request=GetCapabilities\u0026service=WMS"
+    "servicetype": "other",
+    "title": "Human Health Statistics Netherlands (INSPIRE geharmoniseerd) WFS",
+    "url": "https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities\u0026service=WFS"
 }

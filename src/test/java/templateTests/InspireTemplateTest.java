@@ -75,7 +75,7 @@ class TestAllTemplates {
 
      @Test
      @Order(2)
-    void Createtests() throws IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
+    void CreateAndRunTests() throws IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
         loadtestdata(defdir);
         Templatedir templatepath = new Templatedir();
 
@@ -85,7 +85,8 @@ class TestAllTemplates {
         templatepath.builder(temp, ".feature");
         File gentestdir = new File("T4") ;
 
-        DatasetList.INSTANCE.getInstance().createdirstructure(gentestdir, templatepath);
+
+        DatasetList.INSTANCE.getInstance().createdirstructure(gentestdir, templatepath, true);
         System.out.println("gentestdir:" + gentestdir.getAbsolutePath());
         assertTrue(gentestdir.exists());
         List<String> featurepaths = new ArrayList<>();
@@ -104,7 +105,7 @@ class TestAllTemplates {
         DataStorage db = new DataStorage();
         String filename = db.outputdir() + File.separator + "InspireResults.csv";
         DatasetList.INSTANCE.getInstance().writeResultsCSV(filename);
-      //  assertEquals(0, results.getFailCount(), results.getErrorMessages());
+        assertEquals(0, results.getFailCount(), results.getErrorMessages());
 
     }
 

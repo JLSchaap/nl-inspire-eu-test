@@ -20,5 +20,5 @@ Feature:  check url for download
     And match responseHeaders['Content-Length'][0] == '#notnull'
     And match responseHeaders['Content-Type'][0] == 'text/xml'
     * def filesize =  responseHeaders['Content-Length'][0]
-    * assert filesize > 2000
+    * assert filesize > 1500
 

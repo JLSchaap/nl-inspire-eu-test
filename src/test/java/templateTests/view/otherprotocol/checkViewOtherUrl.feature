@@ -13,7 +13,7 @@ Feature:  check url for other service
     Given url metadata.url
     When method HEAD
     Then status 200
-    And match responseHeaders['Content-Length'][0] == '#notnull'
-    And def filesize =  responseHeaders['Content-Length'][0]
-    * assert filesize > 50
+ #   And match responseHeaders['Content-Length'][0] == '#notnull'
+ #   And def filesize =  responseHeaders['Content-Length'][0]
+ #   * assert filesize > 50
 
