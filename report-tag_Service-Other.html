@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>16 Nov 2020, 05:18</td>
+            <td>17 Nov 2020, 05:18</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="2086972309">2.086</td>
+          <td class="duration" data-value="2190615625">2.190</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS139-other-otherprotocol-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_17.html">T4/Beheer-PDOK/Human-Health-NL-NUTS139/other/otherprotocol/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN111-other-otherprotocol-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherProtocolUrl-feature_86.html">T4/Beheer-PDOK/Invasieve-Exoten--IN111/other/otherprotocol/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -180,7 +180,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.370</span>
+  <span class="lead-duration duration">0.392</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:17:56.660 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:18:20.217 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.369</span>
+  <span class="lead-duration duration">0.391</span>
 
   </div>
 
@@ -288,506 +288,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:17:56.661 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
-
-05:17:57.030 response time in milliseconds: 368.46
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 11482
-1 &lt; Content-Type: text/xml; charset=UTF-8
-1 &lt; Date: Mon, 16 Nov 2020 05:17:56 GMT
-1 &lt; Server: lighttpd/1.4.53
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">assert filesize &gt; 50</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut176-other-otherprotocol-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_105.html">T4/Beheer-PDOK/Population-Distribut176/other/otherprotocol/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-  </div>
-
-  
-  <span class="lead-duration duration">0.551</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-5" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-6" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:17:55.201 [print] testing url:http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.002</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.547</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:17:55.204 request:
-1 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
-
-05:17:55.382 response time in milliseconds: 177.52
-1 &lt; 302
-1 &lt; Connection: Keep-Alive
-1 &lt; Content-Length: 0
-1 &lt; Location: https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
-1 &lt; Server: BigIP
-
-05:17:55.384 request:
-2 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
-2 &gt; Accept-Encoding: gzip,deflate
-2 &gt; Connection: Keep-Alive
-2 &gt; Host: service.pdok.nl
-2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
-
-05:17:55.750 response time in milliseconds: 365.84
-2 &lt; 200
-2 &lt; Access-Control-Allow-Headers: Content-Type
-2 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
-2 &lt; Access-Control-Allow-Origin: *
-2 &lt; Content-Length: 11437
-2 &lt; Content-Type: text/xml; charset=UTF-8
-2 &lt; Date: Mon, 16 Nov 2020 05:17:55 GMT
-2 &lt; Server: lighttpd/1.4.53
-2 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">assert filesize &gt; 50</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN156-other-otherprotocol-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherProtocolUrl-feature_110.html">T4/Beheer-PDOK/Invasieve-Exoten--IN156/other/otherprotocol/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherProtocolUrl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-  </div>
-
-  
-  <span class="lead-duration duration">0.388</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-9" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-10" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-11" class="collapse collapsable-details">
-        <pre>05:18:00.733 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.387</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:18:00.734 request:
+        <pre>05:18:20.217 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:18:01.121 response time in milliseconds: 386.43
+05:18:20.608 response time in milliseconds: 390.69
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -795,7 +303,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Mon, 16 Nov 2020 05:18:01 GMT
+1 &lt; Date: Tue, 17 Nov 2020 05:18:20 GMT
 1 &lt; Server: lighttpd/1.4.53
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
@@ -904,7 +412,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_templateTests-other-otherprotocol-checkOtherProtocolUrl-feature_134.html">templateTests/other/otherprotocol/checkOtherProtocolUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS157-other-otherprotocol-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_122.html">T4/Beheer-PDOK/Human-Health-NL-NUTS157/other/otherprotocol/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -912,10 +420,10 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.374</span>
+  <span class="lead-duration duration">0.373</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
     
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -928,13 +436,13 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-13" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
     
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -946,7 +454,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-14" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
@@ -964,11 +472,11 @@ $(document).ready(function() {
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
           <a>Doc string</a>
       </div>
-      <div id="msg-15" class="collapse collapsable-details">
-        <pre>05:18:12.855 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>05:17:56.106 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -1005,7 +513,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.373</span>
+  <span class="lead-duration duration">0.372</span>
 
   </div>
 
@@ -1016,25 +524,25 @@ $(document).ready(function() {
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
           <a>Doc string</a>
       </div>
-      <div id="msg-16" class="collapse collapsable-details">
-        <pre>05:18:12.856 request:
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>05:17:56.109 request:
 1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:18:13.226 response time in milliseconds: 370.26
+05:17:56.479 response time in milliseconds: 369.76
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 11482
 1 &lt; Content-Type: text/xml; charset=UTF-8
-1 &lt; Date: Mon, 16 Nov 2020 05:18:13 GMT
+1 &lt; Date: Tue, 17 Nov 2020 05:17:55 GMT
 1 &lt; Server: lighttpd/1.4.53
 1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
@@ -1143,7 +651,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_templateTests-other-wfs-checkOtherWFSUrl-feature_175.html">templateTests/other/wfs/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_templateTests-other-otherprotocol-checkOtherProtocolUrl-feature_131.html">templateTests/other/otherprotocol/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -1151,7 +659,499 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.402</span>
+  <span class="lead-duration duration">0.374</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>05:18:28.631 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.373</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>05:18:28.632 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
+
+05:18:29.002 response time in milliseconds: 369.81
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 11482
+1 &lt; Content-Type: text/xml; charset=UTF-8
+1 &lt; Date: Tue, 17 Nov 2020 05:18:28 GMT
+1 &lt; Server: lighttpd/1.4.53
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">assert filesize &gt; 50</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut154-other-otherprotocol-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_147.html">T4/Beheer-PDOK/Population-Distribut154/other/otherprotocol/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.653</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>05:17:51.636 [print] testing url:http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.650</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>05:17:51.640 request:
+1 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
+
+05:17:51.905 response time in milliseconds: 263.89
+1 &lt; 302
+1 &lt; Connection: Keep-Alive
+1 &lt; Content-Length: 0
+1 &lt; Location: https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
+1 &lt; Server: BigIP
+
+05:17:51.912 request:
+2 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: service.pdok.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
+
+05:17:52.287 response time in milliseconds: 374.70
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Content-Type
+2 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Content-Length: 11437
+2 &lt; Content-Type: text/xml; charset=UTF-8
+2 &lt; Date: Tue, 17 Nov 2020 05:17:52 GMT
+2 &lt; Server: lighttpd/1.4.53
+2 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">assert filesize &gt; 50</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_templateTests-other-wfs-checkOtherWFSUrl-feature_174.html">templateTests/other/wfs/checkOtherWFSUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.396</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
@@ -1192,7 +1192,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
   </div>
 
@@ -1207,7 +1207,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-19" class="collapse collapsable-details">
-        <pre>05:18:12.444 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:18:28.227 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -1244,7 +1244,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.401</span>
+  <span class="lead-duration duration">0.393</span>
 
   </div>
 
@@ -1259,14 +1259,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-20" class="collapse collapsable-details">
-        <pre>05:18:12.445 request:
+        <pre>05:18:28.227 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:18:12.845 response time in milliseconds: 398.29
+05:18:28.619 response time in milliseconds: 390.21
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -1274,7 +1274,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Mon, 16 Nov 2020 05:18:12 GMT
+1 &lt; Date: Tue, 17 Nov 2020 05:18:28 GMT
 1 &lt; Server: lighttpd/1.4.53
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
