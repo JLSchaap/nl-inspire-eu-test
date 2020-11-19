@@ -1,4 +1,4 @@
-@Service=Other @Protocol=Other
+@Service=Other @Protocol=Other @Test=otherServiceExists
 Feature:  check url for other service
 
   Background:
