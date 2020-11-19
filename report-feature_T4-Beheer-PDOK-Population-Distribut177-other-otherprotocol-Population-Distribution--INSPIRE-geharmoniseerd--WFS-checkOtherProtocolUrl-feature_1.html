@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>19 Nov 2020, 05:19</td>
+            <td>19 Nov 2020, 09:30</td>
     </tr>
   </tbody>
 </table>
@@ -128,18 +128,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">T4/Beheer-PDOK/Population-Distribut177/other/otherprotocol/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</td>
-                    <td      class="passed"    >9</td>
+                    <td      class="passed"    >6</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">9</td>
+          <td class="total">6</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="795589880">0.795</td>
+          <td class="duration" data-value="950650725">0.950</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -234,7 +234,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def metadata = read('metadata.Service.json')</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
   </div>
 
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:18:54.609 karate.env system property was:</pre>
+        <pre>09:29:47.045 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:18:54.611 [print] {
+        <pre>09:29:47.048 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;[beheerPDOK@kadaster.nl, beheerPDOK@kadaster.nl]&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -319,7 +319,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.793</span>
+  <span class="lead-duration duration">0.947</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -360,7 +360,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
   </div>
 
@@ -375,7 +375,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:18:54.612 [print] testing url:http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities</pre>
+        <pre>09:29:47.049 [print] testing url:http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -412,7 +412,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.791</span>
+  <span class="lead-duration duration">0.946</span>
 
   </div>
 
@@ -427,35 +427,35 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:18:54.613 request:
+        <pre>09:29:47.051 request:
 1 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:18:55.039 response time in milliseconds: 426.04
+09:29:47.541 response time in milliseconds: 489.55
 1 &lt; 302
 1 &lt; Connection: Keep-Alive
 1 &lt; Content-Length: 0
 1 &lt; Location: https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
 1 &lt; Server: BigIP
 
-05:18:55.042 request:
+09:29:47.552 request:
 2 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
 2 &gt; Accept-Encoding: gzip,deflate
 2 &gt; Connection: Keep-Alive
 2 &gt; Host: service.pdok.nl
 2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:18:55.404 response time in milliseconds: 361.16
+09:29:47.996 response time in milliseconds: 443.71
 2 &lt; 200
 2 &lt; Access-Control-Allow-Headers: Content-Type
 2 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
 2 &lt; Access-Control-Allow-Origin: *
 2 &lt; Content-Length: 11437
 2 &lt; Content-Type: text/xml; charset=UTF-8
-2 &lt; Date: Thu, 19 Nov 2020 05:18:55 GMT
+2 &lt; Date: Thu, 19 Nov 2020 09:29:47 GMT
 2 &lt; Server: lighttpd/1.4.53
 2 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
@@ -472,69 +472,6 @@ $(document).ready(function() {
 <div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">And</span>
-  <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">assert filesize &gt; 50</span>
   
   <span class="lead-duration duration">0.000</span>
 
