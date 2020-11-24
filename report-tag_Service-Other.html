@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>23 Nov 2020, 05:19</td>
+            <td>24 Nov 2020, 05:20</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">5</td>
 
-          <td class="duration" data-value="2188550365">2.188</td>
+          <td class="duration" data-value="2097965266">2.097</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS182-other-otherprotocol-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_28.html">T4/Beheer-PDOK/Human-Health-NL-NUTS182/other/otherprotocol/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut177-other-otherprotocol-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_1.html">T4/Beheer-PDOK/Population-Distribut177/other/otherprotocol/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -180,7 +180,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.374</span>
+  <span class="lead-duration duration">0.556</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:19:27.036 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:19:53.888 [print] testing url:http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.374</span>
+  <span class="lead-duration duration">0.556</span>
 
   </div>
 
@@ -288,23 +288,37 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:19:27.037 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+        <pre>05:19:53.902 request:
+1 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:19:27.410 response time in milliseconds: 373.02
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 15869
-1 &lt; Content-Type: text/xml; charset=UTF-8
-1 &lt; Date: Mon, 23 Nov 2020 05:19:27 GMT
-1 &lt; Server: lighttpd/1.4.53
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+05:19:54.073 response time in milliseconds: 170.09
+1 &lt; 302
+1 &lt; Connection: Keep-Alive
+1 &lt; Content-Length: 0
+1 &lt; Location: https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
+1 &lt; Server: BigIP
+
+05:19:54.075 request:
+2 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: service.pdok.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
+
+05:19:54.445 response time in milliseconds: 368.71
+2 &lt; 200
+2 &lt; Access-Control-Allow-Headers: Content-Type
+2 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Content-Length: 17219
+2 &lt; Content-Type: text/xml; charset=UTF-8
+2 &lt; Date: Tue, 24 Nov 2020 05:19:54 GMT
+2 &lt; Server: lighttpd/1.4.53
+2 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -348,7 +362,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_templateTests-other-wfs-checkOtherWFSUrl-feature_136.html">templateTests/other/wfs/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS187-other-otherprotocol-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_119.html">T4/Beheer-PDOK/Human-Health-NL-NUTS187/other/otherprotocol/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -356,7 +370,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.387</span>
+  <span class="lead-duration duration">0.366</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -412,7 +426,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:19:52.836 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:20:03.662 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -449,7 +463,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.387</span>
+  <span class="lead-duration duration">0.366</span>
 
   </div>
 
@@ -464,24 +478,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:19:52.837 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+        <pre>05:20:03.665 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:19:53.222 response time in milliseconds: 385.18
+05:20:04.029 response time in milliseconds: 364.09
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 73
-1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Mon, 23 Nov 2020 05:19:53 GMT
+1 &lt; Content-Length: 15869
+1 &lt; Content-Type: text/xml; charset=UTF-8
+1 &lt; Date: Tue, 24 Nov 2020 05:20:03 GMT
 1 &lt; Server: lighttpd/1.4.53
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -525,7 +538,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_templateTests-other-otherprotocol-checkOtherProtocolUrl-feature_161.html">templateTests/other/otherprotocol/checkOtherProtocolUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN111-other-otherprotocol-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherProtocolUrl-feature_122.html">T4/Beheer-PDOK/Invasieve-Exoten--IN111/other/otherprotocol/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -533,7 +546,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.370</span>
+  <span class="lead-duration duration">0.390</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
@@ -589,7 +602,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-11" class="collapse collapsable-details">
-        <pre>05:19:53.235 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:20:27.548 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -626,7 +639,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.370</span>
+  <span class="lead-duration duration">0.390</span>
 
   </div>
 
@@ -641,23 +654,24 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:19:53.236 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+        <pre>05:20:27.548 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:19:53.602 response time in milliseconds: 365.36
+05:20:27.938 response time in milliseconds: 389.41
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 15869
-1 &lt; Content-Type: text/xml; charset=UTF-8
-1 &lt; Date: Mon, 23 Nov 2020 05:19:53 GMT
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 73
+1 &lt; Content-Type: text/html; charset=UTF-8
+1 &lt; Date: Tue, 24 Nov 2020 05:20:27 GMT
 1 &lt; Server: lighttpd/1.4.53
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
@@ -701,7 +715,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN188-other-otherprotocol-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherProtocolUrl-feature_188.html">T4/Beheer-PDOK/Invasieve-Exoten--IN188/other/otherprotocol/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherProtocolUrl.feature</a>
+      <a href="report-feature_templateTests-other-wfs-checkOtherWFSUrl-feature_142.html">templateTests/other/wfs/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -709,7 +723,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.450</span>
+  <span class="lead-duration duration">0.417</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
@@ -765,7 +779,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-15" class="collapse collapsable-details">
-        <pre>05:19:38.687 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:20:34.808 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -802,7 +816,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.450</span>
+  <span class="lead-duration duration">0.417</span>
 
   </div>
 
@@ -817,14 +831,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-16" class="collapse collapsable-details">
-        <pre>05:19:38.688 request:
+        <pre>05:20:34.809 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:19:39.138 response time in milliseconds: 449.71
+05:20:35.226 response time in milliseconds: 416.44
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -832,7 +846,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Mon, 23 Nov 2020 05:19:39 GMT
+1 &lt; Date: Tue, 24 Nov 2020 05:20:35 GMT
 1 &lt; Server: lighttpd/1.4.53
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
@@ -878,7 +892,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut178-other-otherprotocol-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherProtocolUrl-feature_198.html">T4/Beheer-PDOK/Population-Distribut178/other/otherprotocol/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherProtocolUrl.feature</a>
+      <a href="report-feature_templateTests-other-otherprotocol-checkOtherProtocolUrl-feature_166.html">templateTests/other/otherprotocol/checkOtherProtocolUrl.feature</a>
     </div>
   
   
@@ -886,7 +900,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.604</span>
+  <span class="lead-duration duration">0.365</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
@@ -942,7 +956,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-19" class="collapse collapsable-details">
-        <pre>05:19:29.559 [print] testing url:http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities</pre>
+        <pre>05:20:35.235 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -979,7 +993,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.604</span>
+  <span class="lead-duration duration">0.365</span>
 
   </div>
 
@@ -994,37 +1008,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-20" class="collapse collapsable-details">
-        <pre>05:19:29.559 request:
-1 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
+        <pre>05:20:35.236 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:19:29.736 response time in milliseconds: 176.92
-1 &lt; 302
-1 &lt; Connection: Keep-Alive
-1 &lt; Content-Length: 0
-1 &lt; Location: https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
-1 &lt; Server: BigIP
-
-05:19:29.739 request:
-2 &gt; HEAD http://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities
-2 &gt; Accept-Encoding: gzip,deflate
-2 &gt; Connection: Keep-Alive
-2 &gt; Host: service.pdok.nl
-2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
-
-05:19:30.163 response time in milliseconds: 423.79
-2 &lt; 200
-2 &lt; Access-Control-Allow-Headers: Content-Type
-2 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
-2 &lt; Access-Control-Allow-Origin: *
-2 &lt; Content-Length: 17219
-2 &lt; Content-Type: text/xml; charset=UTF-8
-2 &lt; Date: Mon, 23 Nov 2020 05:19:30 GMT
-2 &lt; Server: lighttpd/1.4.53
-2 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+05:20:35.598 response time in milliseconds: 360.95
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 15869
+1 &lt; Content-Type: text/xml; charset=UTF-8
+1 &lt; Date: Tue, 24 Nov 2020 05:20:35 GMT
+1 &lt; Server: lighttpd/1.4.53
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
