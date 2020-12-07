@@ -100,9 +100,9 @@ class TestAllTemplates {
 
         List<String> tags = List.of("~@ignore");
         final Results results = Runner.parallel(tags, featurepaths, 4, "target/surefire-reports");
-        DataStorage db = new DataStorage();
-        String filename = db.outputdir() + File.separator + "InspireResults.csv";
-        DatasetList.INSTANCE.getInstance().writeResultsCSV(filename);
+      //  DataStorage db = new DataStorage();
+      //  String filename = db.outputdir() + File.separator + "InspireResults.csv";
+      //  DatasetList.INSTANCE.getInstance().writeResultsCSV(filename);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
 
     }
