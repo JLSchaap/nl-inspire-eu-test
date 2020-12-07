@@ -1,38 +1,36 @@
 package templateTests;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.*;
+import static org.apache.commons.io.FileUtils.listFiles;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
-import filestructure.Templatedir;
-import metadata.DatasetList;
-import storage.DataStorage;
 
 import org.apache.commons.io.FileUtils;
-
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
-import static org.apache.commons.io.FileUtils.listFiles;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import com.intuit.karate.Results;
-import com.intuit.karate.Runner;
-
+import filestructure.Templatedir;
+import metadata.DatasetList;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
-import org.junit.jupiter.api.io.TempDir;
+import storage.DataStorage;
 
 class TestAllTemplates {
     @TempDir
