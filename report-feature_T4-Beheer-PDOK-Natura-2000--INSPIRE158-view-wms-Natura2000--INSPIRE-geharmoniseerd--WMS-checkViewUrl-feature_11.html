@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>07 Dec 2020, 05:24</td>
+            <td>07 Dec 2020, 10:05</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">T4/Beheer-PDOK/Natura-2000--INSPIRE158/view/wms/Natura2000--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</td>
-                    <td      class="passed"    >11</td>
-          <td      class="failed"    >1</td>
+                    <td      class="passed"    >6</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">12</td>
+          <td >0</td>
+          <td class="total">6</td>
 
           <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
-          <td class="total">2</td>
+          <td >0</td>
+          <td class="total">1</td>
 
-          <td class="duration" data-value="860972063">0.860</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="588878720">0.588</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -175,7 +175,7 @@ $(document).ready(function() {
       </div>
 
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">T4/Beheer-PDOK/Natura-2000--INSPIRE158/view/wms/Natura2000--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</span>
   
@@ -193,7 +193,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.015</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -234,7 +234,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def metadata = read('metadata.Service.json')</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.011</span>
 
   </div>
 
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:24:05.454 karate.env system property was:</pre>
+        <pre>10:05:11.076 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -265,7 +265,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print metadata</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.003</span>
 
   </div>
 
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:24:05.464 [print] {
+        <pre>10:05:11.092 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;[beheerPDOK@kadaster.nl, beheerPDOK@kadaster.nl]&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.0&quot;,
@@ -321,7 +321,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.422</span>
+  <span class="lead-duration duration">0.573</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -362,7 +362,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
   </div>
 
@@ -377,7 +377,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:24:05.465 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wms?request=Getcapabilities</pre>
+        <pre>10:05:11.095 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wms?request=Getcapabilities</pre>
       </div>
     </div>
   </div>
@@ -414,7 +414,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.421</span>
+  <span class="lead-duration duration">0.570</span>
 
   </div>
 
@@ -429,14 +429,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:24:05.481 request:
+        <pre>10:05:11.107 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wms?request=Getcapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
 
-05:24:05.887 response time in milliseconds: 405.65
+10:05:11.666 response time in milliseconds: 558.03
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
@@ -444,9 +444,9 @@ $(document).ready(function() {
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Type: application/xml
-1 &lt; Date: Mon, 07 Dec 2020 05:24:05 GMT
-1 &lt; ETag: &quot;30d8-5b57b5360a200-gzip&quot;
-1 &lt; Last-Modified: Wed, 02 Dec 2020 13:36:08 GMT
+1 &lt; Date: Mon, 07 Dec 2020 10:05:11 GMT
+1 &lt; ETag: &quot;30d8-5b5db29c820c0-gzip&quot;
+1 &lt; Last-Modified: Mon, 07 Dec 2020 07:56:27 GMT
 1 &lt; Vary: Accept-Encoding
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
@@ -473,320 +473,6 @@ $(document).ready(function() {
 
         
         
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                      
-<div class="element">
-  
-  
-<div class="tags indention">
-  </div>
-
-  
-  <span class="lead-duration duration">0.002</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
-    
-<div class="brief passed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-9" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-10" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">def metadata = read('metadata.Service.json')</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-11" class="collapse collapsable-details">
-        <pre>05:24:05.454 karate.env system property was:</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print metadata</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:24:05.457 [print] {
-  &quot;class&quot;: &quot;metadata.Service&quot;,
-  &quot;electronicMailAddress&quot;: &quot;[beheerPDOK@kadaster.nl, beheerPDOK@kadaster.nl]&quot;,
-  &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.0&quot;,
-  &quot;operatesOn&quot;: &quot;http://nationaalgeoregister.nl/geonetwork/srv/en/csw?service=CSW&amp;version=2.0.2&amp;request=GetRecordById&amp;outputschema=http://www.isotc211.org/2005/gmd&amp;elementsetname=full&amp;id=280ed37a-b8d2-4ac5-8567-04d84fad3a41#MD_DataIdentification&quot;,
-  &quot;organisation&quot;: &quot;Beheer PDOK&quot;,
-  &quot;protocol&quot;: &quot;OGC:WMS&quot;,
-  &quot;serviceIdentifierCode&quot;: &quot;a7aeddf2-3b37-4668-9c75-de93d9326276&quot;,
-  &quot;serviceprotocol&quot;: &quot;wms&quot;,
-  &quot;servicetype&quot;: &quot;view&quot;,
-  &quot;title&quot;: &quot;Natura2000 (INSPIRE geharmoniseerd) WMS&quot;,
-  &quot;url&quot;: &quot;https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wms?request=Getcapabilities&quot;
-}</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                      
-<div class="element">
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-viewCheckHeaderXML.html">@Test=viewCheckHeaderXML</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.433</span>
-
-
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
-    
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check view service url has correct header</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details  in ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
-    
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.432</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details">
-        <pre>05:24:05.478 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wms?request=Getcapabilities
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.5)
-
-05:24:05.889 response time in milliseconds: 410.56
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Mon, 07 Dec 2020 05:24:05 GMT
-1 &lt; ETag: &quot;30d8-5b57b5360a200-gzip&quot;
-1 &lt; Last-Modified: Wed, 02 Dec 2020 13:36:08 GMT
-1 &lt; Vary: Accept-Encoding
-1 &lt; X-Cnection: [close, close]</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief failed">
-  <span class="keyword indention">And</span>
-  <span class="name">match responseHeaders['Content-Type'][0] == 'text/xml; charset=UTF-8'</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-16">
-          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:21 - path: $['Content-Type'][0], actual: 'application/xml', expected: 'text/xml; charset=UTF-8', reason: not equal</a>
-      </div>
-      <div id="msg-16" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:21 - path: $['Content-Type'][0], actual: 'application/xml', expected: 'text/xml; charset=UTF-8', reason: not equal</pre>
-      </div>
-    </div>
-  </div>
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-17" class="collapse collapsable-details">
-        <pre>05:24:05.891 assertion failed: path: $['Content-Type'][0], actual: 'application/xml', expected: 'text/xml; charset=UTF-8', reason: not equal</pre>
-      </div>
-    </div>
-  </div>
 
         
 
