@@ -12,13 +12,13 @@ Feature:  check url for download
     When method HEAD
     Then status 200
   
-  @Test=downloadHeaderCheck
-  Scenario:  test download header
-    Given url metadata.url
-    When method HEAD
-    Then status 200
-    And match responseHeaders['Content-Length'][0] == '#notnull'
-    And match responseHeaders['Content-Type'][0] == 'text/xml'
-    * def filesize =  responseHeaders['Content-Length'][0]
-    * assert filesize > 1500
+ # @Test=downloadHeaderCheck
+ # Scenario:  test download header
+ #   Given url metadata.url
+ #   When method HEAD
+ #   Then status 200
+ #   And match responseHeaders['Content-Length'][0] == '#notnull'
+ #   And match responseHeaders['Content-Type'][0] == 'text/xml'
+ #   * def filesize =  responseHeaders['Content-Length'][0]
+ #   * assert filesize > 1500
 
