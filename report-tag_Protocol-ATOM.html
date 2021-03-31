@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>30 Mar 2021, 05:32</td>
+            <td>31 Mar 2021, 05:30</td>
     </tr>
   </tbody>
 </table>
@@ -128,18 +128,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Protocol=ATOM</td>
-                    <td      class="passed"    >184</td>
+                    <td      class="passed"    >188</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">184</td>
+          <td class="total">188</td>
 
-          <td  class="passed"    >46</td>
+          <td  class="passed"    >47</td>
           <td >0</td>
-          <td class="total">46</td>
+          <td class="total">47</td>
 
-          <td class="duration" data-value="19814805820">19.814</td>
+          <td class="duration" data-value="20106651703">20.106</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS98-download-atom-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_4.html">T4/Beheer-PDOK/Human-Health-NL-NUTS98/download/atom/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water169-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_4.html">T4/Beheer-PDOK/Kaderrichtlijn-Water169/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -182,7 +182,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.401</span>
+  <span class="lead-duration duration">0.386</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -238,7 +238,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:32:39.275 [print] testing url:https://service.pdok.nl/cbs/hh/atom/v1_0/index.xml</pre>
+        <pre>05:30:06.566 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -275,7 +275,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.400</span>
+  <span class="lead-duration duration">0.386</span>
 
   </div>
 
@@ -290,14 +290,201 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:32:39.276 request:
+        <pre>05:30:06.567 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:30:06.952 response time in milliseconds: 385.22
+1 &lt; 200
+1 &lt; Accept-Ranges: bytes
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 7165
+1 &lt; Content-Security-Policy: block-all-mixed-content
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:06 GMT
+1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 16715647A4A7568F
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS98-download-atom-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_6.html">T4/Beheer-PDOK/Human-Health-NL-NUTS98/download/atom/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.359</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>05:30:08.985 [print] testing url:https://service.pdok.nl/cbs/hh/atom/v1_0/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.359</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>05:30:08.987 request:
 1 &gt; HEAD https://service.pdok.nl/cbs/hh/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:39.676 response time in milliseconds: 399.69
+05:30:09.345 response time in milliseconds: 357.34
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: Content-Type
@@ -305,7 +492,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 2878
 1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:39 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:09 GMT
 1 &lt; Etag: &quot;285843628&quot;
 1 &lt; Last-Modified: Mon, 29 Mar 2021 14:52:42 GMT
 1 &lt; Server: PDOK ATOM SERVER
@@ -353,7 +540,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge168-download-atom-CBS-Gebiedsindelingen-ATOM-checkdownloadurl-feature_11.html">T4/Beheer-PDOK/CBS-gebiedsindelinge168/download/atom/CBS-Gebiedsindelingen-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water176-download-atom-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_12.html">T4/Beheer-PDOK/Kaderrichtlijn-Water176/download/atom/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -363,185 +550,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.419</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-5" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-6" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.003</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:32:43.268 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.416</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:32:43.269 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
-
-05:32:43.684 response time in milliseconds: 414.65
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 2066
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:43 GMT
-1 &lt; X-Cnection: [close, close]</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Zeegebieden6-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_12.html">T4/Beheer-PDOK/Zeegebieden6/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.414</span>
+  <span class="lead-duration duration">0.405</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
@@ -582,7 +591,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.003</span>
 
   </div>
 
@@ -597,7 +606,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-11" class="collapse collapsable-details">
-        <pre>05:32:21.433 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:56.238 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -634,7 +643,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.413</span>
+  <span class="lead-duration duration">0.401</span>
 
   </div>
 
@@ -649,23 +658,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:32:21.434 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:29:56.239 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:21.847 response time in milliseconds: 412.44
+05:29:56.640 response time in milliseconds: 400.37
 1 &lt; 200
+1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
+1 &lt; Content-Length: 4238
+1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:21 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:29:56 GMT
+1 &lt; Etag: &quot;190ec01df2374bd28ca18382165364c5&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:12 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 167156453E79A8EA
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -709,7 +727,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Overstromi149-download-atom-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_23.html">T4/Beheer-PDOK/Richtlijn-Overstromi149/download/atom/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water170-download-atom-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_15.html">T4/Beheer-PDOK/Kaderrichtlijn-Water170/download/atom/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -719,7 +737,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.396</span>
+  <span class="lead-duration duration">0.381</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
@@ -775,7 +793,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-15" class="collapse collapsable-details">
-        <pre>05:32:38.170 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml</pre>
+        <pre>05:30:05.081 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -812,7 +830,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.396</span>
+  <span class="lead-duration duration">0.381</span>
 
   </div>
 
@@ -827,30 +845,30 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-16" class="collapse collapsable-details">
-        <pre>05:32:38.172 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml
+        <pre>05:30:05.082 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:38.567 response time in milliseconds: 394.14
+05:30:05.462 response time in milliseconds: 378.61
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 6245
+1 &lt; Content-Length: 4238
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:38 GMT
-1 &lt; Etag: &quot;6d63c78519914f9769e359aef346c83f&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:15 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:05 GMT
+1 &lt; Etag: &quot;190ec01df2374bd28ca18382165364c5&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:12 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D65FDFAC69
+1 &lt; X-Amz-Request-Id: 167156474C5D8972
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -896,7 +914,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Adressen159-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_31.html">T4/Beheer-PDOK/Adressen159/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut119-download-atom-Population-Distribution--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_18.html">T4/Beheer-PDOK/Population-Distribut119/download/atom/Population-Distribution--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -906,7 +924,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.394</span>
+  <span class="lead-duration duration">0.472</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
@@ -962,7 +980,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-19" class="collapse collapsable-details">
-        <pre>05:32:27.068 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:05.473 [print] testing url:https://service.pdok.nl/cbs/pd/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -999,7 +1017,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.394</span>
+  <span class="lead-duration duration">0.472</span>
 
   </div>
 
@@ -1014,23 +1032,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-20" class="collapse collapsable-details">
-        <pre>05:32:27.069 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:30:05.474 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/pd/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:27.463 response time in milliseconds: 393.05
+05:30:05.945 response time in milliseconds: 471.10
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Accept-Ranges: bytes
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:27 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Content-Length: 5362
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:05 GMT
+1 &lt; Etag: &quot;965813657&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:19 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -1074,7 +1095,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water113-download-atom-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_37.html">T4/Beheer-PDOK/Kaderrichtlijn-Water113/download/atom/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie172-download-atom-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_19.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie172/download/atom/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -1084,7 +1105,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.395</span>
+  <span class="lead-duration duration">0.492</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-21">
@@ -1125,7 +1146,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -1140,7 +1161,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-23" class="collapse collapsable-details">
-        <pre>05:32:30.240 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml</pre>
+        <pre>05:30:06.961 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -1177,7 +1198,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.394</span>
+  <span class="lead-duration duration">0.492</span>
 
   </div>
 
@@ -1192,30 +1213,30 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-24" class="collapse collapsable-details">
-        <pre>05:32:30.242 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+        <pre>05:30:06.961 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:30.636 response time in milliseconds: 391.75
+05:30:07.453 response time in milliseconds: 491.36
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 4238
+1 &lt; Content-Length: 4285
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:30 GMT
-1 &lt; Etag: &quot;190ec01df2374bd28ca18382165364c5&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:12 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:07 GMT
+1 &lt; Etag: &quot;96b8f639fabc07b32416d937713c2cff&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:05 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D487751B48
+1 &lt; X-Amz-Request-Id: 16715647BD4A3568
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -1261,7 +1282,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Hydrografie-watersch106-download-atom-Waterschappen-Hydrografie-INSPIRE-ATOM-checkdownloadurl-feature_38.html">T4/Beheer-PDOK/Hydrografie-watersch106/download/atom/Waterschappen-Hydrografie-INSPIRE-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Gebouwen--INSPIRE-ge95-download-atom-Gebouwen-Atomfeed--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_20.html">T4/Beheer-PDOK/Gebouwen--INSPIRE-ge95/download/atom/Gebouwen-Atomfeed--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -1271,7 +1292,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.399</span>
+  <span class="lead-duration duration">0.387</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
@@ -1327,7 +1348,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-27" class="collapse collapsable-details">
-        <pre>05:32:23.220 [print] testing url:https://service.pdok.nl/hwh/hydrografie/atom/v1_0/index.xml</pre>
+        <pre>05:29:52.839 [print] testing url:https://service.pdok.nl/kadaster/gebouwen/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -1364,7 +1385,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.399</span>
+  <span class="lead-duration duration">0.386</span>
 
   </div>
 
@@ -1379,24 +1400,24 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-28" class="collapse collapsable-details">
-        <pre>05:32:23.234 request:
-1 &gt; HEAD https://service.pdok.nl/hwh/hydrografie/atom/v1_0/index.xml
+        <pre>05:29:52.840 request:
+1 &gt; HEAD https://service.pdok.nl/kadaster/gebouwen/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:23.619 response time in milliseconds: 384.70
+05:29:53.224 response time in milliseconds: 383.72
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 2781
+1 &lt; Content-Length: 2807
 1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:23 GMT
-1 &lt; Etag: &quot;3332472619&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:52:41 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:53 GMT
+1 &lt; Etag: &quot;2479426819&quot;
+1 &lt; Last-Modified: Tue, 30 Mar 2021 14:10:18 GMT
 1 &lt; Server: PDOK ATOM SERVER
 1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
@@ -1442,7 +1463,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-84-download-atom-CBS-Wijken-en-Buurten-2019-versie-2-ATOM-checkdownloadurl-feature_49.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-84/download/atom/CBS-Wijken-en-Buurten-2019-versie-2-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water179-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_28.html">T4/Beheer-PDOK/Kaderrichtlijn-Water179/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -1452,7 +1473,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.412</span>
+  <span class="lead-duration duration">0.386</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-29">
@@ -1508,7 +1529,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-31" class="collapse collapsable-details">
-        <pre>05:32:24.901 [print] testing url:https://service.pdok.nl/cbs/wb2019/atom/v1_0/index.xml</pre>
+        <pre>05:29:52.567 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -1545,7 +1566,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.412</span>
+  <span class="lead-duration duration">0.385</span>
 
   </div>
 
@@ -1560,26 +1581,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-32" class="collapse collapsable-details">
-        <pre>05:32:24.907 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/wb2019/atom/v1_0/index.xml
+        <pre>05:29:52.570 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:25.314 response time in milliseconds: 406.04
+05:29:52.953 response time in milliseconds: 382.84
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 3128
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:25 GMT
-1 &lt; Etag: &quot;419922322&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:16 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 7165
+1 &lt; Content-Security-Policy: block-all-mixed-content
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:52 GMT
+1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 1671564462C775FC
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -1623,7 +1650,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN7-download-atom-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_50.html">T4/Beheer-PDOK/Invasieve-Exoten--IN7/download/atom/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Zeegebieden107-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_31.html">T4/Beheer-PDOK/Zeegebieden107/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -1633,7 +1660,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.451</span>
+  <span class="lead-duration duration">0.377</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-33">
@@ -1689,7 +1716,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-35" class="collapse collapsable-details">
-        <pre>05:32:25.345 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml</pre>
+        <pre>05:29:54.543 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -1726,7 +1753,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.451</span>
+  <span class="lead-duration duration">0.377</span>
 
   </div>
 
@@ -1741,32 +1768,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-36" class="collapse collapsable-details">
-        <pre>05:32:25.346 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml
+        <pre>05:29:54.544 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:25.796 response time in milliseconds: 450.35
+05:29:54.921 response time in milliseconds: 376.46
 1 &lt; 200
-1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 2792
-1 &lt; Content-Security-Policy: block-all-mixed-content
+1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:25 GMT
-1 &lt; Etag: &quot;732757a9b312b1832f0b156a3a01950e&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:04 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D364C7432D
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:29:54 GMT
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
@@ -1810,7 +1828,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie70-download-atom-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_62.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie70/download/atom/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Vaarweg-Informatie-N192-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_34.html">T4/Beheer-PDOK/Vaarweg-Informatie-N192/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -1820,7 +1838,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.448</span>
+  <span class="lead-duration duration">0.450</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-37">
@@ -1861,7 +1879,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -1876,7 +1894,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-39" class="collapse collapsable-details">
-        <pre>05:32:32.752 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml</pre>
+        <pre>05:29:57.255 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -1913,7 +1931,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.447</span>
+  <span class="lead-duration duration">0.450</span>
 
   </div>
 
@@ -1928,32 +1946,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-40" class="collapse collapsable-details">
-        <pre>05:32:32.754 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+        <pre>05:29:57.261 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:33.199 response time in milliseconds: 444.54
+05:29:57.706 response time in milliseconds: 444.33
 1 &lt; 200
-1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 4285
-1 &lt; Content-Security-Policy: block-all-mixed-content
+1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:33 GMT
-1 &lt; Etag: &quot;96b8f639fabc07b32416d937713c2cff&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:05 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D5201BE53C
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:29:57 GMT
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
@@ -1997,7 +2006,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_templateTests-download-atom-checkdownloadurl-feature_65.html">templateTests/download/atom/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-62-download-atom-CBS-Wijken-en-Buurten-2020-versie-1-ATOM-checkdownloadurl-feature_35.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-62/download/atom/CBS-Wijken-en-Buurten-2020-versie-1-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -2007,7 +2016,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.399</span>
+  <span class="lead-duration duration">0.387</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-41">
@@ -2063,7 +2072,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-43" class="collapse collapsable-details">
-        <pre>05:32:47.549 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml</pre>
+        <pre>05:29:51.209 [print] testing url:https://service.pdok.nl/cbs/wb2020/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -2100,7 +2109,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.398</span>
+  <span class="lead-duration duration">0.386</span>
 
   </div>
 
@@ -2115,32 +2124,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-44" class="collapse collapsable-details">
-        <pre>05:32:47.550 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml
+        <pre>05:29:51.211 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/wb2020/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:47.947 response time in milliseconds: 396.27
+05:29:51.596 response time in milliseconds: 383.91
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 2792
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:47 GMT
-1 &lt; Etag: &quot;732757a9b312b1832f0b156a3a01950e&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:04 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D88F4315A9
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
+1 &lt; Content-Length: 3129
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:51 GMT
+1 &lt; Etag: &quot;3494560430&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:48 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -2184,7 +2187,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-151-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_66.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-151/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kadastrale-Percelen-102-download-atom-Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_40.html">T4/Beheer-PDOK/Kadastrale-Percelen-102/download/atom/Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -2194,7 +2197,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.439</span>
+  <span class="lead-duration duration">0.361</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-45">
@@ -2250,7 +2253,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-47" class="collapse collapsable-details">
-        <pre>05:32:33.629 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml</pre>
+        <pre>05:30:00.408 [print] testing url:https://service.pdok.nl/kadaster/cp/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -2287,7 +2290,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.439</span>
+  <span class="lead-duration duration">0.361</span>
 
   </div>
 
@@ -2302,32 +2305,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-48" class="collapse collapsable-details">
-        <pre>05:32:33.630 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
+        <pre>05:30:00.408 request:
+1 &gt; HEAD https://service.pdok.nl/kadaster/cp/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:34.069 response time in milliseconds: 438.62
+05:30:00.769 response time in milliseconds: 360.10
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 5578
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:34 GMT
-1 &lt; Etag: &quot;79424616aacdc0d03ca3bb9e100d84ec&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:16 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D553D8FD8B
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
+1 &lt; Content-Length: 2891
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:00 GMT
+1 &lt; Etag: &quot;2582757416&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:50:21 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -2371,7 +2368,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-89-download-atom-CBS-Wijken-en-Buurten-2018-versie-3-ATOM-checkdownloadurl-feature_67.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-89/download/atom/CBS-Wijken-en-Buurten-2018-versie-3-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-191-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_43.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-191/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -2381,7 +2378,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.367</span>
+  <span class="lead-duration duration">0.471</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-49">
@@ -2437,7 +2434,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-51" class="collapse collapsable-details">
-        <pre>05:32:27.342 [print] testing url:https://service.pdok.nl/cbs/wb2018/atom/v1_0/index.xml</pre>
+        <pre>05:30:01.793 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -2474,7 +2471,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.366</span>
+  <span class="lead-duration duration">0.471</span>
 
   </div>
 
@@ -2489,26 +2486,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-52" class="collapse collapsable-details">
-        <pre>05:32:27.344 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/wb2018/atom/v1_0/index.xml
+        <pre>05:30:01.794 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:27.709 response time in milliseconds: 364.58
+05:30:02.265 response time in milliseconds: 470.71
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 3103
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:27 GMT
-1 &lt; Etag: &quot;295740818&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:50:21 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 5578
+1 &lt; Content-Security-Policy: block-all-mixed-content
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:02 GMT
+1 &lt; Etag: &quot;79424616aacdc0d03ca3bb9e100d84ec&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:16 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 167156468DA98851
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -2552,7 +2555,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water40-download-atom-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_68.html">T4/Beheer-PDOK/Kaderrichtlijn-Water40/download/atom/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-187-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_57.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-187/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -2562,7 +2565,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.419</span>
+  <span class="lead-duration duration">0.388</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-53">
@@ -2618,7 +2621,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-55" class="collapse collapsable-details">
-        <pre>05:32:41.567 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml</pre>
+        <pre>05:29:59.163 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -2655,7 +2658,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.419</span>
+  <span class="lead-duration duration">0.387</span>
 
   </div>
 
@@ -2670,30 +2673,30 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-56" class="collapse collapsable-details">
-        <pre>05:32:41.568 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml
+        <pre>05:29:59.166 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:41.986 response time in milliseconds: 418.17
+05:29:59.551 response time in milliseconds: 384.04
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 4277
+1 &lt; Content-Length: 5578
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:41 GMT
-1 &lt; Etag: &quot;b48778f18bc107438f41654067b10f3f&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:08 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:59 GMT
+1 &lt; Etag: &quot;79424616aacdc0d03ca3bb9e100d84ec&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:16 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D72BF5B8CF
+1 &lt; X-Amz-Request-Id: 16715645EBFB9E50
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -2739,7 +2742,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-74-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_77.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-74/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Ruimtelijke-plannen-117-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_64.html">T4/Beheer-PDOK/Ruimtelijke-plannen-117/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -2749,7 +2752,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.421</span>
+  <span class="lead-duration duration">0.375</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-57">
@@ -2805,7 +2808,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-59" class="collapse collapsable-details">
-        <pre>05:32:40.081 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml</pre>
+        <pre>05:30:08.602 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -2842,7 +2845,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.421</span>
+  <span class="lead-duration duration">0.375</span>
 
   </div>
 
@@ -2857,30 +2860,208 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-60" class="collapse collapsable-details">
-        <pre>05:32:40.082 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
+        <pre>05:30:08.604 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:40.503 response time in milliseconds: 420.88
+05:30:08.978 response time in milliseconds: 373.43
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:08 GMT
+1 &lt; X-Cnection: [close, close]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_templateTests-download-atom-checkdownloadurl-feature_74.html">templateTests/download/atom/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.493</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-61">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-61" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-62">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-62" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>05:30:14.461 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.492</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-64">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-64" class="collapse collapsable-details">
+        <pre>05:30:14.462 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:30:14.953 response time in milliseconds: 490.10
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 5578
+1 &lt; Content-Length: 2792
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:40 GMT
-1 &lt; Etag: &quot;79424616aacdc0d03ca3bb9e100d84ec&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:16 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:14 GMT
+1 &lt; Etag: &quot;732757a9b312b1832f0b156a3a01950e&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:04 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D6D218E9C0
+1 &lt; X-Amz-Request-Id: 167156498197012C
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -2926,7 +3107,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Ruimtelijke-plannen-125-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_84.html">T4/Beheer-PDOK/Ruimtelijke-plannen-125/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water178-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_78.html">T4/Beheer-PDOK/Kaderrichtlijn-Water178/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -2936,185 +3117,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.414</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-61">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-61" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-62">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-62" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.008</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-63" class="collapse collapsable-details">
-        <pre>05:32:22.591 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.405</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-64">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-64" class="collapse collapsable-details">
-        <pre>05:32:22.592 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
-
-05:32:22.996 response time in milliseconds: 403.71
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:22 GMT
-1 &lt; X-Cnection: [close, close]</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Bodemgebruik10-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_96.html">T4/Beheer-PDOK/Bodemgebruik10/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.395</span>
+  <span class="lead-duration duration">0.603</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-65">
@@ -3170,7 +3173,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-67" class="collapse collapsable-details">
-        <pre>05:32:35.579 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:05.957 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -3207,7 +3210,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.394</span>
+  <span class="lead-duration duration">0.603</span>
 
   </div>
 
@@ -3222,23 +3225,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-68" class="collapse collapsable-details">
-        <pre>05:32:35.580 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:30:05.967 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:35.974 response time in milliseconds: 393.91
+05:30:06.560 response time in milliseconds: 592.40
 1 &lt; 200
+1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
+1 &lt; Content-Length: 7165
+1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:35 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:30:06 GMT
+1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 16715647880F21BA
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -3282,7 +3294,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Weggegevens--WEGGEG-188-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_97.html">T4/Beheer-PDOK/Weggegevens--WEGGEG-188/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-60-download-atom-CBS-Wijken-en-Buurten-2019-versie-2-ATOM-checkdownloadurl-feature_81.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-60/download/atom/CBS-Wijken-en-Buurten-2019-versie-2-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -3292,7 +3304,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.412</span>
+  <span class="lead-duration duration">0.414</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-69">
@@ -3348,7 +3360,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-71" class="collapse collapsable-details">
-        <pre>05:32:21.329 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:05.961 [print] testing url:https://service.pdok.nl/cbs/wb2019/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -3385,7 +3397,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.411</span>
+  <span class="lead-duration duration">0.414</span>
 
   </div>
 
@@ -3400,23 +3412,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-72" class="collapse collapsable-details">
-        <pre>05:32:21.331 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:30:05.962 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/wb2019/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:21.741 response time in milliseconds: 410.05
+05:30:06.376 response time in milliseconds: 413.29
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Accept-Ranges: bytes
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:21 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Content-Length: 3128
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:06 GMT
+1 &lt; Etag: &quot;419922322&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:16 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -3460,7 +3475,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Overheidsdiensten42-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_101.html">T4/Beheer-PDOK/Overheidsdiensten42/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Overheidsdiensten74-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_99.html">T4/Beheer-PDOK/Overheidsdiensten74/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -3470,7 +3485,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.387</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-73">
@@ -3526,7 +3541,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-75" class="collapse collapsable-details">
-        <pre>05:32:39.168 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:50.791 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -3563,7 +3578,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.386</span>
 
   </div>
 
@@ -3578,14 +3593,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-76" class="collapse collapsable-details">
-        <pre>05:32:39.175 request:
+        <pre>05:29:50.797 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:39.577 response time in milliseconds: 402.18
+05:29:51.183 response time in milliseconds: 385.09
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -3593,7 +3608,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:39 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:50 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -3638,7 +3653,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan143-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_102.html">T4/Beheer-PDOK/Actueel-Hoogtebestan143/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan150-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_108.html">T4/Beheer-PDOK/Actueel-Hoogtebestan150/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -3648,7 +3663,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.382</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-77">
@@ -3704,7 +3719,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-79" class="collapse collapsable-details">
-        <pre>05:32:23.469 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:53.259 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -3741,7 +3756,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.381</span>
 
   </div>
 
@@ -3756,14 +3771,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-80" class="collapse collapsable-details">
-        <pre>05:32:23.470 request:
+        <pre>05:29:53.261 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:23.878 response time in milliseconds: 407.88
+05:29:53.641 response time in milliseconds: 380.18
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -3771,7 +3786,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:23 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:53 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -3816,7 +3831,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water140-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_106.html">T4/Beheer-PDOK/Kaderrichtlijn-Water140/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie171-download-atom-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_109.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie171/download/atom/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -3826,7 +3841,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.410</span>
+  <span class="lead-duration duration">0.455</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-81">
@@ -3882,7 +3897,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-83" class="collapse collapsable-details">
-        <pre>05:32:34.954 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
+        <pre>05:29:58.700 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -3919,7 +3934,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.410</span>
+  <span class="lead-duration duration">0.454</span>
 
   </div>
 
@@ -3934,30 +3949,30 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-84" class="collapse collapsable-details">
-        <pre>05:32:34.955 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
+        <pre>05:29:58.701 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:35.364 response time in milliseconds: 408.99
+05:29:59.155 response time in milliseconds: 453.67
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 7165
+1 &lt; Content-Length: 4285
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:35 GMT
-1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:59 GMT
+1 &lt; Etag: &quot;96b8f639fabc07b32416d937713c2cff&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:05 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D5A1332C7B
+1 &lt; X-Amz-Request-Id: 16715645D456E1D5
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -4003,7 +4018,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik170-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_109.html">T4/Beheer-PDOK/Bestand-Bodemgebruik170/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-NWB---Wegen188-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_121.html">T4/Beheer-PDOK/NWB---Wegen188/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -4013,7 +4028,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.391</span>
+  <span class="lead-duration duration">0.375</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-85">
@@ -4069,7 +4084,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-87" class="collapse collapsable-details">
-        <pre>05:32:31.922 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:02.700 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -4106,7 +4121,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.391</span>
+  <span class="lead-duration duration">0.375</span>
 
   </div>
 
@@ -4121,14 +4136,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-88" class="collapse collapsable-details">
-        <pre>05:32:31.923 request:
+        <pre>05:30:02.700 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:32.313 response time in milliseconds: 389.65
+05:30:03.074 response time in milliseconds: 372.84
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -4136,7 +4151,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:31 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:03 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -4181,7 +4196,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Nationaal-Hydrologis85-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_111.html">T4/Beheer-PDOK/Nationaal-Hydrologis85/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti83-download-atom-CBS-Vierkantstatistieken-100m-ATOM-checkdownloadurl-feature_125.html">T4/Beheer-PDOK/CBS-Vierkantstatisti83/download/atom/CBS-Vierkantstatistieken-100m-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -4191,7 +4206,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.400</span>
+  <span class="lead-duration duration">0.368</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-89">
@@ -4232,7 +4247,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.002</span>
 
   </div>
 
@@ -4247,7 +4262,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-91" class="collapse collapsable-details">
-        <pre>05:32:44.687 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:09.577 [print] testing url:https://service.pdok.nl/cbs/vk100/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -4284,7 +4299,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.400</span>
+  <span class="lead-duration duration">0.366</span>
 
   </div>
 
@@ -4299,14 +4314,195 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-92" class="collapse collapsable-details">
-        <pre>05:32:44.691 request:
+        <pre>05:30:09.579 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/vk100/atom/v1_0/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:30:09.943 response time in milliseconds: 363.92
+1 &lt; 200
+1 &lt; Accept-Ranges: bytes
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 11102
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:09 GMT
+1 &lt; Etag: &quot;3394464363&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:50:22 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-TOP10NL100-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_129.html">T4/Beheer-PDOK/TOP10NL100/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.378</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-93">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-93" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-94">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-94" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-95">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-95" class="collapse collapsable-details">
+        <pre>05:30:10.946 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.378</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-96">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-96" class="collapse collapsable-details">
+        <pre>05:30:10.946 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:45.087 response time in milliseconds: 396.32
+05:30:11.324 response time in milliseconds: 377.55
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -4314,7 +4510,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:44 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:11 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -4359,7 +4555,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-24-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_126.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-24/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-INSPIRE-geharmonisee82-download-atom-INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM-checkdownloadurl-feature_135.html">T4/Beheer-PDOK/INSPIRE-geharmonisee82/download/atom/INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -4369,194 +4565,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.395</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-93">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-93" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-94">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-94" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-95">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-95" class="collapse collapsable-details">
-        <pre>05:32:41.150 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.393</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-96">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-96" class="collapse collapsable-details">
-        <pre>05:32:41.151 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
-
-05:32:41.545 response time in milliseconds: 393.04
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 5578
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:41 GMT
-1 &lt; Etag: &quot;79424616aacdc0d03ca3bb9e100d84ec&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:16 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D711AF450B
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Overstromi46-download-atom-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_127.html">T4/Beheer-PDOK/Richtlijn-Overstromi46/download/atom/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.405</span>
+  <span class="lead-duration duration">0.362</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-97">
@@ -4612,7 +4621,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-99" class="collapse collapsable-details">
-        <pre>05:32:35.989 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml</pre>
+        <pre>05:29:56.507 [print] testing url:https://service.pdok.nl/rce/ps-ch/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -4649,7 +4658,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.405</span>
+  <span class="lead-duration duration">0.361</span>
 
   </div>
 
@@ -4664,32 +4673,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-100" class="collapse collapsable-details">
-        <pre>05:32:35.990 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml
+        <pre>05:29:56.508 request:
+1 &gt; HEAD https://service.pdok.nl/rce/ps-ch/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:36.394 response time in milliseconds: 404.09
+05:29:56.868 response time in milliseconds: 358.84
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 6245
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:36 GMT
-1 &lt; Etag: &quot;6d63c78519914f9769e359aef346c83f&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:15 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D5DECA17D8
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
+1 &lt; Content-Length: 2993
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:56 GMT
+1 &lt; Etag: &quot;3646145363&quot;
+1 &lt; Last-Modified: Wed, 31 Mar 2021 05:05:21 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -4733,7 +4736,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken139-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_128.html">T4/Beheer-PDOK/Vervoersnetwerken139/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN86-download-atom-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_139.html">T4/Beheer-PDOK/Invasieve-Exoten--IN86/download/atom/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a>
     </div>
   
   
@@ -4743,7 +4746,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.396</span>
+  <span class="lead-duration duration">0.497</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-101">
@@ -4799,7 +4802,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-103" class="collapse collapsable-details">
-        <pre>05:32:29.880 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:59.556 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -4836,7 +4839,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.396</span>
+  <span class="lead-duration duration">0.497</span>
 
   </div>
 
@@ -4851,23 +4854,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-104" class="collapse collapsable-details">
-        <pre>05:32:29.881 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:29:59.557 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:30.277 response time in milliseconds: 395.32
+05:30:00.053 response time in milliseconds: 496.53
 1 &lt; 200
+1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
+1 &lt; Content-Length: 2792
+1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:29 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:29:59 GMT
+1 &lt; Etag: &quot;732757a9b312b1832f0b156a3a01950e&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:04 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 1671564607E43996
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -4911,7 +4923,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-NWB---Wegen190-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_131.html">T4/Beheer-PDOK/NWB---Wegen190/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken104-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_140.html">T4/Beheer-PDOK/Vervoersnetwerken104/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -4921,7 +4933,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.400</span>
+  <span class="lead-duration duration">0.398</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-105">
@@ -4977,7 +4989,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-107" class="collapse collapsable-details">
-        <pre>05:32:43.691 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:04.723 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -5014,7 +5026,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.400</span>
+  <span class="lead-duration duration">0.398</span>
 
   </div>
 
@@ -5029,14 +5041,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-108" class="collapse collapsable-details">
-        <pre>05:32:43.692 request:
+        <pre>05:30:04.724 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:44.092 response time in milliseconds: 399.70
+05:30:05.121 response time in milliseconds: 397.64
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -5044,7 +5056,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:44 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:04 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -5089,7 +5101,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Nationale-Parken77-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_133.html">T4/Beheer-PDOK/Nationale-Parken77/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Overstromi189-download-atom-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_141.html">T4/Beheer-PDOK/Richtlijn-Overstromi189/download/atom/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -5099,7 +5111,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.429</span>
+  <span class="lead-duration duration">0.506</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-109">
@@ -5155,7 +5167,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-111" class="collapse collapsable-details">
-        <pre>05:32:34.647 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:54.949 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -5192,7 +5204,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.428</span>
+  <span class="lead-duration duration">0.505</span>
 
   </div>
 
@@ -5207,23 +5219,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-112" class="collapse collapsable-details">
-        <pre>05:32:34.648 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:29:54.950 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:35.076 response time in milliseconds: 427.81
+05:29:55.455 response time in milliseconds: 504.70
 1 &lt; 200
+1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
+1 &lt; Content-Length: 6245
+1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:35 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:29:55 GMT
+1 &lt; Etag: &quot;6d63c78519914f9769e359aef346c83f&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:15 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 16715644F7DA82E8
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -5267,7 +5288,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-INSPIRE-geharmonisee154-download-atom-INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM-checkdownloadurl-feature_150.html">T4/Beheer-PDOK/INSPIRE-geharmonisee154/download/atom/INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik109-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_143.html">T4/Beheer-PDOK/Bestand-Bodemgebruik109/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -5277,7 +5298,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.523</span>
+  <span class="lead-duration duration">0.369</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-113">
@@ -5318,7 +5339,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -5333,7 +5354,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-115" class="collapse collapsable-details">
-        <pre>05:32:30.823 [print] testing url:https://service.pdok.nl/rce/ps-ch/atom/v1_0/index.xml</pre>
+        <pre>05:30:11.141 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -5370,7 +5391,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.520</span>
+  <span class="lead-duration duration">0.369</span>
 
   </div>
 
@@ -5385,195 +5406,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-116" class="collapse collapsable-details">
-        <pre>05:32:30.826 request:
-1 &gt; HEAD https://service.pdok.nl/rce/ps-ch/atom/v1_0/index.xml
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
-
-05:32:31.344 response time in milliseconds: 517.20
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 2993
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:31 GMT
-1 &lt; Etag: &quot;3178109954&quot;
-1 &lt; Last-Modified: Tue, 30 Mar 2021 05:05:29 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Geografische-Namen33-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_151.html">T4/Beheer-PDOK/Geografische-Namen33/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.402</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-117">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-117" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-118">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-118" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-119">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-119" class="collapse collapsable-details">
-        <pre>05:32:37.592 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.402</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-120">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-120" class="collapse collapsable-details">
-        <pre>05:32:37.592 request:
+        <pre>05:30:11.141 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:37.994 response time in milliseconds: 401.64
+05:30:11.510 response time in milliseconds: 368.61
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -5581,7 +5421,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:37 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:11 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -5626,7 +5466,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kadastrale-Percelen-155-download-atom-Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_152.html">T4/Beheer-PDOK/Kadastrale-Percelen-155/download/atom/Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Nationale-Parken81-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_147.html">T4/Beheer-PDOK/Nationale-Parken81/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -5636,7 +5476,185 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.377</span>
+  <span class="lead-duration duration">0.384</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-117">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-117" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-118">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-118" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-119">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-119" class="collapse collapsable-details">
+        <pre>05:29:51.618 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.381</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-120">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-120" class="collapse collapsable-details">
+        <pre>05:29:51.619 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:29:51.999 response time in milliseconds: 380.22
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:51 GMT
+1 &lt; X-Cnection: [close, close]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Geografische-Namen142-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_148.html">T4/Beheer-PDOK/Geografische-Namen142/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.390</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-121">
@@ -5692,7 +5710,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-123" class="collapse collapsable-details">
-        <pre>05:32:39.694 [print] testing url:https://service.pdok.nl/kadaster/cp/atom/v1_0/index.xml</pre>
+        <pre>05:30:03.114 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -5729,7 +5747,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.377</span>
+  <span class="lead-duration duration">0.389</span>
 
   </div>
 
@@ -5744,26 +5762,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-124" class="collapse collapsable-details">
-        <pre>05:32:39.695 request:
-1 &gt; HEAD https://service.pdok.nl/kadaster/cp/atom/v1_0/index.xml
+        <pre>05:30:03.114 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:40.072 response time in milliseconds: 376.01
+05:30:03.503 response time in milliseconds: 389.11
 1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 2891
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:40 GMT
-1 &lt; Etag: &quot;2582757416&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:50:21 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:03 GMT
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
@@ -5807,7 +5822,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Vaarweg-Informatie-N29-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_156.html">T4/Beheer-PDOK/Vaarweg-Informatie-N29/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-41-download-atom-CBS-Wijken-en-Buurten-2018-versie-3-ATOM-checkdownloadurl-feature_150.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-41/download/atom/CBS-Wijken-en-Buurten-2018-versie-3-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -5817,7 +5832,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.368</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-125">
@@ -5873,7 +5888,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-127" class="collapse collapsable-details">
-        <pre>05:32:33.397 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:11.855 [print] testing url:https://service.pdok.nl/cbs/wb2018/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -5910,7 +5925,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.368</span>
 
   </div>
 
@@ -5925,23 +5940,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-128" class="collapse collapsable-details">
-        <pre>05:32:33.398 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:30:11.859 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/wb2018/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:33.806 response time in milliseconds: 408.40
+05:30:12.224 response time in milliseconds: 365.12
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Accept-Ranges: bytes
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:33 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Content-Length: 3103
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:12 GMT
+1 &lt; Etag: &quot;295740818&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:50:21 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -5985,7 +6003,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water162-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_158.html">T4/Beheer-PDOK/Kaderrichtlijn-Water162/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water174-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_153.html">T4/Beheer-PDOK/Kaderrichtlijn-Water174/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -5995,7 +6013,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.608</span>
+  <span class="lead-duration duration">1.115</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-129">
@@ -6036,7 +6054,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -6051,7 +6069,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-131" class="collapse collapsable-details">
-        <pre>05:32:32.988 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
+        <pre>05:30:00.775 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -6088,7 +6106,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.607</span>
+  <span class="lead-duration duration">1.115</span>
 
   </div>
 
@@ -6103,14 +6121,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-132" class="collapse collapsable-details">
-        <pre>05:32:32.990 request:
+        <pre>05:30:00.776 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:33.595 response time in milliseconds: 604.51
+05:30:01.891 response time in milliseconds: 1114.78
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
@@ -6120,13 +6138,13 @@ $(document).ready(function() {
 1 &lt; Content-Length: 7165
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:33 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:01 GMT
 1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
 1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D531FF7712
+1 &lt; X-Amz-Request-Id: 167156464BD7150D
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -6172,7 +6190,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water172-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_160.html">T4/Beheer-PDOK/Kaderrichtlijn-Water172/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water166-download-atom-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_157.html">T4/Beheer-PDOK/Kaderrichtlijn-Water166/download/atom/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -6182,7 +6200,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.761</span>
+  <span class="lead-duration duration">0.384</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-133">
@@ -6223,7 +6241,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.031</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -6238,7 +6256,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-135" class="collapse collapsable-details">
-        <pre>05:32:20.069 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
+        <pre>05:29:57.741 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -6275,7 +6293,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.729</span>
+  <span class="lead-duration duration">0.384</span>
 
   </div>
 
@@ -6290,30 +6308,30 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-136" class="collapse collapsable-details">
-        <pre>05:32:20.176 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
+        <pre>05:29:57.742 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:20.802 response time in milliseconds: 625.31
+05:29:58.125 response time in milliseconds: 382.67
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 7165
+1 &lt; Content-Length: 4277
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:20 GMT
-1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:58 GMT
+1 &lt; Etag: &quot;b48778f18bc107438f41654067b10f3f&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:08 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D23A64CBE8
+1 &lt; X-Amz-Request-Id: 16715645972DBE40
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -6359,7 +6377,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water93-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_162.html">T4/Beheer-PDOK/Kaderrichtlijn-Water93/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti59-download-atom-CBS-Vierkantstatistieken-500m-ATOM-checkdownloadurl-feature_158.html">T4/Beheer-PDOK/CBS-Vierkantstatisti59/download/atom/CBS-Vierkantstatistieken-500m-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -6369,7 +6387,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.446</span>
+  <span class="lead-duration duration">0.379</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-137">
@@ -6425,7 +6443,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-139" class="collapse collapsable-details">
-        <pre>05:32:42.949 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml</pre>
+        <pre>05:29:55.476 [print] testing url:https://service.pdok.nl/cbs/vk500/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -6462,7 +6480,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.446</span>
+  <span class="lead-duration duration">0.379</span>
 
   </div>
 
@@ -6477,32 +6495,26 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-140" class="collapse collapsable-details">
-        <pre>05:32:42.950 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwateractueel/atom/v1_0/index.xml
+        <pre>05:29:55.478 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/vk500/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:43.395 response time in milliseconds: 445.33
+05:29:55.855 response time in milliseconds: 376.98
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 7165
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:43 GMT
-1 &lt; Etag: &quot;95fe3a134558dffcb33c36a0e7c62656&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:14 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D77D269031
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
+1 &lt; Content-Length: 11102
+1 &lt; Content-Type: application/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:55 GMT
+1 &lt; Etag: &quot;206410433&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:46 GMT
+1 &lt; Server: PDOK ATOM SERVER
+1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -6546,7 +6558,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-TOP10NL163-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_170.html">T4/Beheer-PDOK/TOP10NL163/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Adressen101-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_165.html">T4/Beheer-PDOK/Adressen101/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -6556,7 +6568,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.374</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-141">
@@ -6612,7 +6624,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-143" class="collapse collapsable-details">
-        <pre>05:32:29.551 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:30:11.472 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -6649,7 +6661,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.409</span>
+  <span class="lead-duration duration">0.374</span>
 
   </div>
 
@@ -6664,14 +6676,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-144" class="collapse collapsable-details">
-        <pre>05:32:29.552 request:
+        <pre>05:30:11.472 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:29.960 response time in milliseconds: 407.98
+05:30:11.846 response time in milliseconds: 373.76
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -6679,7 +6691,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:29 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:11 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -6724,7 +6736,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut146-download-atom-Population-Distribution--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_175.html">T4/Beheer-PDOK/Population-Distribut146/download/atom/Population-Distribution--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-NWB---Vaarwegen--Nat181-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_166.html">T4/Beheer-PDOK/NWB---Vaarwegen--Nat181/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -6734,7 +6746,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.391</span>
+  <span class="lead-duration duration">0.394</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-145">
@@ -6790,7 +6802,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-147" class="collapse collapsable-details">
-        <pre>05:32:44.287 [print] testing url:https://service.pdok.nl/cbs/pd/atom/v1_0/index.xml</pre>
+        <pre>05:29:52.909 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -6827,7 +6839,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.391</span>
+  <span class="lead-duration duration">0.394</span>
 
   </div>
 
@@ -6842,26 +6854,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-148" class="collapse collapsable-details">
-        <pre>05:32:44.288 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/pd/atom/v1_0/index.xml
+        <pre>05:29:52.910 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:44.678 response time in milliseconds: 389.82
+05:29:53.303 response time in milliseconds: 392.93
 1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 5362
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:44 GMT
-1 &lt; Etag: &quot;965813657&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:19 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:53 GMT
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
@@ -6905,7 +6914,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti92-download-atom-CBS-Vierkantstatistieken-500m-ATOM-checkdownloadurl-feature_178.html">T4/Beheer-PDOK/CBS-Vierkantstatisti92/download/atom/CBS-Vierkantstatistieken-500m-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge202-download-atom-CBS-Gebiedsindelingen-ATOM-checkdownloadurl-feature_175.html">T4/Beheer-PDOK/CBS-gebiedsindelinge202/download/atom/CBS-Gebiedsindelingen-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -6915,7 +6924,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.413</span>
+  <span class="lead-duration duration">0.406</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-149">
@@ -6971,7 +6980,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-151" class="collapse collapsable-details">
-        <pre>05:32:23.633 [print] testing url:https://service.pdok.nl/cbs/vk500/atom/v1_0/index.xml</pre>
+        <pre>05:30:07.386 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml</pre>
       </div>
     </div>
   </div>
@@ -7008,7 +7017,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.412</span>
+  <span class="lead-duration duration">0.406</span>
 
   </div>
 
@@ -7023,24 +7032,380 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-152" class="collapse collapsable-details">
-        <pre>05:32:23.637 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/vk500/atom/v1_0/index.xml
+        <pre>05:30:07.387 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:30:07.793 response time in milliseconds: 405.80
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 2066
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:07 GMT
+1 &lt; X-Cnection: [close, close]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Nationaal-Hydrologis180-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_177.html">T4/Beheer-PDOK/Nationaal-Hydrologis180/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.397</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-153">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-153" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-154">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-154" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-155">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-155" class="collapse collapsable-details">
+        <pre>05:29:57.932 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.396</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-156">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-156" class="collapse collapsable-details">
+        <pre>05:29:57.933 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:29:58.329 response time in milliseconds: 395.75
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:58 GMT
+1 &lt; X-Cnection: [close, close]</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Hydrografie-watersch37-download-atom-Waterschappen-Hydrografie-INSPIRE-ATOM-checkdownloadurl-feature_184.html">T4/Beheer-PDOK/Hydrografie-watersch37/download/atom/Waterschappen-Hydrografie-INSPIRE-ATOM/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.579</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-157">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-157" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-158">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-158" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.007</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-159">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-159" class="collapse collapsable-details">
+        <pre>05:29:49.176 [print] testing url:https://service.pdok.nl/hwh/hydrografie/atom/v1_0/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.003</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.568</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-160">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-160" class="collapse collapsable-details">
+        <pre>05:29:49.258 request:
+1 &gt; HEAD https://service.pdok.nl/hwh/hydrografie/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:24.046 response time in milliseconds: 408.91
+05:29:49.748 response time in milliseconds: 489.58
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 11102
+1 &lt; Content-Length: 2781
 1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:23 GMT
-1 &lt; Etag: &quot;206410433&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:46 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:49 GMT
+1 &lt; Etag: &quot;3332472619&quot;
+1 &lt; Last-Modified: Mon, 29 Mar 2021 14:52:41 GMT
 1 &lt; Server: PDOK ATOM SERVER
 1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
@@ -7086,7 +7451,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water115-download-atom-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_182.html">T4/Beheer-PDOK/Kaderrichtlijn-Water115/download/atom/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Overstromi184-download-atom-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_185.html">T4/Beheer-PDOK/Richtlijn-Overstromi184/download/atom/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -7096,381 +7461,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.425</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-153">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-153" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-154">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-154" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-155">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-155" class="collapse collapsable-details">
-        <pre>05:32:24.508 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.424</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-156">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-156" class="collapse collapsable-details">
-        <pre>05:32:24.513 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
-
-05:32:24.933 response time in milliseconds: 419.14
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 4238
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:24 GMT
-1 &lt; Etag: &quot;190ec01df2374bd28ca18382165364c5&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:12 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D333284721
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water173-download-atom-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_186.html">T4/Beheer-PDOK/Kaderrichtlijn-Water173/download/atom/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.409</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-157">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-157" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-158">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-158" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-159">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-159" class="collapse collapsable-details">
-        <pre>05:32:42.788 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.407</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-160">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-160" class="collapse collapsable-details">
-        <pre>05:32:42.792 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
-
-05:32:43.196 response time in milliseconds: 403.50
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 4277
-1 &lt; Content-Security-Policy: block-all-mixed-content
-1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:43 GMT
-1 &lt; Etag: &quot;b48778f18bc107438f41654067b10f3f&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:08 GMT
-1 &lt; Server: MinIO
-1 &lt; Vary: Origin
-1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D773EE44B7
-1 &lt; X-Cnection: [close, close]
-1 &lt; X-Xss-Protection: 1; mode=block</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-NWB---Vaarwegen--Nat193-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_193.html">T4/Beheer-PDOK/NWB---Vaarwegen--Nat193/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.397</span>
+  <span class="lead-duration duration">0.400</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-161">
@@ -7526,7 +7517,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-163" class="collapse collapsable-details">
-        <pre>05:32:31.352 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:54.210 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -7563,7 +7554,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.397</span>
+  <span class="lead-duration duration">0.399</span>
 
   </div>
 
@@ -7578,23 +7569,32 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-164" class="collapse collapsable-details">
-        <pre>05:32:31.353 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+        <pre>05:29:54.214 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnoverstromingsrisico2018/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:31.749 response time in milliseconds: 395.38
+05:29:54.610 response time in milliseconds: 395.62
 1 &lt; 200
+1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 41678
+1 &lt; Content-Length: 6245
+1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:31 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+1 &lt; Date: Wed, 31 Mar 2021 05:29:54 GMT
+1 &lt; Etag: &quot;6d63c78519914f9769e359aef346c83f&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:15 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 16715644C53C6129
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
     </div>
   </div>
@@ -7638,7 +7638,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie14-download-atom-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_200.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie14/download/atom/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water173-download-atom-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_193.html">T4/Beheer-PDOK/Kaderrichtlijn-Water173/download/atom/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -7648,7 +7648,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.795</span>
+  <span class="lead-duration duration">0.396</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-165">
@@ -7704,7 +7704,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-167" class="collapse collapsable-details">
-        <pre>05:32:27.901 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml</pre>
+        <pre>05:30:12.133 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -7741,7 +7741,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.794</span>
+  <span class="lead-duration duration">0.395</span>
 
   </div>
 
@@ -7756,30 +7756,30 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-168" class="collapse collapsable-details">
-        <pre>05:32:27.907 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+        <pre>05:30:12.136 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2009/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:28.696 response time in milliseconds: 789.50
+05:30:12.529 response time in milliseconds: 392.74
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 4285
+1 &lt; Content-Length: 4277
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:28 GMT
-1 &lt; Etag: &quot;96b8f639fabc07b32416d937713c2cff&quot;
-1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:05 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:12 GMT
+1 &lt; Etag: &quot;b48778f18bc107438f41654067b10f3f&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:08 GMT
 1 &lt; Server: MinIO
 1 &lt; Vary: Origin
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 167107D40F8184EB
+1 &lt; X-Amz-Request-Id: 16715648F15AE880
 1 &lt; X-Cnection: [close, close]
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
@@ -7825,7 +7825,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti107-download-atom-CBS-Vierkantstatistieken-100m-ATOM-checkdownloadurl-feature_206.html">T4/Beheer-PDOK/CBS-Vierkantstatisti107/download/atom/CBS-Vierkantstatistieken-100m-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-93-download-atom-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_194.html">T4/Beheer-PDOK/Beschermde-gebieden-93/download/atom/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a>
     </div>
   
   
@@ -7835,7 +7835,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.402</span>
+  <span class="lead-duration duration">0.452</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-169">
@@ -7891,7 +7891,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-171" class="collapse collapsable-details">
-        <pre>05:32:25.805 [print] testing url:https://service.pdok.nl/cbs/vk100/atom/v1_0/index.xml</pre>
+        <pre>05:30:07.691 [print] testing url:https://service.pdok.nl/provincies/ps/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -7928,7 +7928,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.402</span>
+  <span class="lead-duration duration">0.451</span>
 
   </div>
 
@@ -7943,24 +7943,24 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-172" class="collapse collapsable-details">
-        <pre>05:32:25.805 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/vk100/atom/v1_0/index.xml
+        <pre>05:30:07.692 request:
+1 &gt; HEAD https://service.pdok.nl/provincies/ps/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:26.207 response time in milliseconds: 401.02
+05:30:08.143 response time in milliseconds: 451.12
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 11102
+1 &lt; Content-Length: 10178
 1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:26 GMT
-1 &lt; Etag: &quot;3394464363&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:50:22 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:30:08 GMT
+1 &lt; Etag: &quot;752606548&quot;
+1 &lt; Last-Modified: Tue, 30 Mar 2021 02:25:31 GMT
 1 &lt; Server: PDOK ATOM SERVER
 1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
       </div>
@@ -8006,7 +8006,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Publiekrechtelijke-b20-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_209.html">T4/Beheer-PDOK/Publiekrechtelijke-b20/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Publiekrechtelijke-b128-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_199.html">T4/Beheer-PDOK/Publiekrechtelijke-b128/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -8016,7 +8016,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.394</span>
+  <span class="lead-duration duration">0.385</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-173">
@@ -8072,7 +8072,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-175" class="collapse collapsable-details">
-        <pre>05:32:35.760 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+        <pre>05:29:55.084 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -8109,7 +8109,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.393</span>
+  <span class="lead-duration duration">0.384</span>
 
   </div>
 
@@ -8124,14 +8124,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-176" class="collapse collapsable-details">
-        <pre>05:32:35.761 request:
+        <pre>05:29:55.091 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:36.154 response time in milliseconds: 393.03
+05:29:55.469 response time in milliseconds: 377.45
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -8139,7 +8139,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 41678
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:36 GMT
+1 &lt; Date: Wed, 31 Mar 2021 05:29:55 GMT
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
@@ -8184,7 +8184,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-122-download-atom-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_215.html">T4/Beheer-PDOK/Beschermde-gebieden-122/download/atom/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Bodemgebruik140-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_205.html">T4/Beheer-PDOK/Bodemgebruik140/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
     </div>
   
   
@@ -8194,7 +8194,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.397</span>
+  <span class="lead-duration duration">0.390</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-177">
@@ -8250,7 +8250,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-179" class="collapse collapsable-details">
-        <pre>05:32:36.231 [print] testing url:https://service.pdok.nl/provincies/ps/atom/v1_0/index.xml</pre>
+        <pre>05:29:50.298 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
       </div>
     </div>
   </div>
@@ -8287,7 +8287,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.396</span>
+  <span class="lead-duration duration">0.389</span>
 
   </div>
 
@@ -8302,26 +8302,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-180" class="collapse collapsable-details">
-        <pre>05:32:36.232 request:
-1 &gt; HEAD https://service.pdok.nl/provincies/ps/atom/v1_0/index.xml
+        <pre>05:29:50.300 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:36.628 response time in milliseconds: 396.08
+05:29:50.688 response time in milliseconds: 387.99
 1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 10178
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:36 GMT
-1 &lt; Etag: &quot;752606548&quot;
-1 &lt; Last-Modified: Tue, 30 Mar 2021 02:25:31 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:50 GMT
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
@@ -8365,7 +8362,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-144-download-atom-CBS-Wijken-en-Buurten-2020-versie-1-ATOM-checkdownloadurl-feature_221.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-144/download/atom/CBS-Wijken-en-Buurten-2020-versie-1-ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-185-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_214.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-185/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a>
     </div>
   
   
@@ -8375,7 +8372,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.392</span>
+  <span class="lead-duration duration">0.434</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-181">
@@ -8416,7 +8413,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -8431,7 +8428,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-183" class="collapse collapsable-details">
-        <pre>05:32:29.428 [print] testing url:https://service.pdok.nl/cbs/wb2020/atom/v1_0/index.xml</pre>
+        <pre>05:29:54.622 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -8468,7 +8465,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.387</span>
+  <span class="lead-duration duration">0.434</span>
 
   </div>
 
@@ -8483,26 +8480,210 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-184" class="collapse collapsable-details">
-        <pre>05:32:29.429 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/wb2020/atom/v1_0/index.xml
+        <pre>05:29:54.640 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/richtlijnstedelijkafvalwater2015/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
 
-05:32:29.816 response time in milliseconds: 385.35
+05:29:55.055 response time in milliseconds: 414.90
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Methods: GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 3129
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 30 Mar 2021 05:32:29 GMT
-1 &lt; Etag: &quot;3494560430&quot;
-1 &lt; Last-Modified: Mon, 29 Mar 2021 14:51:48 GMT
-1 &lt; Server: PDOK ATOM SERVER
-1 &lt; Strict-Transport-Security: max-age=3600; includeSubDomains; preload</pre>
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 5578
+1 &lt; Content-Security-Policy: block-all-mixed-content
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:29:55 GMT
+1 &lt; Etag: &quot;79424616aacdc0d03ca3bb9e100d84ec&quot;
+1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:16 GMT
+1 &lt; Server: MinIO
+1 &lt; Vary: Origin
+1 &lt; X-Amz-Bucket-Region: Amsterdam
+1 &lt; X-Amz-Request-Id: 16715644E007AE0C
+1 &lt; X-Cnection: [close, close]
+1 &lt; X-Xss-Protection: 1; mode=block</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Weggegevens--WEGGEG-197-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_218.html">T4/Beheer-PDOK/Weggegevens--WEGGEG-197/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.393</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-185">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-185" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-186">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-186" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-187">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-187" class="collapse collapsable-details">
+        <pre>05:30:08.031 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.393</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-188">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-188" class="collapse collapsable-details">
+        <pre>05:30:08.032 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.6)
+
+05:30:08.424 response time in milliseconds: 392.27
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Content-Length: 41678
+1 &lt; Content-Type: text/xml
+1 &lt; Date: Wed, 31 Mar 2021 05:30:07 GMT
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
