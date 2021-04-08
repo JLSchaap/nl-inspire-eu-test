@@ -22,6 +22,7 @@ import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -53,6 +54,7 @@ class TestAllTemplates {
     }
 
     @Test
+    @Disabled ("Run template tests only during test development") 
     @Order(1)
     void testTemplateParallel() throws IOException, CsvDataTypeMismatchException, CsvRequiredFieldEmptyException {
         DataStorage db = new DataStorage();
