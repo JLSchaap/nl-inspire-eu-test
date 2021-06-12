@@ -1,0 +1,4089 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Features Overview</title>
+
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                1314,
+                0,
+                0,
+                0,
+                0
+            ],
+            backgroundColor: [
+                "#00B000",
+                "#FF3030",
+                "#88AAFF",
+                "#F5F28F",
+                "#F5B975"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed",
+            "Skipped",
+            "Pending",
+            "Undefined"
+        ]
+    };
+
+    var context = document.getElementById("steps-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Steps"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 1314) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  $(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                218,
+                0
+            ],
+            backgroundColor: [
+                "#00B000",
+                "#FF3030"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed"
+        ]
+    };
+
+    var context = document.getElementById("scenarios-chart");
+    window.myBar = new Chart(context, {
+        type: "doughnut",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Scenarios"
+            },
+            circumference: Math.PI,
+            rotation: Math.PI,
+            cutoutPercentage: 70,
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 218) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  $(document).ready(function() {
+
+    var chartData = {
+        datasets: [{
+            data: [
+                   218,
+                   0
+               ],
+               backgroundColor: [
+                "#00B000",
+                "#FF3030"
+            ]
+        }],
+        labels: [
+            "Passed",
+            "Failed"
+        ]
+    };
+
+    var context = document.getElementById("features-chart");
+    window.myBar = new Chart(context, {
+        type: "pie",
+        data: chartData,
+        options: {
+            title: {
+                display: true,
+                fontSize: 20,
+                text: "Features"
+            },
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var allData = data.datasets[tooltipItem.datasetIndex].data;
+                        var tooltipLabel = data.labels[tooltipItem.index];
+                        var tooltipData = allData[tooltipItem.index];
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 218) / 100;
+                        return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
+                    }
+                }
+            }
+        }
+    });
+
+});  </script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"  class="active" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>NLTEST</td>
+            <td>12 Jun 2021, 05:25</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Features Statistics</h2>
+          <p>The following graphs show passing and failing statistics for features</p>
+      </div>
+</div>
+
+
+  <div class="container-fluid" id="charts">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div id="featureChartCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#featureChartCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#featureChartCarousel" data-slide-to="1"></li>
+            <li data-target="#featureChartCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <canvas id="features-chart" height="120"></canvas>
+            </div>
+
+            <div class="item">
+              <canvas id="scenarios-chart" height="120"></canvas>
+            </div>
+
+            <div class="item">
+              <canvas id="steps-chart" height="120"></canvas>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#featureChartCarousel" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#featureChartCarousel" role="button" data-slide="next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      
+<table id="tablesorter" class="stats-table table-hover">
+  
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+  <tbody>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-RDinfo137-download-wfs-RD-info-WFS-checkWfsUrl-feature.html">T4/Beheer-PDOK/RDinfo137/download/wfs/RD-info-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392130708">0.392</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver9-download-wfs-Habitatrichtlijn-verspreiding-van-typen-WFS-checkWfsUrl-feature_1.html">T4/Beheer-PDOK/Habitatrichtlijn-ver9/download/wfs/Habitatrichtlijn-verspreiding-van-typen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401687041">0.401</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Natura-2000--INSPIRE214-download-wfs-Natura2000--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_2.html">T4/Beheer-PDOK/Natura-2000--INSPIRE214/download/wfs/Natura2000--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="417010891">0.417</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---54-download-wfs-Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_3.html">T4/Beheer-PDOK/Vervoersnetwerken---54/download/wfs/Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402894219">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geografische-Namen148-view-wms-TOP10NL-WMS-checkViewUrl-feature_4.html">T4/Beheer-PDOK/Geografische-Namen148/view/wms/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414314901">0.414</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie---Physic138-view-wms-Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_5.html">T4/Beheer-PDOK/Hydrografie---Physic138/view/wms/Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="418018104">0.418</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationaal-Beschermde104-view-wms-Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_6.html">T4/Beheer-PDOK/Nationaal-Beschermde104/view/wms/Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402613504">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2017-25cm-68-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-RGB-WMS-checkViewUrl-feature_7.html">T4/Beheer-PDOK/Luchtfoto-2017-25cm-68/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-RGB-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="367207427">0.367</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk197-download-wfs-Geluidskaarten-Rijkswegen-WFS-checkWfsUrl-feature_8.html">T4/Beheer-PDOK/Geluidbelasting-rijk197/download/wfs/Geluidskaarten-Rijkswegen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402705109">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-BAG61-view-wms-BAG-WMS-checkViewUrl-feature_9.html">T4/Beheer-PDOK/BAG61/view/wms/BAG-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401874540">0.401</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-151-download-atom-CBS-Wijken-en-Buurten-2019-versie-2-ATOM-checkdownloadurl-feature_10.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-151/download/atom/CBS-Wijken-en-Buurten-2019-versie-2-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391203051">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan192-download-wcs-Actueel-Hoogtebestand-Nederland-2--AHN2--WCS-checkwcsUrl-feature_11.html">T4/Beheer-PDOK/Actueel-Hoogtebestan192/download/wcs/Actueel-Hoogtebestand-Nederland-2--AHN2--WCS/checkwcsUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="456457582">0.456</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan168-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_12.html">T4/Beheer-PDOK/Actueel-Hoogtebestan168/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="407222952">0.407</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Adressen152-download-wfs-Adressen-V2-WFS-checkWfsUrl-feature_13.html">T4/Beheer-PDOK/Adressen152/download/wfs/Adressen-V2-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403260552">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationaal-Hydrologis87-view-wms-Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WMS-checkViewUrl-feature_14.html">T4/Beheer-PDOK/Nationaal-Hydrologis87/view/wms/Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1172363804">1.172</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie49-view-wms-Kaderrichtlijn-Mariene-Strategie-2018-WMS-checkViewUrl-feature_15.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie49/view/wms/Kaderrichtlijn-Mariene-Strategie-2018-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402272383">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Schelpdierpercelen--63-view-wms-Schelpdierpercelen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_16.html">T4/Beheer-PDOK/Schelpdierpercelen--63/view/wms/Schelpdierpercelen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="381079604">0.381</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vaarwegmarkeringen-N203-download-wfs-Vaarwegmarkeringen-WFS-checkWfsUrl-feature_17.html">T4/Beheer-PDOK/Vaarwegmarkeringen-N203/download/wfs/Vaarwegmarkeringen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398159374">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-191-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_18.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-191/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398873153">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk196-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_19.html">T4/Beheer-PDOK/Geluidbelasting-rijk196/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="410158681">0.410</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Mosselzaadinvanginst189-download-wfs-Mosselzaadinvanginstallaties-WFS-checkWfsUrl-feature_20.html">T4/Beheer-PDOK/Mosselzaadinvanginst189/download/wfs/Mosselzaadinvanginstallaties-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="433418334">0.433</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Ligging-industrie-en86-view-wms-Potentiekaart-restwarmte-WMS-checkViewUrl-feature_21.html">T4/Beheer-PDOK/Ligging-industrie-en86/view/wms/Potentiekaart-restwarmte-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1944621000">1.944</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-102-other-wfs-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1-checkOtherWFSUrl-feature_22.html">T4/Beheer-PDOK/Beschermde-gebieden-102/other/wfs/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1/checkOtherWFSUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430722568">0.430</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-NWB---Wegen201-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_23.html">T4/Beheer-PDOK/NWB---Wegen201/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395011634">0.395</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wetlands--RAMSAR---I105-view-wms-Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_24.html">T4/Beheer-PDOK/Wetlands--RAMSAR---I105/view/wms/Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="417770187">0.417</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti170-view-wms-CBS-Vierkantstatistieken-500m-WMS-checkViewUrl-feature_25.html">T4/Beheer-PDOK/CBS-Vierkantstatisti170/view/wms/CBS-Vierkantstatistieken-500m-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2099596263">2.099</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wetlands--RAMSAR---I105-download-wfs-Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_26.html">T4/Beheer-PDOK/Wetlands--RAMSAR---I105/download/wfs/Beschermde-Gebieden-Wetlands--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397168822">0.397</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-157-download-atom-CBS-Wijken-en-Buurten-2020-versie-1-ATOM-checkdownloadurl-feature_27.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-157/download/atom/CBS-Wijken-en-Buurten-2020-versie-1-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="390428088">0.390</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Administratieve-Eenh45-view-wms-Administratieve-Eenheden--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_28.html">T4/Beheer-PDOK/Administratieve-Eenh45/view/wms/Administratieve-Eenheden--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408167718">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Administratieve-Eenh45-download-wfs-Administratieve-Eenheden--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_29.html">T4/Beheer-PDOK/Administratieve-Eenh45/download/wfs/Administratieve-Eenheden--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404959875">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-hoofdspo77-download-wfs-Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WFS-checkWfsUrl-feature_30.html">T4/Beheer-PDOK/Geluidkaart-hoofdspo77/download/wfs/Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398086067">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk197-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_31.html">T4/Beheer-PDOK/Geluidbelasting-rijk197/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408856675">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water95-view-wms-Kaderrichtlijn-Water-actueel-WMS-checkViewUrl-feature_32.html">T4/Beheer-PDOK/Kaderrichtlijn-Water95/view/wms/Kaderrichtlijn-Water-actueel-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400497843">0.400</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Mosselzaadinvanginst189-view-wms-Mosselzaadinvanginstallaties-WMS-checkViewUrl-feature_33.html">T4/Beheer-PDOK/Mosselzaadinvanginst189/view/wms/Mosselzaadinvanginstallaties-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2727155608">2.727</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2020-25cm-81-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-RGB-WMS-checkViewUrl-feature_34.html">T4/Beheer-PDOK/Luchtfoto-2020-25cm-81/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-RGB-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="485854004">0.485</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Weggegevens--WEGGEG-204-view-wms-Weggegevens--Weggeg--WMS-checkViewUrl-feature_35.html">T4/Beheer-PDOK/Weggegevens--WEGGEG-204/view/wms/Weggegevens--Weggeg--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2704429986">2.704</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-141-view-wms-Richtlijn-Stedelijk-Afvalwater-EU2015-WMS-checkViewUrl-feature_36.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-141/view/wms/Richtlijn-Stedelijk-Afvalwater-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="422864272">0.422</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geografische-Namen148-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_37.html">T4/Beheer-PDOK/Geografische-Namen148/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404160316">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-NWB---Vaarwegen--Nat202-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_38.html">T4/Beheer-PDOK/NWB---Vaarwegen--Nat202/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411574881">0.411</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk198-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_39.html">T4/Beheer-PDOK/Geluidbelasting-rijk198/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="440309152">0.440</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water114-view-wms-Kaderrichtlijn-Water-EU2009-WMS-checkViewUrl-feature_40.html">T4/Beheer-PDOK/Kaderrichtlijn-Water114/view/wms/Kaderrichtlijn-Water-EU2009-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="643072918">0.643</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie42-download-atom-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_41.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie42/download/atom/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1125559759">1.125</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-hoofdspo134-download-wfs-Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WFS-checkWfsUrl-feature_42.html">T4/Beheer-PDOK/Geluidkaart-hoofdspo134/download/wfs/Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402161367">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vogelrichtlijn-versp7-view-wms-Vogelrichtlijn-verspreiding-van-soorten-WMS-checkViewUrl-feature_43.html">T4/Beheer-PDOK/Vogelrichtlijn-versp7/view/wms/Vogelrichtlijn-verspreiding-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="430753029">0.430</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver9-view-wms-Habitatrichtlijn-verspreiding-van-habitattypen-WMS-checkViewUrl-feature_44.html">T4/Beheer-PDOK/Habitatrichtlijn-ver9/view/wms/Habitatrichtlijn-verspreiding-van-habitattypen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="776926573">0.776</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-hoofdspo77-view-wms-Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WMS-checkViewUrl-feature_45.html">T4/Beheer-PDOK/Geluidkaart-hoofdspo77/view/wms/Geluidblootstelling-van-het-hoofdspoorwegennet-Lnight-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399918406">0.399</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-157-view-wms-CBS-Wijken-en-Buurten-2020-versie-1-WMS-checkViewUrl-feature_46.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-157/view/wms/CBS-Wijken-en-Buurten-2020-versie-1-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395798692">0.395</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-Schiphol8-view-wms-Geluidskaarten-Schiphol-2016-lnight-WMS-checkViewUrl-feature_47.html">T4/Beheer-PDOK/Geluidkaart-Schiphol8/view/wms/Geluidskaarten-Schiphol-2016-lnight-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414326226">0.414</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water94-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_48.html">T4/Beheer-PDOK/Kaderrichtlijn-Water94/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1124222458">1.124</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationale-Parken169-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_49.html">T4/Beheer-PDOK/Nationale-Parken169/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393687332">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-150-view-wms-CBS-Wijken-en-Buurten-2018-versie-3-WMS-checkViewUrl-feature_50.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-150/view/wms/CBS-Wijken-en-Buurten-2018-versie-3-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396730757">0.396</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---32-download-wfs-Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_51.html">T4/Beheer-PDOK/Vervoersnetwerken---32/download/wfs/Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398352614">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Publiekrechtelijke-b173-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_52.html">T4/Beheer-PDOK/Publiekrechtelijke-b173/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416204368">0.416</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2018-25cm-82-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_53.html">T4/Beheer-PDOK/Luchtfoto-2018-25cm-82/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391152532">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk71-download-wfs-Geluidskaarten-Rijkswegen-WFS-checkWfsUrl-feature_54.html">T4/Beheer-PDOK/Geluidbelasting-rijk71/download/wfs/Geluidskaarten-Rijkswegen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396991085">0.396</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---119-download-wfs-Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_55.html">T4/Beheer-PDOK/Vervoersnetwerken---119/download/wfs/Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399826598">0.399</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kadastrale-Percelen-193-download-atom-Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_56.html">T4/Beheer-PDOK/Kadastrale-Percelen-193/download/atom/Cadastral-parcels--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="405995566">0.405</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vaarweg-Informatie-N171-download-wfs-Vaarweg-Informatie-Nederland--VIN--WFS-checkWfsUrl-feature_57.html">T4/Beheer-PDOK/Vaarweg-Informatie-N171/download/wfs/Vaarweg-Informatie-Nederland--VIN--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="438071691">0.438</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti172-download-wfs-CBS-Vierkantstatistieken-100m-WFS-checkWfsUrl-feature_58.html">T4/Beheer-PDOK/CBS-Vierkantstatisti172/download/wfs/CBS-Vierkantstatistieken-100m-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416510063">0.416</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Zeegebieden--INSPIRE80-download-wfs-Zeegebieden--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_59.html">T4/Beheer-PDOK/Zeegebieden--INSPIRE80/download/wfs/Zeegebieden--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="405558132">0.405</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vogelrichtlijn-versp7-download-wfs-Vogelrichtlijn-verspreiding-van-soorten-WFS-checkWfsUrl-feature_60.html">T4/Beheer-PDOK/Vogelrichtlijn-versp7/download/wfs/Vogelrichtlijn-verspreiding-van-soorten-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="432009524">0.432</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie---Physic138-download-wfs-Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_61.html">T4/Beheer-PDOK/Hydrografie---Physic138/download/wfs/Hydrografie---Physical-Waters--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409048024">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-TOP10NL174-view-wms-TOP10NL-WMS-checkViewUrl-feature_62.html">T4/Beheer-PDOK/TOP10NL174/view/wms/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="432935938">0.432</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water212-download-atom-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_63.html">T4/Beheer-PDOK/Kaderrichtlijn-Water212/download/atom/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="407140652">0.407</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Adressen152-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_64.html">T4/Beheer-PDOK/Adressen152/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="407415364">0.407</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Overheidsdiensten176-view-wms-Overheidsdiensten-WMS-checkViewUrl-feature_65.html">T4/Beheer-PDOK/Overheidsdiensten176/view/wms/Overheidsdiensten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="443766029">0.443</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS181-download-atom-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_66.html">T4/Beheer-PDOK/Human-Health-NL-NUTS181/download/atom/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="417270246">0.417</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS181-view-wms-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_67.html">T4/Beheer-PDOK/Human-Health-NL-NUTS181/view/wms/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="385477236">0.385</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Zeegebieden--INSPIRE80-view-wms-Zeegebieden--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_68.html">T4/Beheer-PDOK/Zeegebieden--INSPIRE80/view/wms/Zeegebieden--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="419790112">0.419</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---100-view-wms-Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_69.html">T4/Beheer-PDOK/Vervoersnetwerken---100/view/wms/Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401478052">0.401</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationaal-Hydrologis87-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_70.html">T4/Beheer-PDOK/Nationaal-Hydrologis87/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403450661">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-Schiphol8-download-wfs-Geluidskaarten-Schiphol-2016-lnight-WFS-checkWfsUrl-feature_71.html">T4/Beheer-PDOK/Geluidkaart-Schiphol8/download/wfs/Geluidskaarten-Schiphol-2016-lnight-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393886473">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver29-view-wms-Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WMS-checkViewUrl-feature_72.html">T4/Beheer-PDOK/Habitatrichtlijn-ver29/view/wms/Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416497949">0.416</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-23-download-wfs-Richtlijn-Stedelijk-Afvalwater-EU2015-WFS-checkWfsUrl-feature_73.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-23/download/wfs/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391014733">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver113-view-wms-Habitatrichtlijn-verspreidingsgebied-van-soorten-WMS-checkViewUrl-feature_74.html">T4/Beheer-PDOK/Habitatrichtlijn-ver113/view/wms/Habitatrichtlijn-verspreidingsgebied-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404305132">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti172-view-wms-CBS-Vierkantstatistieken-100m-WMS-checkViewUrl-feature_75.html">T4/Beheer-PDOK/CBS-Vierkantstatisti172/view/wms/CBS-Vierkantstatistieken-100m-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="578832664">0.578</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---54-view-wms-Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_76.html">T4/Beheer-PDOK/Vervoersnetwerken---54/view/wms/Vervoersnetwerken-Waterwegen-RWS--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398250766">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vogelrichtlijn-versp53-view-wms-Vogelrichtlijn-verspreidingsgebied-van-soorten-WMS-checkViewUrl-feature_77.html">T4/Beheer-PDOK/Vogelrichtlijn-versp53/view/wms/Vogelrichtlijn-verspreidingsgebied-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391854395">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2019-25cm-47-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-RGB-WMS-checkViewUrl-feature_78.html">T4/Beheer-PDOK/Luchtfoto-2019-25cm-47/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-RGB-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="386033653">0.386</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti172-download-atom-CBS-Vierkantstatistieken-100m-ATOM-checkdownloadurl-feature_79.html">T4/Beheer-PDOK/CBS-Vierkantstatisti172/download/atom/CBS-Vierkantstatistieken-100m-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392376132">0.392</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Gebouwen--INSPIRE-ge213-view-wms-Gebouwen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_80.html">T4/Beheer-PDOK/Gebouwen--INSPIRE-ge213/view/wms/Gebouwen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403606686">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Adressen152-view-wms-Adressen-V2-WMS-checkViewUrl-feature_81.html">T4/Beheer-PDOK/Adressen152/view/wms/Adressen-V2-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="394191664">0.394</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Zeegebieden175-view-wms-TOP10NL-WMS-checkViewUrl-feature_82.html">T4/Beheer-PDOK/Zeegebieden175/view/wms/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="387589972">0.387</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie167-view-wms-TOP10NL-WMS-checkViewUrl-feature_83.html">T4/Beheer-PDOK/Hydrografie167/view/wms/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392593238">0.392</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Overstromi22-download-atom-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_84.html">T4/Beheer-PDOK/Richtlijn-Overstromi22/download/atom/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="453353386">0.453</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik177-download-wfs-CBS-Bestand-Bodemgebruik-2015-WFS-checkWfsUrl-feature_85.html">T4/Beheer-PDOK/Bestand-Bodemgebruik177/download/wfs/CBS-Bestand-Bodemgebruik-2015-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409698934">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Population-Distribut126-other-wfs-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_86.html">T4/Beheer-PDOK/Population-Distribut126/other/wfs/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="374877799">0.374</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-NWB---Wegen201-view-wms-NWB---Wegen--Nationaal-Wegen-Bestand--WMS-checkViewUrl-feature_87.html">T4/Beheer-PDOK/NWB---Wegen201/view/wms/NWB---Wegen--Nationaal-Wegen-Bestand--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392458740">0.392</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-RDinfo137-view-wms-RD-info-WMS-checkViewUrl-feature_88.html">T4/Beheer-PDOK/RDinfo137/view/wms/RD-info-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="421131505">0.421</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Digitaal-Topografisc200-view-wms-Digitaal-Topografisch-Bestand--DTB--WMS-checkViewUrl-feature_89.html">T4/Beheer-PDOK/Digitaal-Topografisc200/view/wms/Digitaal-Topografisch-Bestand--DTB--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="923530955">0.923</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---25-download-wfs-Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_90.html">T4/Beheer-PDOK/Vervoersnetwerken---25/download/wfs/Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414059064">0.414</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan168-view-wms-Actueel-Hoogtebestand-Nederland-1--AHN1--WMS-checkViewUrl-feature_91.html">T4/Beheer-PDOK/Actueel-Hoogtebestan168/view/wms/Actueel-Hoogtebestand-Nederland-1--AHN1--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="410353988">0.410</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk196-download-wfs-Geluidskaarten-Rijkswegen-WFS-checkWfsUrl-feature_92.html">T4/Beheer-PDOK/Geluidbelasting-rijk196/download/wfs/Geluidskaarten-Rijkswegen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391398460">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-hoofdspo134-view-wms-Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WMS-checkViewUrl-feature_93.html">T4/Beheer-PDOK/Geluidkaart-hoofdspo134/view/wms/Geluidblootstelling-van-het-hoofdspoorwegennet-Lden-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402745812">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---41-download-wfs-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WFS-checkWfsUrl-feature_94.html">T4/Beheer-PDOK/Vervoersnetwerken---41/download/wfs/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="428622567">0.428</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---25-view-wms-Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_95.html">T4/Beheer-PDOK/Vervoersnetwerken---25/view/wms/Vervoersnetwerken-Wegen-RWS--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406761111">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water60-view-wms-Kaderrichtlijn-Water-EU2015-WMS-checkViewUrl-feature_96.html">T4/Beheer-PDOK/Kaderrichtlijn-Water60/view/wms/Kaderrichtlijn-Water-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409610527">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Statistical-Units-Ve155-view-wms-CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_97.html">T4/Beheer-PDOK/Statistical-Units-Ve155/view/wms/CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400711765">0.400</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk71-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_98.html">T4/Beheer-PDOK/Geluidbelasting-rijk71/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="386162664">0.386</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-191-view-wms-Richtlijn-Stedelijk-Afvalwater-EU2015-WMS-checkViewUrl-feature_99.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-191/view/wms/Richtlijn-Stedelijk-Afvalwater-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393150907">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Scheepvaart-verkeers59-view-wms-Scheepvaart-Verkeersscheidingsstelsel-Noordzee-WMS-checkViewUrl-feature_100.html">T4/Beheer-PDOK/Scheepvaart-verkeers59/view/wms/Scheepvaart-Verkeersscheidingsstelsel-Noordzee-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="444016638">0.444</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-INSPIRE-geharmonisee70-download-atom-INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM-checkdownloadurl-feature_101.html">T4/Beheer-PDOK/INSPIRE-geharmonisee70/download/atom/INSPIRE-downloadservice-geharmoniseerde-Beschermde-Gebieden---Cultuurhistorie-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395964332">0.395</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vaarwegmarkeringen-N203-view-wms-Vaarwegmarkeringen-WMS-checkViewUrl-feature_102.html">T4/Beheer-PDOK/Vaarwegmarkeringen-N203/view/wms/Vaarwegmarkeringen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="421149414">0.421</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---144-view-wms-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_103.html">T4/Beheer-PDOK/Vervoersnetwerken---144/view/wms/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="429265516">0.429</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken166-view-wms-TOP10NL-WMS-checkViewUrl-feature_104.html">T4/Beheer-PDOK/Vervoersnetwerken166/view/wms/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398820422">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk125-download-wfs-Geluidskaarten-Rijkswegen-WFS-checkWfsUrl-feature_105.html">T4/Beheer-PDOK/Geluidbelasting-rijk125/download/wfs/Geluidskaarten-Rijkswegen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413312112">0.413</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge43-view-wms-CBS-Gebiedsindelingen-WMS-checkViewUrl-feature_106.html">T4/Beheer-PDOK/CBS-gebiedsindelinge43/view/wms/CBS-Gebiedsindelingen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="433562855">0.433</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water56-view-wms-Kaderrichtlijn-Water-EU2015-WMS-checkViewUrl-feature_107.html">T4/Beheer-PDOK/Kaderrichtlijn-Water56/view/wms/Kaderrichtlijn-Water-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395260353">0.395</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Bodemgebruik147-view-wms-TOP10NL-WMS-checkViewUrl-feature_108.html">T4/Beheer-PDOK/Bodemgebruik147/view/wms/TOP10NL-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="410366289">0.410</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-23-view-wms-Richtlijn-Stedelijk-Afvalwater-EU2015-WMS-checkViewUrl-feature_109.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-23/view/wms/Richtlijn-Stedelijk-Afvalwater-EU2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399360164">0.399</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-150-download-atom-CBS-Wijken-en-Buurten-2018-versie-3-ATOM-checkdownloadurl-feature_110.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-150/download/atom/CBS-Wijken-en-Buurten-2018-versie-3-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="394832311">0.394</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie-watersch73-view-wms-Waterschappen-Hydrografie-INSPIRE-WMS-checkViewUrl-feature_111.html">T4/Beheer-PDOK/Hydrografie-watersch73/view/wms/Waterschappen-Hydrografie-INSPIRE-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397133621">0.397</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie---Netwer57-view-wms-Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_112.html">T4/Beheer-PDOK/Hydrografie---Netwer57/view/wms/Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393544849">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-102-view-wms-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_113.html">T4/Beheer-PDOK/Beschermde-gebieden-102/view/wms/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396584379">0.396</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---144-download-wfs-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_114.html">T4/Beheer-PDOK/Vervoersnetwerken---144/download/wfs/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="405029779">0.405</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-151-download-wfs-CBS-Wijken-en-Buurten-2019-versie-2-WFS-checkWfsUrl-feature_115.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-151/download/wfs/CBS-Wijken-en-Buurten-2019-versie-2-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="731467164">0.731</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Population-Distribut126-view-wms-Population-Distribution--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_116.html">T4/Beheer-PDOK/Population-Distribut126/view/wms/Population-Distribution--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="383767174">0.383</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2018-25cm-132-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-RGB-WMS-checkViewUrl-feature_117.html">T4/Beheer-PDOK/Luchtfoto-2018-25cm-132/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-RGB-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="388655141">0.388</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN182-view-wms-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WMS-V1-checkViewUrl-feature_118.html">T4/Beheer-PDOK/Invasieve-Exoten--IN182/view/wms/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WMS-V1/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="418991978">0.418</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Land-Use-2015139-download-wfs-Statistics-Netherlands-Land-Use-2015-WFS--BBG-2015-INSPIRE-geharmoniseerd--checkWfsUrl-feature_119.html">T4/Beheer-PDOK/Land-Use-2015139/download/wfs/Statistics-Netherlands-Land-Use-2015-WFS--BBG-2015-INSPIRE-geharmoniseerd-/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="436486005">0.436</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Digitaal-Topografisc200-download-wfs-Digitaal-Topografisch-Bestand--DTB--WFS-checkWfsUrl-feature_120.html">T4/Beheer-PDOK/Digitaal-Topografisc200/download/wfs/Digitaal-Topografisch-Bestand--DTB--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="950410691">0.950</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vaarweg-Informatie-N171-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_121.html">T4/Beheer-PDOK/Vaarweg-Informatie-N171/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406851525">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---41-view-wms-Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WMS-checkViewUrl-feature_122.html">T4/Beheer-PDOK/Vervoersnetwerken---41/view/wms/Vervoersnetwerken---Wegen--INSPIRE-geharmoniseerd----Kadaster-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413779542">0.413</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geografische-Namen--133-view-wms-Geografische-Namen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_123.html">T4/Beheer-PDOK/Geografische-Namen--133/view/wms/Geografische-Namen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="445424383">0.445</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik177-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_124.html">T4/Beheer-PDOK/Bestand-Bodemgebruik177/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="433114805">0.433</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-141-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_125.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-141/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="500612070">0.500</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Ruimtelijke-plannen-149-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_126.html">T4/Beheer-PDOK/Ruimtelijke-plannen-149/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="412891916">0.412</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Ligging-industrie-en86-download-wfs-Potentiekaart-restwarmte-WFS-checkWfsUrl-feature_127.html">T4/Beheer-PDOK/Ligging-industrie-en86/download/wfs/Potentiekaart-restwarmte-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1999880387">1.999</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Schelpdierenpercelen24-view-wms-Schelpdierenpercelen-WMS-checkViewUrl-feature_128.html">T4/Beheer-PDOK/Schelpdierenpercelen24/view/wms/Schelpdierenpercelen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2956499838">2.956</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vaarweg-Informatie-N171-view-wms-Vaarweg-Informatie-Nederland--VIN--WMS-checkViewUrl-feature_129.html">T4/Beheer-PDOK/Vaarweg-Informatie-N171/view/wms/Vaarweg-Informatie-Nederland--VIN--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="440376668">0.440</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik177-view-wms-CBS-Bestand-Bodemgebruik-2015-WMS-checkViewUrl-feature_130.html">T4/Beheer-PDOK/Bestand-Bodemgebruik177/view/wms/CBS-Bestand-Bodemgebruik-2015-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413321507">0.413</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Bodemgebruik147-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_131.html">T4/Beheer-PDOK/Bodemgebruik147/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="420575063">0.420</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti170-download-wfs-CBS-Vierkantstatistieken-500m-WFS-checkWfsUrl-feature_132.html">T4/Beheer-PDOK/CBS-Vierkantstatisti170/download/wfs/CBS-Vierkantstatistieken-500m-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1975406455">1.975</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-102-download-atom-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_133.html">T4/Beheer-PDOK/Beschermde-gebieden-102/download/atom/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404435675">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie-watersch73-download-atom-Waterschappen-Hydrografie-INSPIRE-ATOM-checkdownloadurl-feature_134.html">T4/Beheer-PDOK/Hydrografie-watersch73/download/atom/Waterschappen-Hydrografie-INSPIRE-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="377798854">0.377</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN182-other-wfs-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherWFSUrl-feature_135.html">T4/Beheer-PDOK/Invasieve-Exoten--IN182/other/wfs/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherWFSUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411217590">0.411</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---119-view-wms-Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_136.html">T4/Beheer-PDOK/Vervoersnetwerken---119/view/wms/Vervoersnetwerken---Kabelbanen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="408053623">0.408</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationaal-Beschermde104-download-wfs-Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_137.html">T4/Beheer-PDOK/Nationaal-Beschermde104/download/wfs/Beschermde-gebieden---CDDA--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406658809">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge43-download-atom-CBS-Gebiedsindelingen-ATOM-checkdownloadurl-feature_138.html">T4/Beheer-PDOK/CBS-gebiedsindelinge43/download/atom/CBS-Gebiedsindelingen-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="422338505">0.422</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Schelpdierpercelen--63-download-atom-Schelpdierpercelen--INSPIRE-geharmoniseerd--Atom-checkdownloadurl-feature_139.html">T4/Beheer-PDOK/Schelpdierpercelen--63/download/atom/Schelpdierpercelen--INSPIRE-geharmoniseerd--Atom/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="422324731">0.422</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water131-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_140.html">T4/Beheer-PDOK/Kaderrichtlijn-Water131/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403573083">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge43-download-wfs-CBS-Gebiedsindelingen-WFS-checkWfsUrl-feature_141.html">T4/Beheer-PDOK/CBS-gebiedsindelinge43/download/wfs/CBS-Gebiedsindelingen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="480495513">0.480</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver111-download-wfs-Habitatrichtlijn-verspreiding-van-soorten-WFS-checkWfsUrl-feature_142.html">T4/Beheer-PDOK/Habitatrichtlijn-ver111/download/wfs/Habitatrichtlijn-verspreiding-van-soorten-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396211226">0.396</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk125-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_143.html">T4/Beheer-PDOK/Geluidbelasting-rijk125/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="405774541">0.405</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geografische-Namen--133-download-wfs-Geografische-Namen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_144.html">T4/Beheer-PDOK/Geografische-Namen--133/download/wfs/Geografische-Namen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="431847954">0.431</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2020-25cm-34-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_145.html">T4/Beheer-PDOK/Luchtfoto-2020-25cm-34/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="378098446">0.378</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Overstromi145-download-atom-Richtlijn-Overstromingsrisico-EU2018-ATOM-checkdownloadurl-feature_146.html">T4/Beheer-PDOK/Richtlijn-Overstromi145/download/atom/Richtlijn-Overstromingsrisico-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406933329">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationale-Parken169-view-wms-Nationale-Parken-WMS-checkViewUrl-feature_147.html">T4/Beheer-PDOK/Nationale-Parken169/view/wms/Nationale-Parken-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="454822666">0.454</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk198-download-wfs-Geluidskaarten-Rijkswegen-WFS-checkWfsUrl-feature_148.html">T4/Beheer-PDOK/Geluidbelasting-rijk198/download/wfs/Geluidskaarten-Rijkswegen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409541923">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-141-download-wfs-Richtlijn-Stedelijk-Afvalwater-EU2015-WFS-checkWfsUrl-feature_149.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-141/download/wfs/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="396974410">0.396</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2016-25cm-36-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_150.html">T4/Beheer-PDOK/Luchtfoto-2016-25cm-36/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="369304972">0.369</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-Schiphol4-view-wms-Geluidskaarten-Schiphol-2016-lden-WMS-checkViewUrl-feature_151.html">T4/Beheer-PDOK/Geluidkaart-Schiphol4/view/wms/Geluidskaarten-Schiphol-2016-lden-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409056825">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver113-download-wfs-Habitatrichtlijn-verspreidingsgebied-van-soorten-WFS-checkWfsUrl-feature_152.html">T4/Beheer-PDOK/Habitatrichtlijn-ver113/download/wfs/Habitatrichtlijn-verspreidingsgebied-van-soorten-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399822091">0.399</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-INSPIRE-geharmonisee70-view-wms-Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_153.html">T4/Beheer-PDOK/INSPIRE-geharmonisee70/view/wms/Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395331484">0.395</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Schelpdierenpercelen24-download-wfs-Schelpdierenpercelen-WFS-checkWfsUrl-feature_154.html">T4/Beheer-PDOK/Schelpdierenpercelen24/download/wfs/Schelpdierenpercelen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="3534339665">3.534</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---33-download-wfs-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_155.html">T4/Beheer-PDOK/Vervoersnetwerken---33/download/wfs/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413731040">0.413</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water94-view-wms-Kaderrichtlijn-Water-actueel-WMS-checkViewUrl-feature_156.html">T4/Beheer-PDOK/Kaderrichtlijn-Water94/view/wms/Kaderrichtlijn-Water-actueel-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1091430773">1.091</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Windsnelheden-op-100154-download-wfs-Windsnelheden-100m-hoogte-WFS-checkWfsUrl-feature_157.html">T4/Beheer-PDOK/Windsnelheden-op-100154/download/wfs/Windsnelheden-100m-hoogte-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404271735">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan168-download-wcs-Actueel-Hoogtebestand-Nederland-1--AHN1--WCS-checkwcsUrl-feature_158.html">T4/Beheer-PDOK/Actueel-Hoogtebestan168/download/wcs/Actueel-Hoogtebestand-Nederland-1--AHN1--WCS/checkwcsUrl.feature</a></td>
+        
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="417603636">0.417</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2019-25cm-75-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_159.html">T4/Beheer-PDOK/Luchtfoto-2019-25cm-75/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="379533285">0.379</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water76-view-wms-Schelpdierwater-WMS-checkViewUrl-feature_160.html">T4/Beheer-PDOK/Kaderrichtlijn-Water76/view/wms/Schelpdierwater-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411392804">0.411</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Mossel--en-oesterhab143-view-wms-Mossel--en-oesterhabitats-WMS-checkViewUrl-feature_161.html">T4/Beheer-PDOK/Mossel--en-oesterhab143/view/wms/Mossel--en-oesterhabitats-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="469422773">0.469</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Adressen--INSPIRE-ge159-view-wms-Adressen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_162.html">T4/Beheer-PDOK/Adressen--INSPIRE-ge159/view/wms/Adressen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="401156501">0.401</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Population-Distribut126-download-atom-Population-Distribution--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_163.html">T4/Beheer-PDOK/Population-Distribut126/download/atom/Population-Distribution--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392235616">0.392</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationale-Parken--IN130-download-wfs-Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_164.html">T4/Beheer-PDOK/Nationale-Parken--IN130/download/wfs/Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="414191379">0.414</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Statistical-Units-Ve155-download-wfs-CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_165.html">T4/Beheer-PDOK/Statistical-Units-Ve155/download/wfs/CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402747920">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-151-view-wms-CBS-Wijken-en-Buurten-2019-versie-2-WMS-checkViewUrl-feature_166.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-151/view/wms/CBS-Wijken-en-Buurten-2019-versie-2-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403092566">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-23-download-atom-Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM-checkdownloadurl-feature_167.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-23/download/atom/Richtlijn-Stedelijk-Afvalwater-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393072687">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie49-download-atom-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkdownloadurl-feature_168.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie49/download/atom/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402064269">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk199-download-wfs-Geluidskaarten-Rijkswegen-WFS-checkWfsUrl-feature_169.html">T4/Beheer-PDOK/Geluidbelasting-rijk199/download/wfs/Geluidskaarten-Rijkswegen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="388426226">0.388</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver29-download-wfs-Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WFS-checkWfsUrl-feature_170.html">T4/Beheer-PDOK/Habitatrichtlijn-ver29/download/wfs/Habitatrichtlijn-verspreidingsgebied-van-habitattypen-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400952372">0.400</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water56-download-atom-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_171.html">T4/Beheer-PDOK/Kaderrichtlijn-Water56/download/atom/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="398357788">0.398</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidkaart-Schiphol4-download-wfs-Geluidskaarten-Schiphol-2016-lden-WFS-checkWfsUrl-feature_172.html">T4/Beheer-PDOK/Geluidkaart-Schiphol4/download/wfs/Geluidskaarten-Schiphol-2016-lden-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="448989954">0.448</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationaal-Hydrologis87-download-wfs-Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WFS-checkWfsUrl-feature_173.html">T4/Beheer-PDOK/Nationaal-Hydrologis87/download/wfs/Nationaal-Hydrologisch-Instrumentarium--NHI--netwerkschematisaties-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1109387734">1.109</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water212-view-wms-Kaderrichtlijn-Water-EU2009-WMS-checkViewUrl-feature_174.html">T4/Beheer-PDOK/Kaderrichtlijn-Water212/view/wms/Kaderrichtlijn-Water-EU2009-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406634213">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk199-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_175.html">T4/Beheer-PDOK/Geluidbelasting-rijk199/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404361535">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Scheepvaart-verkeers59-download-wfs-Scheepvaart-Verkeersscheidingsstelsel-Noordzee-WFS-checkWfsUrl-feature_176.html">T4/Beheer-PDOK/Scheepvaart-verkeers59/download/wfs/Scheepvaart-Verkeersscheidingsstelsel-Noordzee-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="393379104">0.393</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationale-Parken--IN130-view-wms-Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_177.html">T4/Beheer-PDOK/Nationale-Parken--IN130/view/wms/Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="400379833">0.400</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water114-download-atom-Kaderrichtlijn-Water-EU2009-ATOM-checkdownloadurl-feature_178.html">T4/Beheer-PDOK/Kaderrichtlijn-Water114/download/atom/Kaderrichtlijn-Water-EU2009-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="411809699">0.411</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie42-view-wms-Kaderrichtlijn-Mariene-Strategie-2018-WMS-checkViewUrl-feature_179.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie42/view/wms/Kaderrichtlijn-Mariene-Strategie-2018-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="699045650">0.699</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Nationale-Parken169-download-wfs-Nationale-Parken-WFS-checkWfsUrl-feature_180.html">T4/Beheer-PDOK/Nationale-Parken169/download/wfs/Nationale-Parken-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="417086406">0.417</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Mossel--en-oesterhab143-download-wfs-Mossel--en-oesterhabitats-WFS-checkWfsUrl-feature_181.html">T4/Beheer-PDOK/Mossel--en-oesterhab143/download/wfs/Mossel--en-oesterhabitats-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="821295038">0.821</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver9-view-wms-Habitatrichtlijn-verspreiding-van-typen-WMS-checkViewUrl-feature_182.html">T4/Beheer-PDOK/Habitatrichtlijn-ver9/view/wms/Habitatrichtlijn-verspreiding-van-typen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="825496356">0.825</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Habitatrichtlijn-ver111-view-wms-Habitatrichtlijn-verspreiding-van-soorten-WMS-checkViewUrl-feature_183.html">T4/Beheer-PDOK/Habitatrichtlijn-ver111/view/wms/Habitatrichtlijn-verspreiding-van-soorten-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="399768694">0.399</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken166-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_184.html">T4/Beheer-PDOK/Vervoersnetwerken166/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="448189763">0.448</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water95-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_185.html">T4/Beheer-PDOK/Kaderrichtlijn-Water95/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="469261652">0.469</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vogelrichtlijn-versp53-download-wfs-Vogelrichtlijn-verspreidingsgebied-van-soorten-WFS-checkWfsUrl-feature_186.html">T4/Beheer-PDOK/Vogelrichtlijn-versp53/download/wfs/Vogelrichtlijn-verspreidingsgebied-van-soorten-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="459804544">0.459</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Weggegevens--WEGGEG-204-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_187.html">T4/Beheer-PDOK/Weggegevens--WEGGEG-204/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397100983">0.397</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-157-download-wfs-CBS-Wijken-en-Buurten-2020-versie-1-WFS-checkWfsUrl-feature_188.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-157/download/wfs/CBS-Wijken-en-Buurten-2020-versie-1-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="420072833">0.420</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Hydrografie---Netwer57-download-wfs-Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_189.html">T4/Beheer-PDOK/Hydrografie---Netwer57/download/wfs/Hydrografie---Netwerk-RWS--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="419104386">0.419</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Publiekrechtelijke-b173-view-wms-Publiekrechtelijke-Beperking-WMS-checkViewUrl-feature_190.html">T4/Beheer-PDOK/Publiekrechtelijke-b173/view/wms/Publiekrechtelijke-Beperking-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2657707174">2.657</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN182-download-atom-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1-checkdownloadurl-feature_191.html">T4/Beheer-PDOK/Invasieve-Exoten--IN182/download/atom/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--ATOM-V1/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="413655875">0.413</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Natura-2000--INSPIRE214-view-wms-Natura2000--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_192.html">T4/Beheer-PDOK/Natura-2000--INSPIRE214/view/wms/Natura2000--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="406738414">0.406</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Ruimtelijke-plannen-149-view-wms-Ruimtelijke-plannen-WMS-checkViewUrl-feature_193.html">T4/Beheer-PDOK/Ruimtelijke-plannen-149/view/wms/Ruimtelijke-plannen-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="511156170">0.511</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-BAG61-download-wfs-BAG-WFS-checkWfsUrl-feature_194.html">T4/Beheer-PDOK/BAG61/download/wfs/BAG-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="395459454">0.395</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan192-view-wms-Actueel-Hoogtebestand-Nederland-2--AHN2--WMS-checkViewUrl-feature_195.html">T4/Beheer-PDOK/Actueel-Hoogtebestan192/view/wms/Actueel-Hoogtebestand-Nederland-2--AHN2--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="403302755">0.403</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---32-view-wms-Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_196.html">T4/Beheer-PDOK/Vervoersnetwerken---32/view/wms/Vervoersnetwerken---Gemeenschappelijke-elementen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="438717476">0.438</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-NWB---Vaarwegen--Nat202-view-wms-NWB---Vaarwegen--Nationaal-Wegen-Bestand--WMS-checkViewUrl-feature_197.html">T4/Beheer-PDOK/NWB---Vaarwegen--Nat202/view/wms/NWB---Vaarwegen--Nationaal-Wegen-Bestand--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1385607274">1.385</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---100-download-wfs-Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_198.html">T4/Beheer-PDOK/Vervoersnetwerken---100/download/wfs/Vervoersnetwerken---spoorwegen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="407672821">0.407</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Richtlijn-Stedelijk-191-download-wfs-Richtlijn-Stedelijk-Afvalwater-EU2015-WFS-checkWfsUrl-feature_199.html">T4/Beheer-PDOK/Richtlijn-Stedelijk-191/download/wfs/Richtlijn-Stedelijk-Afvalwater-EU2015-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402180901">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2016-25cm-184-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-RGB-WMS-checkViewUrl-feature_200.html">T4/Beheer-PDOK/Luchtfoto-2016-25cm-184/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-RGB-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="427401115">0.427</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-150-download-wfs-CBS-Wijken-en-Buurten-2018-versie-3-WFS-checkWfsUrl-feature_201.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-150/download/wfs/CBS-Wijken-en-Buurten-2018-versie-3-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="741772597">0.741</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Adressen--INSPIRE-ge159-download-wfs-Adressen--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_202.html">T4/Beheer-PDOK/Adressen--INSPIRE-ge159/download/wfs/Adressen--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404850379">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water76-download-wfs-Schelpdierwater-WFS-checkWfsUrl-feature_203.html">T4/Beheer-PDOK/Kaderrichtlijn-Water76/download/wfs/Schelpdierwater-WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="402369719">0.402</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water160-download-atom-Kaderrichtlijn-Water-actueel-ATOM-checkdownloadurl-feature_204.html">T4/Beheer-PDOK/Kaderrichtlijn-Water160/download/atom/Kaderrichtlijn-Water-actueel-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="456389371">0.456</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Luchtfoto-2017-25cm-74-view-wms-Luchtfoto-Beeldmateriaal---PDOK-25-cm-Infrarood-WMS-checkViewUrl-feature_205.html">T4/Beheer-PDOK/Luchtfoto-2017-25cm-74/view/wms/Luchtfoto-Beeldmateriaal-/-PDOK-25-cm-Infrarood-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="391813717">0.391</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Windsnelheden-op-100154-view-wms-Windsnelheden-100m-hoogte-WMS-checkViewUrl-feature_206.html">T4/Beheer-PDOK/Windsnelheden-op-100154/view/wms/Windsnelheden-100m-hoogte-WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="679844218">0.679</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kadastrale-Percelen-193-view-wms-Cadastral-parcels--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_207.html">T4/Beheer-PDOK/Kadastrale-Percelen-193/view/wms/Cadastral-parcels--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="409419727">0.409</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---33-view-wms-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_208.html">T4/Beheer-PDOK/Vervoersnetwerken---33/view/wms/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="421298514">0.421</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti170-download-atom-CBS-Vierkantstatistieken-500m-ATOM-checkdownloadurl-feature_209.html">T4/Beheer-PDOK/CBS-Vierkantstatisti170/download/atom/CBS-Vierkantstatistieken-500m-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="392465734">0.392</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Land-Use-2015139-view-wms-Statistics-Netherlands-Land-Use-2015-WMS--BBG-2015-INSPIRE-geharmoniseerd--checkViewUrl-feature_210.html">T4/Beheer-PDOK/Land-Use-2015139/view/wms/Statistics-Netherlands-Land-Use-2015-WMS--BBG-2015-INSPIRE-geharmoniseerd-/checkViewUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="404874507">0.404</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-TOP10NL174-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_211.html">T4/Beheer-PDOK/TOP10NL174/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="416219069">0.416</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS181-other-wfs-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_212.html">T4/Beheer-PDOK/Human-Health-NL-NUTS181/other/wfs/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="363272553">0.363</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water60-download-atom-Kaderrichtlijn-Water-EU2015-ATOM-checkdownloadurl-feature_213.html">T4/Beheer-PDOK/Kaderrichtlijn-Water60/download/atom/Kaderrichtlijn-Water-EU2015-ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="722297612">0.722</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Gebouwen--INSPIRE-ge213-download-atom-Gebouwen-Atomfeed--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_214.html">T4/Beheer-PDOK/Gebouwen--INSPIRE-ge213/download/atom/Gebouwen-Atomfeed--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="379619269">0.379</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Zeegebieden175-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_215.html">T4/Beheer-PDOK/Zeegebieden175/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="397723940">0.397</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-Overheidsdiensten176-download-atom-INSPIRE-download-service-PDOK-checkdownloadurl-feature_216.html">T4/Beheer-PDOK/Overheidsdiensten176/download/atom/INSPIRE-download-service-PDOK/checkdownloadurl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="394772816">0.394</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_T4-Beheer-PDOK-INSPIRE-geharmonisee70-download-wfs-Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_217.html">T4/Beheer-PDOK/INSPIRE-geharmonisee70/download/wfs/Beschermde-Gebieden---Cultuurhistorie--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a></td>
+        
+        <td      class="passed"    >6</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">6</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="374454201">0.374</td>
+        <td class="passed">Passed</td>
+      </tr>
+      </tbody>
+
+  <tfoot class="total">
+    <tr>
+      <td></td>
+            <td>1314</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1314</td>
+
+      <td>218</td>
+      <td>0</td>
+      <td>218</td>
+
+      <td class="duration">1:56.968</td>
+      <td>218</td>
+    </tr>
+    <tr>
+      <td></td>
+            <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+      <td></td>
+      <td></td>
+      <td>100.00%</td>
+    </tr>
+  </tfoot>
+</table>
+
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
