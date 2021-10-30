@@ -76,7 +76,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>29 Oct 2021, 05:19</td>
+            <td>30 Oct 2021, 05:36</td>
     </tr>
   </tbody>
 </table>
@@ -116,22 +116,24 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti127-download-wfs-CBS-Vierkantstatistieken-100m-WFS-checkWfsUrl-feature_29.html">T4/Beheer-PDOK/CBS-Vierkantstatisti127/download/wfs/CBS-Vierkantstatistieken-100m-WFS/checkWfsUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Ligging-industrie-en121-view-wms-Potentiekaart-restwarmte-WMS-checkViewUrl-feature_5.html">T4/Beheer-PDOK/Ligging-industrie-en121/view/wms/Potentiekaart-restwarmte-WMS/checkViewUrl.feature</a>
     </div>
   
   
 <div class="tags indention">
-  </div>
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
 
   
-  <span class="lead-duration duration">0.656</span>
+  <span class="lead-duration duration">2:0.080</span>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
+  <span class="name">check view service url exists</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -180,7 +182,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:19:45.008 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:33:52.490 [print] testing url:https://geodata.nationaalgeoregister.nl/restwarmte/wms?request=GetCapabilities&amp;service=wms</pre>
       </div>
     </div>
   </div>
@@ -213,42 +215,68 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.655</span>
+  <span class="lead-duration duration">2:0.080</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
 
 
         
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:19:45.010 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>05:33:52.491 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/restwarmte/wms?request=GetCapabilities&amp;service=wms
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:19:45.664 response time in milliseconds: 653.90
-1 &lt; 503
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 70
-1 &lt; Content-Type: application/json
-1 &lt; Date: Fri, 29 Oct 2021 05:19:45 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+05:34:22.506 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/restwarmte/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:34:52.527 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/restwarmte/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:35:22.543 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/restwarmte/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:35:52.570 java.net.SocketException: Network is unreachable, http call failed after 30027 milliseconds for URL: https://geodata.nationaalgeoregister.nl/restwarmte/wms?request=GetCapabilities&amp;service=wms
+05:35:52.570 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
@@ -260,7 +288,7 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   
@@ -270,30 +298,9 @@ $(document).ready(function() {
 
         
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
-          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:15 - status code was: 503, expected: 200, response time: 654, url: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS, response: </a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:15 - status code was: 503, expected: 200, response time: 654, url: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS, response: </pre>
-      </div>
-    </div>
-  </div>
-
 
         
         
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details">
-        <pre>05:19:45.664 status code was: 503, expected: 200, response time: 654, url: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS, response:</pre>
-      </div>
-    </div>
-  </div>
 
         
 
@@ -313,7 +320,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti127-view-wms-CBS-Vierkantstatistieken-100m-WMS-checkViewUrl-feature_105.html">T4/Beheer-PDOK/CBS-Vierkantstatisti127/view/wms/CBS-Vierkantstatistieken-100m-WMS/checkViewUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie158-view-wms-Kaderrichtlijn-Mariene-Strategie-2018-WMS-checkViewUrl-feature_9.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie158/view/wms/Kaderrichtlijn-Mariene-Strategie-2018-WMS/checkViewUrl.feature</a>
     </div>
   
   
@@ -323,10 +330,10 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.671</span>
+  <span class="lead-duration duration">2:0.103</span>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-6">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -339,13 +346,13 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details  in ">
+  <div id="element-6" class="collapse collapsable-details  in ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-7">
     
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -357,7 +364,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-7" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
@@ -375,11 +382,11 @@ $(document).ready(function() {
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
           <a>Doc string</a>
       </div>
-      <div id="msg-9" class="collapse collapsable-details">
-        <pre>05:19:45.155 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS</pre>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>05:24:30.701 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -412,15 +419,27 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.670</span>
+  <span class="lead-duration duration">2:0.103</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -431,23 +450,37 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-10" class="collapse collapsable-details">
-        <pre>05:19:45.156 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS
+        <pre>05:24:30.702 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:19:45.826 response time in milliseconds: 669.30
-1 &lt; 503
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 70
-1 &lt; Content-Type: application/json
-1 &lt; Date: Fri, 29 Oct 2021 05:19:45 GMT
-1 &lt; X-Cnection: [close, close]</pre>
+05:25:00.713 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:30.743 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:00.774 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:30.804 java.net.SocketException: Network is unreachable, http call failed after 30030 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
+05:26:30.804 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
@@ -459,7 +492,7 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   
@@ -469,13 +502,145 @@ $(document).ready(function() {
 
         
 
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water49-view-wms-Kaderrichtlijn-Water-EU2015-WMS-checkViewUrl-feature_13.html">T4/Beheer-PDOK/Kaderrichtlijn-Water49/view/wms/Kaderrichtlijn-Water-EU2015-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.105</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-11" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>05:28:11.973 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/wms/v1_0?service=WMS&amp;request=GetCapabilities</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.105</span>
+
+  </div>
+
+        
+
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
-          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:13 - status code was: 503, expected: 200, response time: 669, url: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS, response: </a>
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-14">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
       </div>
-      <div id="msg-11" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:13 - status code was: 503, expected: 200, response time: 669, url: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS, response: </pre>
+      <div id="msg-14" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
@@ -485,14 +650,4733 @@ $(document).ready(function() {
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
           <a>Doc string</a>
       </div>
-      <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:19:45.826 status code was: 503, expected: 200, response time: 669, url: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS, response:</pre>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>05:28:11.974 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/wms/v1_0?service=WMS&amp;request=GetCapabilities
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:28:42.004 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/wms/v1_0?service=WMS&amp;request=GetCapabilities
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:29:12.031 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/wms/v1_0?service=WMS&amp;request=GetCapabilities
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:29:42.060 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/wms/v1_0?service=WMS&amp;request=GetCapabilities
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:30:12.078 java.net.SocketException: Network is unreachable, http call failed after 30018 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/wms/v1_0?service=WMS&amp;request=GetCapabilities
+05:30:12.078 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge109-download-atom-CBS-Gebiedsindelingen-ATOM-checkdownloadurl-feature_16.html">T4/Beheer-PDOK/CBS-gebiedsindelinge109/download/atom/CBS-Gebiedsindelingen-ATOM/checkdownloadurl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.119</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-16">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-16" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>05:18:44.689 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.119</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-19">
+          <a>com.intuit.karate.exception.KarateException: checkdownloadurl.feature:12 - </a>
+      </div>
+      <div id="msg-19" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkdownloadurl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>05:18:44.696 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:14.722 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:44.752 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:14.783 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:44.814 java.net.SocketException: Network is unreachable, http call failed after 30031 milliseconds for URL: https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/atom/cbsgebiedsindelingen.xml
+05:20:44.814 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti198-view-wms-CBS-Vierkantstatistieken-500m-WMS-checkViewUrl-feature_23.html">T4/Beheer-PDOK/CBS-Vierkantstatisti198/view/wms/CBS-Vierkantstatistieken-500m-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.084</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-21">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-21" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-22">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-22" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-23">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details">
+        <pre>05:30:30.889 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wms/?request=GetCapabilities&amp;service=WMS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.083</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-24">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-24" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-25">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-25" class="collapse collapsable-details">
+        <pre>05:30:30.890 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wms/?request=GetCapabilities&amp;service=WMS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:00.912 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wms/?request=GetCapabilities&amp;service=WMS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:30.936 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wms/?request=GetCapabilities&amp;service=WMS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:00.959 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wms/?request=GetCapabilities&amp;service=WMS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:30.972 java.net.SocketException: Network is unreachable, http call failed after 30013 milliseconds for URL: https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wms/?request=GetCapabilities&amp;service=WMS
+05:32:30.972 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-NWB---Wegen188-download-otherprotocol-INSPIRE-download-service-PDOK-checkOtherUrl-feature_40.html">T4/Beheer-PDOK/NWB---Wegen188/download/otherprotocol/INSPIRE-download-service-PDOK/checkOtherUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.096</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-26">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-26" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-27">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-27" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>05:18:46.284 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.094</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-29">
+          <a>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - </a>
+      </div>
+      <div id="msg-29" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-30">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-30" class="collapse collapsable-details">
+        <pre>05:18:46.285 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:16.316 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:46.345 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:16.359 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:46.378 java.net.SocketException: Network is unreachable, http call failed after 30019 milliseconds for URL: https://geodata.nationaalgeoregister.nl/atom/index.xml
+05:20:46.379 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Administratieve-Eenh149-download-wfs-Administratieve-Eenheden--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_48.html">T4/Beheer-PDOK/Administratieve-Eenh149/download/wfs/Administratieve-Eenheden--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.084</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-31">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-32">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-32" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>05:18:45.650 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/au/wfs?request=GetCapabilities&amp;service=wfs</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.084</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-34">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-34" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-35">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-35" class="collapse collapsable-details">
+        <pre>05:18:45.651 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/au/wfs?request=GetCapabilities&amp;service=wfs
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:15.668 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/au/wfs?request=GetCapabilities&amp;service=wfs
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:45.693 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/au/wfs?request=GetCapabilities&amp;service=wfs
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:15.724 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/au/wfs?request=GetCapabilities&amp;service=wfs
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:45.734 java.net.SocketException: Network is unreachable, http call failed after 30010 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/au/wfs?request=GetCapabilities&amp;service=wfs
+05:20:45.734 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Scheepvaart-verkeers120-view-wms-Scheepvaart-Verkeersscheidingsstelsel-Noordzee-WMS-checkViewUrl-feature_63.html">T4/Beheer-PDOK/Scheepvaart-verkeers120/view/wms/Scheepvaart-Verkeersscheidingsstelsel-Noordzee-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.098</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-36">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-36" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-37">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-37" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-38">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-38" class="collapse collapsable-details">
+        <pre>05:22:18.002 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/verkeersscheidingsstelsel/wms/v2_0?service=WMS&amp;request=getcapabilities</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.097</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-39">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-39" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-40">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-40" class="collapse collapsable-details">
+        <pre>05:22:18.003 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/verkeersscheidingsstelsel/wms/v2_0?service=WMS&amp;request=getcapabilities
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:22:48.031 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/verkeersscheidingsstelsel/wms/v2_0?service=WMS&amp;request=getcapabilities
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:23:18.037 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/verkeersscheidingsstelsel/wms/v2_0?service=WMS&amp;request=getcapabilities
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:23:48.069 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/verkeersscheidingsstelsel/wms/v2_0?service=WMS&amp;request=getcapabilities
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:24:18.100 java.net.SocketException: Network is unreachable, http call failed after 30031 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rws/verkeersscheidingsstelsel/wms/v2_0?service=WMS&amp;request=getcapabilities
+05:24:18.100 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---122-view-wms-Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_82.html">T4/Beheer-PDOK/Vervoersnetwerken---122/view/wms/Vervoersnetwerken---Luchttransport--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.119</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-41">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-41" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-42">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-42" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-43">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-43" class="collapse collapsable-details">
+        <pre>05:31:03.480 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/tn-a/wms?request=GetCapabilities&amp;service=wms</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.119</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-44">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-44" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-45">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-45" class="collapse collapsable-details">
+        <pre>05:31:03.481 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-a/wms?request=GetCapabilities&amp;service=wms
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:33.510 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-a/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:03.536 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-a/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:33.569 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-a/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:03.599 java.net.SocketException: Network is unreachable, http call failed after 30030 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/tn-a/wms?request=GetCapabilities&amp;service=wms
+05:33:03.599 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti199-view-wms-CBS-Vierkantstatistieken-100m-WMS-checkViewUrl-feature_87.html">T4/Beheer-PDOK/CBS-Vierkantstatisti199/view/wms/CBS-Vierkantstatistieken-100m-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.120</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-46">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-46" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-47">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-47" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-48">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-48" class="collapse collapsable-details">
+        <pre>05:33:03.613 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.120</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-49">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-49" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-50">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-50" class="collapse collapsable-details">
+        <pre>05:33:03.614 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:33.645 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:34:03.676 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:34:33.707 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:35:03.734 java.net.SocketException: Network is unreachable, http call failed after 30027 milliseconds for URL: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wms/?request=GetCapabilities&amp;service=WMS
+05:35:03.734 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Windsnelheden-op-100129-download-wfs-Windsnelheden-100m-hoogte-WFS-checkWfsUrl-feature_95.html">T4/Beheer-PDOK/Windsnelheden-op-100129/download/wfs/Windsnelheden-100m-hoogte-WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.084</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-51">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-51" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-52">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-52" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-53">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-53" class="collapse collapsable-details">
+        <pre>05:31:51.937 [print] testing url:https://geodata.nationaalgeoregister.nl/windkaart/wfs?request=GetCapabilities&amp;service=wfs</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.083</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-54">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-54" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-55">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-55" class="collapse collapsable-details">
+        <pre>05:31:51.938 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wfs?request=GetCapabilities&amp;service=wfs
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:21.969 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wfs?request=GetCapabilities&amp;service=wfs
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:51.982 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wfs?request=GetCapabilities&amp;service=wfs
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:21.990 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wfs?request=GetCapabilities&amp;service=wfs
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:52.021 java.net.SocketException: Network is unreachable, http call failed after 30031 milliseconds for URL: https://geodata.nationaalgeoregister.nl/windkaart/wfs?request=GetCapabilities&amp;service=wfs
+05:33:52.021 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti199-download-wfs-CBS-Vierkantstatistieken-100m-WFS-checkWfsUrl-feature_105.html">T4/Beheer-PDOK/CBS-Vierkantstatisti199/download/wfs/CBS-Vierkantstatistieken-100m-WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.118</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-56">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-56" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-57">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-57" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-58">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-58" class="collapse collapsable-details">
+        <pre>05:32:31.420 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.118</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-59">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-59" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-60">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-60" class="collapse collapsable-details">
+        <pre>05:32:31.422 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:01.453 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:31.483 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:34:01.508 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:34:31.538 java.net.SocketException: Network is unreachable, http call failed after 30030 milliseconds for URL: https://geodata.nationaalgeoregister.nl/cbsvierkanten100mv2/wfs?request=GetCapabilities&amp;service=WFS
+05:34:31.538 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Bodemgebruik183-download-otherprotocol-INSPIRE-download-service-PDOK-checkOtherUrl-feature_124.html">T4/Beheer-PDOK/Bodemgebruik183/download/otherprotocol/INSPIRE-download-service-PDOK/checkOtherUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.104</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-61">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-61" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-62">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-62" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>05:24:49.073 [print] testing url:https://geodata.nationaalgeoregister.nl/atom/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.104</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-64">
+          <a>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - </a>
+      </div>
+      <div id="msg-64" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-65">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-65" class="collapse collapsable-details">
+        <pre>05:24:49.074 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:19.104 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:49.130 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:19.147 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/atom/index.xml
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:49.178 java.net.SocketException: Network is unreachable, http call failed after 30030 milliseconds for URL: https://geodata.nationaalgeoregister.nl/atom/index.xml
+05:26:49.178 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Vervoersnetwerken---15-view-wms-Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_131.html">T4/Beheer-PDOK/Vervoersnetwerken---15/view/wms/Vervoersnetwerken---Waterwegen--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.092</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-66">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-66" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-67">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-67" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-68">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-68" class="collapse collapsable-details">
+        <pre>05:27:51.267 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/tn-w/wms?request=GetCapabilities&amp;service=wms</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.092</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-69">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-69" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-70">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-70" class="collapse collapsable-details">
+        <pre>05:27:51.268 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-w/wms?request=GetCapabilities&amp;service=wms
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:28:21.298 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-w/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:28:51.329 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-w/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:29:21.345 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/tn-w/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:29:51.359 java.net.SocketException: Network is unreachable, http call failed after 30014 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/tn-w/wms?request=GetCapabilities&amp;service=wms
+05:29:51.359 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-gebiedsindelinge109-download-wfs-CBS-Gebiedsindelingen-WFS-checkWfsUrl-feature_137.html">T4/Beheer-PDOK/CBS-gebiedsindelinge109/download/wfs/CBS-Gebiedsindelingen-WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.112</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-71">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-71" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-72">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-72" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-73">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-73" class="collapse collapsable-details">
+        <pre>05:18:44.739 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.111</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-74">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-74" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-75">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-75" class="collapse collapsable-details">
+        <pre>05:18:44.741 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:14.772 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetCapabilities&amp;service=WFS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:44.790 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetCapabilities&amp;service=WFS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:14.820 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetCapabilities&amp;service=WFS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:20:44.850 java.net.SocketException: Network is unreachable, http call failed after 30030 milliseconds for URL: https://geodata.nationaalgeoregister.nl/cbsgebiedsindelingen/wfs?request=GetCapabilities&amp;service=WFS
+05:20:44.850 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Marie158-download-otherprotocol-Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM-checkOtherUrl-feature_138.html">T4/Beheer-PDOK/Kaderrichtlijn-Marie158/download/otherprotocol/Kaderrichtlijn-Mariene-Strategie-EU2018-ATOM/checkOtherUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.094</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-76">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-76" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-77">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-77" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-78">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-78" class="collapse collapsable-details">
+        <pre>05:24:30.634 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.092</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-79">
+          <a>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - </a>
+      </div>
+      <div id="msg-79" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-80">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-80" class="collapse collapsable-details">
+        <pre>05:24:30.634 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:00.644 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:30.675 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:00.704 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:30.726 java.net.SocketException: Network is unreachable, http call failed after 30022 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/atom/v1_0/index.xml
+05:26:30.726 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Ruimtelijke-plannen-191-view-wms-Ruimtelijke-plannen-WMS-checkViewUrl-feature_139.html">T4/Beheer-PDOK/Ruimtelijke-plannen-191/view/wms/Ruimtelijke-plannen-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.102</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-81">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-81" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-82">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-82" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-83">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-83" class="collapse collapsable-details">
+        <pre>05:29:51.827 [print] testing url:https://geodata.nationaalgeoregister.nl/plu/wms?request=GetCapabilities&amp;service=WMS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.101</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-84">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-84" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-85">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-85" class="collapse collapsable-details">
+        <pre>05:29:51.828 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/plu/wms?request=GetCapabilities&amp;service=WMS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:30:21.840 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/plu/wms?request=GetCapabilities&amp;service=WMS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:30:51.872 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/plu/wms?request=GetCapabilities&amp;service=WMS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:21.899 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/plu/wms?request=GetCapabilities&amp;service=WMS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:51.928 java.net.SocketException: Network is unreachable, http call failed after 30029 milliseconds for URL: https://geodata.nationaalgeoregister.nl/plu/wms?request=GetCapabilities&amp;service=WMS
+05:31:51.929 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-RDinfo117-download-wfs-RD-info-WFS-checkWfsUrl-feature_140.html">T4/Beheer-PDOK/RDinfo117/download/wfs/RD-info-WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.084</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-86">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-86" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-87">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-87" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-88">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-88" class="collapse collapsable-details">
+        <pre>05:22:49.111 [print] testing url:https://geodata.nationaalgeoregister.nl/rdinfo/wfs?request=GetCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.084</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-89">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-89" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-90">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-90" class="collapse collapsable-details">
+        <pre>05:22:49.112 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rdinfo/wfs?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:23:19.140 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rdinfo/wfs?request=GetCapabilities&amp;service=WFS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:23:49.155 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rdinfo/wfs?request=GetCapabilities&amp;service=WFS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:24:19.166 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rdinfo/wfs?request=GetCapabilities&amp;service=WFS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:24:49.196 java.net.SocketException: Network is unreachable, http call failed after 30029 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rdinfo/wfs?request=GetCapabilities&amp;service=WFS
+05:24:49.196 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Bodemgebruik183-view-wms-TOP10NL-WMS-checkViewUrl-feature_141.html">T4/Beheer-PDOK/Bodemgebruik183/view/wms/TOP10NL-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.121</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-91">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-91" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-92">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-92" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-93">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-93" class="collapse collapsable-details">
+        <pre>05:24:49.204 [print] testing url:https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.120</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-94">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-94" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-95">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-95" class="collapse collapsable-details">
+        <pre>05:24:49.205 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:19.236 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:25:49.266 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:19.296 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:26:49.325 java.net.SocketException: Network is unreachable, http call failed after 30029 milliseconds for URL: https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
+05:26:49.325 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Adressen--INSPIRE-ge96-download-otherprotocol-Adressen--INSPIRE-geharmoniseerd--WFS-checkOtherUrl-feature_156.html">T4/Beheer-PDOK/Adressen--INSPIRE-ge96/download/otherprotocol/Adressen--INSPIRE-geharmoniseerd--WFS/checkOtherUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.113</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-96">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-96" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-97">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-97" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-98">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-98" class="collapse collapsable-details">
+        <pre>05:21:27.220 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/ad/wfs?request=GetCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.110</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-99">
+          <a>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - </a>
+      </div>
+      <div id="msg-99" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-100">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-100" class="collapse collapsable-details">
+        <pre>05:21:27.223 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ad/wfs?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:21:57.262 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ad/wfs?request=GetCapabilities&amp;service=WFS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:22:27.287 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ad/wfs?request=GetCapabilities&amp;service=WFS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:22:57.318 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ad/wfs?request=GetCapabilities&amp;service=WFS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:23:27.331 java.net.SocketException: Network is unreachable, http call failed after 30013 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/ad/wfs?request=GetCapabilities&amp;service=WFS
+05:23:27.331 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Natura-2000--INSPIRE204-download-wfs-Natura2000--INSPIRE-geharmoniseerd--WFS-checkWfsUrl-feature_158.html">T4/Beheer-PDOK/Natura-2000--INSPIRE204/download/wfs/Natura2000--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.079</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-101">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-101" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-102">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-102" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-103">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-103" class="collapse collapsable-details">
+        <pre>05:28:30.803 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wfs?request=GetCapabilities&amp;service=wfs</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.079</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-104">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-104" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-105">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-105" class="collapse collapsable-details">
+        <pre>05:28:30.803 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wfs?request=GetCapabilities&amp;service=wfs
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:29:00.829 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wfs?request=GetCapabilities&amp;service=wfs
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:29:30.859 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wfs?request=GetCapabilities&amp;service=wfs
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:30:00.866 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wfs?request=GetCapabilities&amp;service=wfs
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:30:30.882 java.net.SocketException: Network is unreachable, http call failed after 30015 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/ps-natura2000/wfs?request=GetCapabilities&amp;service=wfs
+05:30:30.882 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Windsnelheden-op-100129-view-wms-Windsnelheden-100m-hoogte-WMS-checkViewUrl-feature_166.html">T4/Beheer-PDOK/Windsnelheden-op-100129/view/wms/Windsnelheden-100m-hoogte-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.083</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-106">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-106" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-107">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-107" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-108">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-108" class="collapse collapsable-details">
+        <pre>05:32:12.571 [print] testing url:https://geodata.nationaalgeoregister.nl/windkaart/wms?request=GetCapabilities&amp;service=wms</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.082</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-109">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-109" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-110">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-110" class="collapse collapsable-details">
+        <pre>05:32:12.572 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wms?request=GetCapabilities&amp;service=wms
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:42.602 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:12.622 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:33:42.633 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/windkaart/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:34:12.654 java.net.SocketException: Network is unreachable, http call failed after 30021 milliseconds for URL: https://geodata.nationaalgeoregister.nl/windkaart/wms?request=GetCapabilities&amp;service=wms
+05:34:12.654 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-NWB---Wegen188-view-wms-NWB---Wegen--Nationaal-Wegen-Bestand--WMS-checkViewUrl-feature_167.html">T4/Beheer-PDOK/NWB---Wegen188/view/wms/NWB---Wegen--Nationaal-Wegen-Bestand--WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.064</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-111">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-111" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-112">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-112" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-113">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-113" class="collapse collapsable-details">
+        <pre>05:20:44.824 [print] testing url:https://geodata.nationaalgeoregister.nl/nwbwegen/wms?request=GetCapabilities&amp;service=wms</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.064</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-114">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-114" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-115">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-115" class="collapse collapsable-details">
+        <pre>05:20:44.825 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/nwbwegen/wms?request=GetCapabilities&amp;service=wms
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:21:14.830 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/nwbwegen/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:21:44.853 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/nwbwegen/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:22:14.884 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/nwbwegen/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:22:44.888 java.net.SocketException: Network is unreachable, http call failed after 30004 milliseconds for URL: https://geodata.nationaalgeoregister.nl/nwbwegen/wms?request=GetCapabilities&amp;service=wms
+05:22:44.888 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-CBS-Vierkantstatisti198-download-wfs-CBS-Vierkantstatistieken-500m-WFS-checkWfsUrl-feature_179.html">T4/Beheer-PDOK/CBS-Vierkantstatisti198/download/wfs/CBS-Vierkantstatistieken-500m-WFS/checkWfsUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.069</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-116">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-116" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-117">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-117" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-118">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-118" class="collapse collapsable-details">
+        <pre>05:30:12.495 [print] testing url:https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wfs?request=GetCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.068</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-119">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-119" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-120">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-120" class="collapse collapsable-details">
+        <pre>05:30:12.496 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wfs?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:30:42.527 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wfs?request=GetCapabilities&amp;service=WFS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:12.537 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wfs?request=GetCapabilities&amp;service=WFS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:31:42.552 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wfs?request=GetCapabilities&amp;service=WFS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:32:12.564 java.net.SocketException: Network is unreachable, http call failed after 30012 milliseconds for URL: https://geodata.nationaalgeoregister.nl/cbsvierkanten500mv2/wfs?request=GetCapabilities&amp;service=WFS
+05:32:12.564 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Geluidbelasting-rijk165-view-wms-Geluidskaarten-Rijkswegen-WMS-checkViewUrl-feature_186.html">T4/Beheer-PDOK/Geluidbelasting-rijk165/view/wms/Geluidskaarten-Rijkswegen-WMS/checkViewUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
+      </div>
+
+  
+  <span class="lead-duration duration">2:0.091</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-121">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check view service url exists</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-121" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-122">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-122" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.002</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-123">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-123" class="collapse collapsable-details">
+        <pre>05:34:43.086 [print] testing url:https://geodata.nationaalgeoregister.nl/rwsgeluidskaarten/wms?request=GetCapabilities&amp;service=wms</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.089</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-124">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-124" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-125">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-125" class="collapse collapsable-details">
+        <pre>05:34:43.087 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rwsgeluidskaarten/wms?request=GetCapabilities&amp;service=wms
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:35:13.114 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rwsgeluidskaarten/wms?request=GetCapabilities&amp;service=wms
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:35:43.134 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rwsgeluidskaarten/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:36:13.165 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rwsgeluidskaarten/wms?request=GetCapabilities&amp;service=wms
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:36:43.175 java.net.SocketException: Network is unreachable, http call failed after 30010 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rwsgeluidskaarten/wms?request=GetCapabilities&amp;service=wms
+05:36:43.175 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Kaderrichtlijn-Water41-download-otherprotocol-Kaderrichtlijn-Water-EU2015-ATOM-checkOtherUrl-feature_197.html">T4/Beheer-PDOK/Kaderrichtlijn-Water41/download/otherprotocol/Kaderrichtlijn-Water-EU2015-ATOM/checkOtherUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">2:0.061</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-126">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-126" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-127">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-127" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-128">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-128" class="collapse collapsable-details">
+        <pre>05:26:30.733 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">2:0.061</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-129">
+          <a>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - </a>
+      </div>
+      <div id="msg-129" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-130">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-130" class="collapse collapsable-details">
+        <pre>05:26:30.734 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:27:00.739 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:27:30.756 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:28:00.787 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:28:30.795 java.net.SocketException: Network is unreachable, http call failed after 30008 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnwater2015/atom/v1_0/index.xml
+05:28:30.795 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
 
         
 
