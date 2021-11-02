@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>01 Nov 2021, 05:58</td>
+            <td>02 Nov 2021, 05:43</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Service=Other</td>
-                    <td      class="passed"    >14</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >1</td>
+                    <td      class="passed"    >16</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">16</td>
 
-          <td  class="passed"    >3</td>
-          <td  class="failed"    >1</td>
+          <td  class="passed"    >4</td>
+          <td >0</td>
           <td class="total">4</td>
 
-          <td class="duration" data-value="121260673341">2:1.260</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="1538611265">1.538</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN156-other-wfs-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherWFSUrl-feature_38.html">T4/Beheer-PDOK/Invasieve-Exoten--IN156/other/wfs/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut140-other-wfs-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_139.html">T4/Beheer-PDOK/Population-Distribut140/other/wfs/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -180,12 +180,12 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">2:0.081</span>
+  <span class="lead-duration duration">0.393</span>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">check service url</span>
   
@@ -196,15 +196,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -214,7 +214,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:51:42.136 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:23:12.865 [print] testing url:https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs</pre>
       </div>
     </div>
   </div>
@@ -269,68 +269,42 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">2:0.081</span>
+  <span class="lead-duration duration">0.393</span>
 
   </div>
 
         
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>com.intuit.karate.exception.KarateException: checkOtherWFSUrl.feature:14 - </a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: checkOtherWFSUrl.feature:14 - 
-java.net.SocketException: Network is unreachable</pre>
-      </div>
-    </div>
-  </div>
 
 
         
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
           <a>Doc string</a>
       </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>05:51:42.137 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>05:23:12.868 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
+1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:52:12.152 request:
-2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
-2 &gt; Accept-Encoding: gzip,deflate
-2 &gt; Connection: Keep-Alive
-2 &gt; Host: geodata.nationaalgeoregister.nl
-2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
-
-05:52:42.181 request:
-3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
-3 &gt; Accept-Encoding: gzip,deflate
-3 &gt; Connection: Keep-Alive
-3 &gt; Host: geodata.nationaalgeoregister.nl
-3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
-
-05:53:12.206 request:
-4 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
-4 &gt; Accept-Encoding: gzip,deflate
-4 &gt; Connection: Keep-Alive
-4 &gt; Host: geodata.nationaalgeoregister.nl
-4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
-
-05:53:42.218 java.net.SocketException: Network is unreachable, http call failed after 30011 milliseconds for URL: https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
-05:53:42.218 http request failed: 
-java.net.SocketException: Network is unreachable</pre>
+05:23:13.258 response time in milliseconds: 388.74
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 73
+1 &lt; Content-Type: text/html
+1 &lt; Date: Tue, 02 Nov 2021 05:23:13 GMT
+1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
     </div>
   </div>
@@ -342,7 +316,7 @@ java.net.SocketException: Network is unreachable</pre>
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   
@@ -374,7 +348,7 @@ java.net.SocketException: Network is unreachable</pre>
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-118-other-wfs-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1-checkOtherWFSUrl-feature_91.html">T4/Beheer-PDOK/Beschermde-gebieden-118/other/wfs/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS106-other-wfs-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_165.html">T4/Beheer-PDOK/Human-Health-NL-NUTS106/other/wfs/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -382,10 +356,10 @@ java.net.SocketException: Network is unreachable</pre>
   </div>
 
   
-  <span class="lead-duration duration">0.399</span>
+  <span class="lead-duration duration">0.374</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
     
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -398,13 +372,13 @@ java.net.SocketException: Network is unreachable</pre>
   </span>
   <div class="description indention"></div>
 
-  <div id="element-6" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
     
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -416,14 +390,14 @@ java.net.SocketException: Network is unreachable</pre>
 
   </div>
 
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.004</span>
 
   </div>
 
@@ -434,11 +408,11 @@ java.net.SocketException: Network is unreachable</pre>
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
           <a>Doc string</a>
       </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:19:35.028 [print] testing url:https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0</pre>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>05:19:06.482 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -475,7 +449,7 @@ java.net.SocketException: Network is unreachable</pre>
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.398</span>
+  <span class="lead-duration duration">0.370</span>
 
   </div>
 
@@ -486,18 +460,194 @@ java.net.SocketException: Network is unreachable</pre>
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
           <a>Doc string</a>
       </div>
-      <div id="msg-9" class="collapse collapsable-details">
-        <pre>05:19:35.030 request:
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>05:19:06.485 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+05:19:06.853 response time in milliseconds: 367.40
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 73
+1 &lt; Content-Type: text/html
+1 &lt; Date: Tue, 02 Nov 2021 05:19:06 GMT
+1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-129-other-wfs-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1-checkOtherWFSUrl-feature_178.html">T4/Beheer-PDOK/Beschermde-gebieden-129/other/wfs/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1/checkOtherWFSUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.388</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>05:35:23.726 [print] testing url:https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.388</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>05:35:23.727 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:19:35.427 response time in milliseconds: 396.91
+05:35:24.114 response time in milliseconds: 386.48
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -505,7 +655,7 @@ java.net.SocketException: Network is unreachable</pre>
 1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Mon, 01 Nov 2021 05:19:35 GMT
+1 &lt; Date: Tue, 02 Nov 2021 05:35:24 GMT
 1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
 1 &lt; X-Cnection: [close, close]</pre>
       </div>
@@ -551,7 +701,7 @@ java.net.SocketException: Network is unreachable</pre>
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut192-other-wfs-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_173.html">T4/Beheer-PDOK/Population-Distribut192/other/wfs/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN153-other-wfs-Spreiding-van-soorten---Invasieve-Exoten-WFS-V1-checkOtherWFSUrl-feature_192.html">T4/Beheer-PDOK/Invasieve-Exoten--IN153/other/wfs/Spreiding-van-soorten---Invasieve-Exoten-WFS-V1/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -559,10 +709,10 @@ java.net.SocketException: Network is unreachable</pre>
   </div>
 
   
-  <span class="lead-duration duration">0.375</span>
+  <span class="lead-duration duration">0.381</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
     
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -575,13 +725,13 @@ java.net.SocketException: Network is unreachable</pre>
   </span>
   <div class="description indention"></div>
 
-  <div id="element-10" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
     
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -593,7 +743,7 @@ java.net.SocketException: Network is unreachable</pre>
 
   </div>
 
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
@@ -611,11 +761,11 @@ java.net.SocketException: Network is unreachable</pre>
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
           <a>Doc string</a>
       </div>
-      <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:55:43.507 [print] testing url:https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs</pre>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>05:34:22.878 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -652,131 +802,7 @@ java.net.SocketException: Network is unreachable</pre>
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.375</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-13" class="collapse collapsable-details">
-        <pre>05:55:43.509 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
-
-05:55:43.882 response time in milliseconds: 373.20
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Content-Length: 73
-1 &lt; Content-Type: text/html
-1 &lt; Date: Mon, 01 Nov 2021 05:55:43 GMT
-1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
-1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS157-other-wfs-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_192.html">T4/Beheer-PDOK/Human-Health-NL-NUTS157/other/wfs/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-  </div>
-
-  
-  <span class="lead-duration duration">0.404</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-14" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-15" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.381</span>
 
   </div>
 
@@ -791,75 +817,24 @@ java.net.SocketException: Network is unreachable</pre>
           <a>Doc string</a>
       </div>
       <div id="msg-16" class="collapse collapsable-details">
-        <pre>05:21:47.325 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.403</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-17" class="collapse collapsable-details">
-        <pre>05:21:47.328 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+        <pre>05:34:22.879 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/invasieve-exoten/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:21:47.727 response time in milliseconds: 398.64
+05:34:23.259 response time in milliseconds: 379.87
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
 1 &lt; Content-Length: 73
-1 &lt; Content-Type: text/html
-1 &lt; Date: Mon, 01 Nov 2021 05:21:47 GMT
-1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
-1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
+1 &lt; Content-Type: text/html; charset=UTF-8
+1 &lt; Date: Tue, 02 Nov 2021 05:34:23 GMT
+1 &lt; Server: lighttpd/1.4.53
+1 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
