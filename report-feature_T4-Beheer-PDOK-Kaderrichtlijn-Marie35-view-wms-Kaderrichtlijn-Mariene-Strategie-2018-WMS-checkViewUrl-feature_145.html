@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>08 Nov 2021, 05:42</td>
+            <td>08 Nov 2021, 08:23</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="412432048">0.412</td>
+          <td class="duration" data-value="61543645648">1:1.543</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -234,7 +234,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def metadata = read('metadata.Service.json')</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:26:14.244 karate.env system property was:</pre>
+        <pre>08:09:18.094 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:26:14.246 [print] {
+        <pre>08:09:18.096 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;beheerPDOK@kadaster.nl,beheerPDOK@kadaster.nl&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -321,7 +321,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.411</span>
+  <span class="lead-duration duration">1:1.542</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -377,7 +377,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:26:14.246 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities</pre>
+        <pre>08:09:18.096 [print] testing url:https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -414,7 +414,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.410</span>
+  <span class="lead-duration duration">1:1.541</span>
 
   </div>
 
@@ -429,24 +429,38 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:26:14.247 request:
+        <pre>08:09:18.098 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:26:14.657 response time in milliseconds: 409.62
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Length: 73
-1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Mon, 08 Nov 2021 05:26:14 GMT
-1 &lt; Server: lighttpd/1.4.53
-1 &lt; X-Cnection: [close, close]</pre>
+08:09:48.128 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+08:10:18.132 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/rws/kaderrichtlijnmarienestrategie2018/wms/v1_0?SERVICE=WMS&amp;REQUEST=GetCapabilities
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+08:10:19.638 response time in milliseconds: 1505.71
+3 &lt; 200
+3 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+3 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Access-Control-Max-Age: 1000
+3 &lt; Content-Length: 73
+3 &lt; Content-Type: text/html; charset=UTF-8
+3 &lt; Date: Mon, 08 Nov 2021 08:10:19 GMT
+3 &lt; Server: lighttpd/1.4.53
+3 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>
