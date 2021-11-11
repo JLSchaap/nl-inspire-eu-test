@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>11 Nov 2021, 05:42</td>
+            <td>11 Nov 2021, 09:09</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">T4/Beheer-PDOK/Wijk--en-Buurtkaart-160/view/wms/CBS-Wijken-en-Buurten-2020-versie-1-WMS/checkViewUrl.feature</td>
-                    <td      class="passed"    >6</td>
-          <td >0</td>
-          <td >0</td>
+                    <td      class="passed"    >4</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="398173303">0.398</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="120092193213">2:0.092</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -175,7 +175,7 @@ $(document).ready(function() {
       </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">T4/Beheer-PDOK/Wijk--en-Buurtkaart-160/view/wms/CBS-Wijken-en-Buurten-2020-versie-1-WMS/checkViewUrl.feature</span>
   
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:34:44.468 karate.env system property was:</pre>
+        <pre>08:57:15.707 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:34:44.469 [print] {
+        <pre>08:57:15.708 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;beheerpdok@kadaster.nl,beheerpdok@kadaster.nl&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -321,12 +321,12 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.397</span>
+  <span class="lead-duration duration">2:0.090</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">check view service url exists</span>
   
@@ -337,15 +337,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details  in ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -355,7 +355,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-6" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
@@ -377,7 +377,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:34:44.469 [print] testing url:https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS</pre>
+        <pre>08:57:15.708 [print] testing url:https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS</pre>
       </div>
     </div>
   </div>
@@ -410,45 +410,68 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.396</span>
+  <span class="lead-duration duration">2:0.090</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - </a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:12 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
 
 
         
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
           <a>Doc string</a>
       </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:34:44.470 request:
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>08:57:15.709 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-05:34:44.866 response time in milliseconds: 395.29
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Thu, 11 Nov 2021 05:34:44 GMT
-1 &lt; ETag: &quot;122a4-5cfe0f1c3bc06-gzip&quot;
-1 &lt; Last-Modified: Wed, 03 Nov 2021 11:45:19 GMT
-1 &lt; Vary: Accept-Encoding
-1 &lt; X-Cnection: [close, close]</pre>
+08:57:45.740 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+08:58:15.745 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+08:58:45.774 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+08:59:15.799 java.net.SocketException: Network is unreachable, http call failed after 30025 milliseconds for URL: https://geodata.nationaalgeoregister.nl/wijkenbuurten2020/wms?request=GetCapabilities&amp;service=WMS
+08:59:15.799 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
@@ -460,7 +483,7 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   
