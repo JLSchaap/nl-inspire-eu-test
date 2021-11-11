@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>11 Nov 2021, 09:09</td>
+            <td>11 Nov 2021, 12:02</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">T4/Beheer-PDOK/Statistical-Units-Ve184/download/otherprotocol/CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WFS/checkOtherUrl.feature</td>
-                    <td      class="passed"    >6</td>
-          <td >0</td>
-          <td >0</td>
+                    <td      class="passed"    >4</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1464865266">1.464</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="120092892374">2:0.092</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -176,7 +176,7 @@ $(document).ready(function() {
       </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">T4/Beheer-PDOK/Statistical-Units-Ve184/download/otherprotocol/CBS-Gebiedsindelingen--INSPIRE-geharmoniseerd--WFS/checkOtherUrl.feature</span>
   
@@ -250,7 +250,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:02:55.518 karate.env system property was:</pre>
+        <pre>11:26:34.198 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -281,7 +281,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>09:02:55.520 [print] {
+        <pre>11:26:34.199 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;beheerPDOK@kadaster.nl,beheerPDOK@kadaster.nl&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -320,12 +320,12 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">1.463</span>
+  <span class="lead-duration duration">2:0.091</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">check service url</span>
   
@@ -336,15 +336,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details  in ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -354,14 +354,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-6" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -376,7 +376,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>09:02:55.522 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS</pre>
+        <pre>11:26:34.199 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -409,45 +409,68 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">1.461</span>
+  <span class="lead-duration duration">2:0.091</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+          <a>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - </a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
 
 
         
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
           <a>Doc string</a>
       </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>09:02:55.523 request:
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>11:26:34.200 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-09:02:56.984 response time in milliseconds: 1460.90
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Thu, 11 Nov 2021 09:02:56 GMT
-1 &lt; ETag: &quot;18263-5cfe0f6fdec87-gzip&quot;
-1 &lt; Last-Modified: Wed, 03 Nov 2021 11:46:47 GMT
-1 &lt; Vary: Accept-Encoding
-1 &lt; X-Cnection: [close, close]</pre>
+11:27:04.222 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+11:27:34.229 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+11:28:04.260 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+11:28:34.291 java.net.SocketException: Network is unreachable, http call failed after 30031 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/su-vector/wfs?&amp;request=GetCapabilities&amp;service=WFS
+11:28:34.291 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
@@ -459,7 +482,7 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   

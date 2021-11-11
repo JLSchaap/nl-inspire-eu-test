@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>11 Nov 2021, 09:09</td>
+            <td>11 Nov 2021, 12:02</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="30685139883">30.685</td>
+          <td class="duration" data-value="60712983770">1:0.712</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.001</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -234,7 +234,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def metadata = read('metadata.Service.json')</span>
   
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>08:48:41.719 karate.env system property was:</pre>
+        <pre>10:24:43.335 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>08:48:41.724 [print] {
+        <pre>10:24:43.336 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;beheerPDOK@kadaster.nl,beheerPDOK@kadaster.nl&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -321,7 +321,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">30.680</span>
+  <span class="lead-duration duration">1:0.711</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -377,7 +377,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>08:48:41.724 [print] testing url:https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms</pre>
+        <pre>10:24:43.336 [print] testing url:https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms</pre>
       </div>
     </div>
   </div>
@@ -414,7 +414,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">30.680</span>
+  <span class="lead-duration duration">1:0.711</span>
 
   </div>
 
@@ -429,33 +429,40 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>08:48:41.725 request:
+        <pre>10:24:43.337 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-08:49:11.751 request:
+10:25:13.354 request:
 2 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
 2 &gt; Accept-Encoding: gzip,deflate
 2 &gt; Connection: Keep-Alive
 2 &gt; Host: geodata.nationaalgeoregister.nl
 2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-08:49:12.404 response time in milliseconds: 653.07
-2 &lt; 200
-2 &lt; Accept-Ranges: bytes
-2 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-2 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-2 &lt; Access-Control-Allow-Origin: *
-2 &lt; Access-Control-Max-Age: 1000
-2 &lt; Content-Type: application/xml
-2 &lt; Date: Thu, 11 Nov 2021 08:49:12 GMT
-2 &lt; ETag: &quot;2b71d-5cfe0f1bcce95-gzip&quot;
-2 &lt; Last-Modified: Wed, 03 Nov 2021 11:45:18 GMT
-2 &lt; Vary: Accept-Encoding
-2 &lt; X-Cnection: [close, close]</pre>
+10:25:43.379 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/top10nlv2/wms?request=GetCapabilities&amp;service=wms
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+10:25:44.048 response time in milliseconds: 667.28
+3 &lt; 200
+3 &lt; Accept-Ranges: bytes
+3 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+3 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Access-Control-Max-Age: 1000
+3 &lt; Content-Type: application/xml
+3 &lt; Date: Thu, 11 Nov 2021 10:25:43 GMT
+3 &lt; ETag: &quot;2b71d-5cfe0f1bcce95-gzip&quot;
+3 &lt; Last-Modified: Wed, 03 Nov 2021 11:45:18 GMT
+3 &lt; Vary: Accept-Encoding
+3 &lt; X-Cnection: [close, close]</pre>
       </div>
     </div>
   </div>

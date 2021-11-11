@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>11 Nov 2021, 09:09</td>
+            <td>11 Nov 2021, 12:02</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">T4/Beheer-PDOK/Nationale-Parken--IN126/download/wfs/Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</td>
-                    <td      class="passed"    >6</td>
-          <td >0</td>
-          <td >0</td>
+                    <td      class="passed"    >4</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1601900880">1.601</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="120130402885">2:0.130</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -175,7 +175,7 @@ $(document).ready(function() {
       </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">T4/Beheer-PDOK/Nationale-Parken--IN126/download/wfs/Beschermde-Gebieden-Nationale-Parken--INSPIRE-geharmoniseerd--WFS/checkWfsUrl.feature</span>
   
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:04:38.111 karate.env system property was:</pre>
+        <pre>11:46:35.231 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>09:04:38.112 [print] {
+        <pre>11:46:35.232 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;beheerPDOK@kadaster.nl,beheerPDOK@kadaster.nl&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -319,12 +319,12 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">1.600</span>
+  <span class="lead-duration duration">2:0.129</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">check service url</span>
   
@@ -335,15 +335,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-5" class="collapse collapsable-details ">
+  <div id="element-5" class="collapse collapsable-details  in ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-6">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -353,7 +353,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-6" class="inner-level collapse collapsable-details ">
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
@@ -375,7 +375,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>09:04:38.112 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs</pre>
+        <pre>11:46:35.232 [print] testing url:https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs</pre>
       </div>
     </div>
   </div>
@@ -408,45 +408,68 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">1.600</span>
+  <span class="lead-duration duration">2:0.129</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+          <a>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - </a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkWfsUrl.feature:14 - 
+java.net.SocketException: Network is unreachable</pre>
+      </div>
+    </div>
+  </div>
 
 
         
         
   <div class="inner-level">
     <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
           <a>Doc string</a>
       </div>
-      <div id="msg-8" class="collapse collapsable-details">
-        <pre>09:04:38.113 request:
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>11:46:35.233 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
 
-09:04:39.711 response time in milliseconds: 1597.19
-1 &lt; 200
-1 &lt; Accept-Ranges: bytes
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Content-Type: application/xml
-1 &lt; Date: Thu, 11 Nov 2021 09:04:39 GMT
-1 &lt; ETag: &quot;1ac4c-5cfe0f6fc719f-gzip&quot;
-1 &lt; Last-Modified: Wed, 03 Nov 2021 11:46:46 GMT
-1 &lt; Vary: Accept-Encoding
-1 &lt; X-Cnection: [close, close]</pre>
+11:47:05.256 request:
+2 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Host: geodata.nationaalgeoregister.nl
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+11:47:35.283 request:
+3 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: geodata.nationaalgeoregister.nl
+3 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+11:48:05.314 request:
+4 &gt; HEAD https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: geodata.nationaalgeoregister.nl
+4 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.9)
+
+11:48:35.361 java.net.SocketException: Network is unreachable, http call failed after 30047 milliseconds for URL: https://geodata.nationaalgeoregister.nl/inspire/ps-rvo-np/wfs?request=GetCapabilities&amp;service=wfs
+11:48:35.362 http request failed: 
+java.net.SocketException: Network is unreachable</pre>
       </div>
     </div>
   </div>
@@ -458,7 +481,7 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   
