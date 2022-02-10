@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>09 Feb 2022, 05:20</td>
+            <td>10 Feb 2022, 05:21</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="981503574">0.981</td>
+          <td class="duration" data-value="1009750540">1.009</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -193,7 +193,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.094</span>
+  <span class="lead-duration duration">0.138</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -234,7 +234,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def metadata = read('metadata.Service.json')</span>
   
-  <span class="lead-duration duration">0.079</span>
+  <span class="lead-duration duration">0.135</span>
 
   </div>
 
@@ -249,7 +249,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:18:32.636 karate.env system property was:</pre>
+        <pre>05:19:01.440 karate.env system property was:</pre>
       </div>
     </div>
   </div>
@@ -265,7 +265,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print metadata</span>
   
-  <span class="lead-duration duration">0.014</span>
+  <span class="lead-duration duration">0.003</span>
 
   </div>
 
@@ -280,7 +280,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:18:32.737 [print] {
+        <pre>05:19:01.596 [print] {
   &quot;class&quot;: &quot;metadata.Service&quot;,
   &quot;electronicMailAddress&quot;: &quot;beheerPDOK@kadaster.nl,beheerpdok@kadaster.nl&quot;,
   &quot;metadataStandardVersion&quot;: &quot;Nederlands metadata profiel op ISO 19119 voor services 2.1.0&quot;,
@@ -321,7 +321,7 @@ $(document).ready(function() {
       </div>
 
   
-  <span class="lead-duration duration">0.887</span>
+  <span class="lead-duration duration">0.870</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -362,7 +362,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.016</span>
+  <span class="lead-duration duration">0.014</span>
 
   </div>
 
@@ -377,7 +377,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:18:32.754 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml</pre>
+        <pre>05:19:01.612 [print] testing url:https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml</pre>
       </div>
     </div>
   </div>
@@ -393,7 +393,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">url metadata.url</span>
   
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.003</span>
 
   </div>
 
@@ -414,7 +414,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.858</span>
+  <span class="lead-duration duration">0.853</span>
 
   </div>
 
@@ -429,14 +429,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:18:32.854 request:
+        <pre>05:19:01.691 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/rvo/inspire/invasieve-exoten/atom/v1_0/index.xml
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.10)
 
-05:18:33.625 response time in milliseconds: 765.30
+05:19:02.468 response time in milliseconds: 775.28
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
@@ -447,15 +447,15 @@ $(document).ready(function() {
 1 &lt; Content-Length: 2792
 1 &lt; Content-Security-Policy: block-all-mixed-content
 1 &lt; Content-Type: text/xml
-1 &lt; Date: Wed, 09 Feb 2022 05:18:33 GMT
+1 &lt; Date: Thu, 10 Feb 2022 05:19:02 GMT
 1 &lt; Etag: &quot;00000000000000000000000000000000-1&quot;
-1 &lt; Keep-Alive: timeout=5, max=11
+1 &lt; Keep-Alive: timeout=5, max=23
 1 &lt; Last-Modified: Thu, 10 Dec 2020 15:04:04 GMT
 1 &lt; Server: MinIO
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains
 1 &lt; Vary: Origin,Accept-Encoding
 1 &lt; X-Amz-Bucket-Region: Amsterdam
-1 &lt; X-Amz-Request-Id: 16D20675008EE6BE
+1 &lt; X-Amz-Request-Id: 16D2551048CC49FA
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Xss-Protection: 1; mode=block</pre>
       </div>
