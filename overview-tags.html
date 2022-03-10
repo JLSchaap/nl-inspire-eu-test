@@ -49,28 +49,28 @@ $(document).ready(function() {
   $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@Protocol=ATOM",  "@Protocol=Other",  "@Protocol=WFS",  "@Protocol=WMS",  "@Service=Download",  "@Service=Other",  "@Service=View",  "@Test=downloadExists",  "@Test=otherExists",  "@Test=viewServiceExists", ] ,
+        labels:  [ "@Protocol=ATOM",  "@Protocol=Other",  "@Protocol=WCS",  "@Protocol=WFS",  "@Protocol=WMS",  "@Service=Download",  "@Service=Other",  "@Service=View",  "@Test=downloadExists",  "@Test=otherExists",  "@Test=viewServiceExists", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00, ]             },
+                data:  [ 100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00,  100.00, ]             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             }
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ]             }
         ]
     };
 
@@ -129,7 +129,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>09 Mar 2022, 05:21</td>
+            <td>10 Mar 2022, 05:22</td>
     </tr>
   </tbody>
 </table>
@@ -204,7 +204,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">30</td>
 
-        <td class="duration" data-value="10753378042">10.753</td>
+        <td class="duration" data-value="18130950991">18.130</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
@@ -221,7 +221,24 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">40</td>
 
-        <td class="duration" data-value="18786387582">18.786</td>
+        <td class="duration" data-value="28253291789">28.253</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_Protocol-WCS.html">@Protocol=WCS</a></td>
+        
+        <td      class="passed"    >7</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">7</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="676819123">0.676</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
@@ -238,41 +255,41 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">38</td>
 
-        <td class="duration" data-value="14612679086">14.612</td>
+        <td class="duration" data-value="24960277935">24.960</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-tag_Protocol-WMS.html">@Protocol=WMS</a></td>
         
-        <td      class="passed"    >344</td>
+        <td      class="passed"    >348</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">344</td>
+        <td class="total">348</td>
 
-        <td  class="passed"    >86</td>
+        <td  class="passed"    >87</td>
         <td >0</td>
-        <td class="total">86</td>
+        <td class="total">87</td>
 
-        <td class="duration" data-value="33964716360">33.964</td>
+        <td class="duration" data-value="56686519893">56.686</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-tag_Service-Download.html">@Service=Download</a></td>
         
-        <td      class="passed"    >388</td>
+        <td      class="passed"    >395</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">388</td>
+        <td class="total">395</td>
 
-        <td  class="passed"    >97</td>
+        <td  class="passed"    >98</td>
         <td >0</td>
-        <td class="total">97</td>
+        <td class="total">98</td>
 
-        <td class="duration" data-value="38051842239">38.051</td>
+        <td class="duration" data-value="63818264461">1:3.818</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
@@ -289,24 +306,24 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">5</td>
 
-        <td class="duration" data-value="1816862763">1.816</td>
+        <td class="duration" data-value="3174746265">3.174</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-tag_Service-View.html">@Service=View</a></td>
         
-        <td      class="passed"    >368</td>
+        <td      class="passed"    >372</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">368</td>
+        <td class="total">372</td>
 
-        <td  class="passed"    >92</td>
+        <td  class="passed"    >93</td>
         <td >0</td>
-        <td class="total">92</td>
+        <td class="total">93</td>
 
-        <td class="duration" data-value="38248456068">38.248</td>
+        <td class="duration" data-value="61714849005">1:1.714</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
@@ -323,7 +340,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">30</td>
 
-        <td class="duration" data-value="10753378042">10.753</td>
+        <td class="duration" data-value="18130950991">18.130</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
@@ -340,24 +357,24 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">34</td>
 
-        <td class="duration" data-value="14502647874">14.502</td>
+        <td class="duration" data-value="23224962677">23.224</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a></td>
         
-        <td      class="passed"    >344</td>
+        <td      class="passed"    >348</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">344</td>
+        <td class="total">348</td>
 
-        <td  class="passed"    >86</td>
+        <td  class="passed"    >87</td>
         <td >0</td>
-        <td class="total">86</td>
+        <td class="total">87</td>
 
-        <td class="duration" data-value="33964716360">33.964</td>
+        <td class="duration" data-value="56686519893">56.686</td>
         <td class="passed">Passed</td>
       </tr>
       </tbody>
@@ -365,19 +382,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-            <td>2152</td>
+            <td>2178</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>2152</td>
+      <td>2178</td>
 
-      <td>538</td>
+      <td>543</td>
       <td>0</td>
-      <td>538</td>
+      <td>543</td>
 
-      <td class="duration">3:35.455</td>
-      <td>10</td>
+      <td class="duration">5:55.458</td>
+      <td>11</td>
     </tr>
     <tr>
       <td></td>
