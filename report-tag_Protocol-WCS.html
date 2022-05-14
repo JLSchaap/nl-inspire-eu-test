@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>13 May 2022, 05:46</td>
+            <td>14 May 2022, 06:01</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="449317299">0.449</td>
+          <td class="duration" data-value="437607167">0.437</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan150-download-wcs-Actueel-Hoogtebestand-Nederland-3-WCS-checkwcsUrl-feature_55.html">T4/Beheer-PDOK/Actueel-Hoogtebestan150/download/wcs/Actueel-Hoogtebestand-Nederland-3-WCS/checkwcsUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan181-download-wcs-Actueel-Hoogtebestand-Nederland-3-WCS-checkwcsUrl-feature_212.html">T4/Beheer-PDOK/Actueel-Hoogtebestan181/download/wcs/Actueel-Hoogtebestand-Nederland-3-WCS/checkwcsUrl.feature</a>
     </div>
   
   
@@ -180,7 +180,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.449</span>
+  <span class="lead-duration duration">0.437</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:44:57.561 [print] testing url:https://geodata.nationaalgeoregister.nl/ahn3/wcs?&amp;service=wcs&amp;request=GetCapabilities</pre>
+        <pre>06:00:40.424 [print] testing url:https://geodata.nationaalgeoregister.nl/ahn3/wcs?&amp;service=wcs&amp;request=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.414</span>
+  <span class="lead-duration duration">0.387</span>
 
   </div>
 
@@ -288,14 +288,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:44:57.562 request:
+        <pre>06:00:40.425 request:
 1 &gt; HEAD https://geodata.nationaalgeoregister.nl/ahn3/wcs?&amp;service=wcs&amp;request=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:44:57.976 response time in milliseconds: 413.10
+06:00:40.812 response time in milliseconds: 386.50
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
 1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
@@ -304,8 +304,8 @@ $(document).ready(function() {
 1 &lt; Connection: Keep-Alive
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Fri, 13 May 2022 05:44:57 GMT
-1 &lt; Keep-Alive: timeout=5, max=47
+1 &lt; Date: Sat, 14 May 2022 06:00:40 GMT
+1 &lt; Keep-Alive: timeout=5, max=81
 1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53</pre>
       </div>
     </div>
@@ -343,7 +343,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
   
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.006</span>
 
   </div>
 
@@ -364,7 +364,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
   
-  <span class="lead-duration duration">0.016</span>
+  <span class="lead-duration duration">0.037</span>
 
   </div>
 
@@ -385,7 +385,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">assert filesize &gt; 50</span>
   
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.005</span>
 
   </div>
 
