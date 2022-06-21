@@ -76,7 +76,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>20 Jun 2022, 05:24</td>
+            <td>21 Jun 2022, 05:28</td>
     </tr>
   </tbody>
 </table>
@@ -116,24 +116,24 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Nationale-Landschapp132-download-atom-Provinciaal-Landschapsbeleid--voorheen-Nationale-Landschappen----Provincies--INSPIRE-geharmoniseerd--ATOM-checkdownloadurl-feature_121.html">T4/Beheer-PDOK/Nationale-Landschapp132/download/atom/Provinciaal-Landschapsbeleid--voorheen-Nationale-Landschappen----Provincies--INSPIRE-geharmoniseerd--ATOM/checkdownloadurl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Nationale-Landschapp132-view-wms-Provinciaal-Landschapsbeleid--voorheen-Nationale-Landschappen----Provincies--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_174.html">T4/Beheer-PDOK/Nationale-Landschapp132/view/wms/Provinciaal-Landschapsbeleid--voorheen-Nationale-Landschappen----Provincies--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a>
     </div>
   
   
 <div class="tags indention">
       <b>Tags:</b>
-           <a href="report-tag_Test-downloadExists.html">@Test=downloadExists</a>
+           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
       </div>
 
   
-  <span class="lead-duration duration">0.469</span>
+  <span class="lead-duration duration">0.586</span>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
+  <span class="name">check view service url exists</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -182,7 +182,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:24:03.059 [print] testing url:https://service.pdok.nl/provincies/nationale-landschappen/atom/index.xml</pre>
+        <pre>05:28:06.461 [print] testing url:https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS</pre>
       </div>
     </div>
   </div>
@@ -219,7 +219,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.468</span>
+  <span class="lead-duration duration">0.584</span>
 
   </div>
 
@@ -234,18 +234,18 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:24:03.059 request:
-1 &gt; HEAD https://service.pdok.nl/provincies/nationale-landschappen/atom/index.xml
+        <pre>05:28:06.462 request:
+1 &gt; HEAD https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:24:03.527 response time in milliseconds: 467.24
+05:28:07.045 response time in milliseconds: 582.88
 1 &lt; 404
 1 &lt; Content-Length: 19
 1 &lt; Content-Type: text/plain; charset=utf-8
-1 &lt; Date: Mon, 20 Jun 2022 05:24:03 GMT
+1 &lt; Date: Tue, 21 Jun 2022 05:28:06 GMT
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 1 &lt; X-Content-Type-Options: nosniff</pre>
       </div>
@@ -263,7 +263,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
   </div>
 
@@ -272,10 +272,10 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
-          <a>com.intuit.karate.exception.KarateException: checkdownloadurl.feature:13 - status code was: 404, expected: 200, response time: 467, url: https://service.pdok.nl/provincies/nationale-landschappen/atom/index.xml, response: </a>
+          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:13 - status code was: 404, expected: 200, response time: 583, url: https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS, response: </a>
       </div>
       <div id="msg-5" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: checkdownloadurl.feature:13 - status code was: 404, expected: 200, response time: 467, url: https://service.pdok.nl/provincies/nationale-landschappen/atom/index.xml, response: </pre>
+        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:13 - status code was: 404, expected: 200, response time: 583, url: https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS, response: </pre>
       </div>
     </div>
   </div>
@@ -289,203 +289,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-6" class="collapse collapsable-details">
-        <pre>05:24:03.528 status code was: 404, expected: 200, response time: 467, url: https://service.pdok.nl/provincies/nationale-landschappen/atom/index.xml, response:</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                      
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Nationale-Landschapp132-view-wms-Provinciaal-Landschapsbeleid--voorheen-Nationale-Landschappen----Provincies--INSPIRE-geharmoniseerd--WMS-checkViewUrl-feature_177.html">T4/Beheer-PDOK/Nationale-Landschapp132/view/wms/Provinciaal-Landschapsbeleid--voorheen-Nationale-Landschappen----Provincies--INSPIRE-geharmoniseerd--WMS/checkViewUrl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-      <b>Tags:</b>
-           <a href="report-tag_Test-viewServiceExists.html">@Test=viewServiceExists</a>
-      </div>
-
-  
-  <span class="lead-duration duration">0.526</span>
-
-
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
-    
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check view service url exists</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-7" class="collapse collapsable-details  in ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
-    
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details">
-        <pre>05:24:03.537 [print] testing url:https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.525</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-10" class="collapse collapsable-details">
-        <pre>05:24:03.539 request:
-1 &gt; HEAD https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
-
-05:24:04.063 response time in milliseconds: 523.71
-1 &lt; 404
-1 &lt; Content-Length: 19
-1 &lt; Content-Type: text/plain; charset=utf-8
-1 &lt; Date: Mon, 20 Jun 2022 05:24:03 GMT
-1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-1 &lt; X-Content-Type-Options: nosniff</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
-          <a>com.intuit.karate.exception.KarateException: checkViewUrl.feature:13 - status code was: 404, expected: 200, response time: 524, url: https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS, response: </a>
-      </div>
-      <div id="msg-11" class="collapse collapsable-details  in ">
-        <pre>com.intuit.karate.exception.KarateException: checkViewUrl.feature:13 - status code was: 404, expected: 200, response time: 524, url: https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS, response: </pre>
-      </div>
-    </div>
-  </div>
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:24:04.063 status code was: 404, expected: 200, response time: 524, url: https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS, response:</pre>
+        <pre>05:28:07.046 status code was: 404, expected: 200, response time: 583, url: https://service.pdok.nl/provincies/nationale-landschappen/wms/v1_0?request=GetCapabilities&amp;service=WMS, response:</pre>
       </div>
     </div>
   </div>
