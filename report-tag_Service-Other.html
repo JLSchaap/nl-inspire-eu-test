@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>29 Jun 2022, 05:32</td>
+            <td>30 Jun 2022, 05:30</td>
     </tr>
   </tbody>
 </table>
@@ -128,18 +128,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Service=Other</td>
-                    <td      class="passed"    >24</td>
+                    <td      class="passed"    >28</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">24</td>
+          <td class="total">28</td>
 
-          <td  class="passed"    >6</td>
+          <td  class="passed"    >7</td>
           <td >0</td>
-          <td class="total">6</td>
+          <td class="total">7</td>
 
-          <td class="duration" data-value="2978760058">2.978</td>
+          <td class="duration" data-value="3416339966">3.416</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS142-other-wfs-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_65.html">T4/Beheer-PDOK/Human-Health-NL-NUTS142/other/wfs/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-124-other-wfs-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1-checkOtherWFSUrl-feature_6.html">T4/Beheer-PDOK/Beschermde-gebieden-124/other/wfs/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -180,7 +180,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.480</span>
+  <span class="lead-duration duration">0.538</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -221,7 +221,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
   </div>
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:31:09.840 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
+        <pre>05:28:41.791 [print] testing url:https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0</pre>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.479</span>
+  <span class="lead-duration duration">0.537</span>
 
   </div>
 
@@ -288,23 +288,25 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:31:09.843 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
+        <pre>05:28:41.793 request:
+1 &gt; HEAD https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
-1 &gt; Host: service.pdok.nl
+1 &gt; Host: geodata.nationaalgeoregister.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:31:10.319 response time in milliseconds: 475.65
+05:28:42.328 response time in milliseconds: 533.88
 1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type
-1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
+1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
+1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
 1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Max-Age: 1000
+1 &lt; Connection: Keep-Alive
 1 &lt; Content-Length: 73
-1 &lt; Content-Type: text/html
-1 &lt; Date: Wed, 29 Jun 2022 05:31:10 GMT
-1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
-1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
+1 &lt; Content-Type: text/html; charset=UTF-8
+1 &lt; Date: Thu, 30 Jun 2022 05:28:42 GMT
+1 &lt; Keep-Alive: timeout=5, max=98
+1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53</pre>
       </div>
     </div>
   </div>
@@ -348,7 +350,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN112-other-wfs-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_108.html">T4/Beheer-PDOK/Invasieve-Exoten--IN112/other/wfs/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Mosselzaadinvanginst30-other-wfs-Mosselzaadinvanginstallaties-WFS-checkOtherWFSUrl-feature_18.html">T4/Beheer-PDOK/Mosselzaadinvanginst30/other/wfs/Mosselzaadinvanginstallaties-WFS/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -356,7 +358,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.480</span>
+  <span class="lead-duration duration">0.477</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
@@ -412,7 +414,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-7" class="collapse collapsable-details">
-        <pre>05:31:20.551 [print] testing url:https://service.pdok.nl/rvo/invasieve-exoten/wfs/v1_0?request=getcapabilities&amp;service=wfs</pre>
+        <pre>05:29:31.077 [print] testing url:https://service.pdok.nl/rvo/mosselzaadinvanginstallaties/wfs/v1_0?service=wfs&amp;request=getcapabilities</pre>
       </div>
     </div>
   </div>
@@ -449,7 +451,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.479</span>
+  <span class="lead-duration duration">0.476</span>
 
   </div>
 
@@ -464,21 +466,21 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-8" class="collapse collapsable-details">
-        <pre>05:31:20.552 request:
-1 &gt; HEAD https://service.pdok.nl/rvo/invasieve-exoten/wfs/v1_0?request=getcapabilities&amp;service=wfs
+        <pre>05:29:31.078 request:
+1 &gt; HEAD https://service.pdok.nl/rvo/mosselzaadinvanginstallaties/wfs/v1_0?service=wfs&amp;request=getcapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:31:21.031 response time in milliseconds: 478.80
+05:29:31.554 response time in milliseconds: 475.04
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html
-1 &lt; Date: Wed, 29 Jun 2022 05:31:20 GMT
+1 &lt; Date: Thu, 30 Jun 2022 05:29:31 GMT
 1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
@@ -524,7 +526,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Beschermde-gebieden-83-other-wfs-Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1-checkOtherWFSUrl-feature_118.html">T4/Beheer-PDOK/Beschermde-gebieden-83/other/wfs/Beschermde-gebieden---Provincies--INSPIRE-geharmoniseerd--WFS-V1/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Human-Health-NL-NUTS142-other-wfs-Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_76.html">T4/Beheer-PDOK/Human-Health-NL-NUTS142/other/wfs/Human-Health-Statistics-Netherlands--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -532,7 +534,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.515</span>
+  <span class="lead-duration duration">0.483</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
@@ -588,7 +590,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-11" class="collapse collapsable-details">
-        <pre>05:31:27.655 [print] testing url:https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0</pre>
+        <pre>05:28:58.597 [print] testing url:https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -625,7 +627,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.513</span>
+  <span class="lead-duration duration">0.482</span>
 
   </div>
 
@@ -640,199 +642,21 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-12" class="collapse collapsable-details">
-        <pre>05:31:27.656 request:
-1 &gt; HEAD https://geodata.nationaalgeoregister.nl/provincies/ps/wfs/v1?SERVICE=WFS&amp;REQUEST=GetCapabilities&amp;version=2.0.0
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: geodata.nationaalgeoregister.nl
-1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
-
-05:31:28.169 response time in milliseconds: 512.67
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: SOAPAction,X-Requested-With,Content-Type,Origin,Authorization,Accept
-1 &lt; Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Access-Control-Max-Age: 1000
-1 &lt; Connection: Keep-Alive
-1 &lt; Content-Length: 73
-1 &lt; Content-Type: text/html; charset=UTF-8
-1 &lt; Date: Wed, 29 Jun 2022 05:31:28 GMT
-1 &lt; Keep-Alive: timeout=5, max=92
-1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-      </div>
-</div>
-
-
-    
-
-  </div>
-</div>
-
-                  
-<div class="element">
-      <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik111-other-wfs-Bestand-bodemgebruik-2017-WFS-checkOtherWFSUrl-feature_137.html">T4/Beheer-PDOK/Bestand-Bodemgebruik111/other/wfs/Bestand-bodemgebruik-2017-WFS/checkOtherWFSUrl.feature</a>
-    </div>
-  
-  
-<div class="tags indention">
-  </div>
-
-  
-  <span class="lead-duration duration">0.491</span>
-
-
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
-    
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">check service url</span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-13" class="collapse collapsable-details ">
-    
-
-
-    
-<div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
-    
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-  
-
-       <i class="chevron fa fa-fw"></i>
-  </div>
-
-  </div>
-
-  <div id="steps-14" class="inner-level collapse collapsable-details ">
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
-  
-  <span class="lead-duration duration">0.001</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-15" class="collapse collapsable-details">
-        <pre>05:30:52.897 [print] testing url:https://service.pdok.nl/cbs/bestandbodemgebruik/2017/wfs/v1_0?request=getCapabilities&amp;service=WFS</pre>
-      </div>
-    </div>
-  </div>
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url metadata.url</span>
-  
-  <span class="lead-duration duration">0.000</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method HEAD</span>
-  
-  <span class="lead-duration duration">0.489</span>
-
-  </div>
-
-        
-
-
-        
-        
-  <div class="inner-level">
-    <div class="docstring indention">
-            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-16" class="collapse collapsable-details">
-        <pre>05:30:52.899 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/bestandbodemgebruik/2017/wfs/v1_0?request=getCapabilities&amp;service=WFS
+        <pre>05:28:58.599 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/hh/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:30:53.387 response time in milliseconds: 486.87
+05:28:59.080 response time in milliseconds: 480.47
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html
-1 &lt; Date: Wed, 29 Jun 2022 05:30:53 GMT
+1 &lt; Date: Thu, 30 Jun 2022 05:28:59 GMT
 1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
@@ -878,7 +702,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Mosselzaadinvanginst91-other-wfs-Mosselzaadinvanginstallaties-WFS-checkOtherWFSUrl-feature_159.html">T4/Beheer-PDOK/Mosselzaadinvanginst91/other/wfs/Mosselzaadinvanginstallaties-WFS/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Invasieve-Exoten--IN108-other-wfs-Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_108.html">T4/Beheer-PDOK/Invasieve-Exoten--IN108/other/wfs/Spreiding-van-soorten---Invasieve-Exoten--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -886,7 +710,183 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.527</span>
+  <span class="lead-duration duration">0.466</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>05:30:16.065 [print] testing url:https://service.pdok.nl/rvo/invasieve-exoten/wfs/v1_0?request=getcapabilities&amp;service=wfs</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.465</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>05:30:16.066 request:
+1 &gt; HEAD https://service.pdok.nl/rvo/invasieve-exoten/wfs/v1_0?request=getcapabilities&amp;service=wfs
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
+
+05:30:16.530 response time in milliseconds: 464.04
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 73
+1 &lt; Content-Type: text/html
+1 &lt; Date: Thu, 30 Jun 2022 05:30:16 GMT
+1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Wijk--en-Buurtkaart-102-other-wfs-CBS-Wijken-en-Buurten-2021-versie-1-WFS-checkOtherWFSUrl-feature_111.html">T4/Beheer-PDOK/Wijk--en-Buurtkaart-102/other/wfs/CBS-Wijken-en-Buurten-2021-versie-1-WFS/checkOtherWFSUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.477</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
@@ -942,7 +942,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-19" class="collapse collapsable-details">
-        <pre>05:31:30.842 [print] testing url:https://service.pdok.nl/rvo/mosselzaadinvanginstallaties/wfs/v1_0?service=wfs&amp;request=getcapabilities</pre>
+        <pre>05:28:31.391 [print] testing url:https://service.pdok.nl/cbs/wb2021/wfs/v1_0?request=GetCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -979,7 +979,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.527</span>
+  <span class="lead-duration duration">0.476</span>
 
   </div>
 
@@ -994,21 +994,21 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-20" class="collapse collapsable-details">
-        <pre>05:31:30.843 request:
-1 &gt; HEAD https://service.pdok.nl/rvo/mosselzaadinvanginstallaties/wfs/v1_0?service=wfs&amp;request=getcapabilities
+        <pre>05:28:31.392 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/wb2021/wfs/v1_0?request=GetCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:31:31.369 response time in milliseconds: 525.19
+05:28:31.868 response time in milliseconds: 474.88
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html
-1 &lt; Date: Wed, 29 Jun 2022 05:31:31 GMT
+1 &lt; Date: Thu, 30 Jun 2022 05:28:31 GMT
 1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
@@ -1054,7 +1054,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut105-other-wfs-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_172.html">T4/Beheer-PDOK/Population-Distribut105/other/wfs/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Bestand-Bodemgebruik107-other-wfs-Bestand-bodemgebruik-2017-WFS-checkOtherWFSUrl-feature_133.html">T4/Beheer-PDOK/Bestand-Bodemgebruik107/other/wfs/Bestand-bodemgebruik-2017-WFS/checkOtherWFSUrl.feature</a>
     </div>
   
   
@@ -1062,7 +1062,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.484</span>
+  <span class="lead-duration duration">0.478</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-21">
@@ -1118,7 +1118,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-23" class="collapse collapsable-details">
-        <pre>05:32:10.086 [print] testing url:https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs</pre>
+        <pre>05:29:09.675 [print] testing url:https://service.pdok.nl/cbs/bestandbodemgebruik/2017/wfs/v1_0?request=getCapabilities&amp;service=WFS</pre>
       </div>
     </div>
   </div>
@@ -1155,7 +1155,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.483</span>
+  <span class="lead-duration duration">0.478</span>
 
   </div>
 
@@ -1170,21 +1170,197 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-24" class="collapse collapsable-details">
-        <pre>05:32:10.087 request:
-1 &gt; HEAD https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs
+        <pre>05:29:09.676 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/bestandbodemgebruik/2017/wfs/v1_0?request=getCapabilities&amp;service=WFS
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
 
-05:32:10.570 response time in milliseconds: 482.23
+05:29:10.153 response time in milliseconds: 476.92
 1 &lt; 200
 1 &lt; Access-Control-Allow-Headers: Content-Type
 1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html
-1 &lt; Date: Wed, 29 Jun 2022 05:32:10 GMT
+1 &lt; Date: Thu, 30 Jun 2022 05:29:10 GMT
+1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-Population-Distribut103-other-wfs-Population-Distribution--INSPIRE-geharmoniseerd--WFS-checkOtherWFSUrl-feature_210.html">T4/Beheer-PDOK/Population-Distribut103/other/wfs/Population-Distribution--INSPIRE-geharmoniseerd--WFS/checkOtherWFSUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.494</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-25" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-26" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>05:28:45.009 [print] testing url:https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.492</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-28">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-28" class="collapse collapsable-details">
+        <pre>05:28:45.016 request:
+1 &gt; HEAD https://service.pdok.nl/cbs/pd/wfs/v1_0?service=WFS&amp;request=GetCapabilities&amp;service=wfs
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.11)
+
+05:28:45.502 response time in milliseconds: 485.66
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 73
+1 &lt; Content-Type: text/html
+1 &lt; Date: Thu, 30 Jun 2022 05:28:45 GMT
 1 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
