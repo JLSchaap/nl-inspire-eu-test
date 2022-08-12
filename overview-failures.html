@@ -76,7 +76,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>11 Aug 2022, 05:23</td>
+            <td>12 Aug 2022, 05:25</td>
     </tr>
   </tbody>
 </table>
@@ -111,7 +111,204 @@ $(document).ready(function() {
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
 
-              <p>You have no failed scenarios in your Cucumber report</p>
+              <div class="elements">
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_T4-Beheer-PDOK-BAG126-other-wfs-BAG-WFS-checkOtherWFSUrl-feature_35.html">T4/Beheer-PDOK/BAG126/other/wfs/BAG-WFS/checkOtherWFSUrl.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.466</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">check service url</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;testing url:&quot; + metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>05:24:57.966 [print] testing url:https://service.pdok.nl/lv/bag/wfs/v2_0?request=getCapabilities&amp;service=WFS</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url metadata.url</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method HEAD</span>
+  
+  <span class="lead-duration duration">0.466</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>05:24:57.966 request:
+1 &gt; HEAD https://service.pdok.nl/lv/bag/wfs/v2_0?request=getCapabilities&amp;service=WFS
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: service.pdok.nl
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.12)
+
+05:24:58.432 response time in milliseconds: 465.10
+1 &lt; 503
+1 &lt; Access-Control-Allow-Headers: Content-Type
+1 &lt; Access-Control-Allow-Method: GET, POST, OPTIONS
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Content-Length: 19
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Date: Fri, 12 Aug 2022 05:24:58 GMT
+1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+          <a>com.intuit.karate.exception.KarateException: checkOtherWFSUrl.feature:15 - status code was: 503, expected: 200, response time: 465, url: https://service.pdok.nl/lv/bag/wfs/v2_0?request=getCapabilities&amp;service=WFS, response: </a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: checkOtherWFSUrl.feature:15 - status code was: 503, expected: 200, response time: 465, url: https://service.pdok.nl/lv/bag/wfs/v2_0?request=getCapabilities&amp;service=WFS, response: </pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>05:24:58.432 status code was: 503, expected: 200, response time: 465, url: https://service.pdok.nl/lv/bag/wfs/v2_0?request=getCapabilities&amp;service=WFS, response:</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
       
     </div>
   </div>
