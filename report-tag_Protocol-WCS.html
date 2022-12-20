@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>19 Dec 2022, 05:20</td>
+            <td>20 Dec 2022, 05:21</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="744818153">0.744</td>
+          <td class="duration" data-value="900217441">0.900</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan210-download-wcs-Actueel-Hoogtebestand-Nederland-3-WCS-checkwcsUrl-feature_109.html">T4/Beheer-PDOK/Actueel-Hoogtebestan210/download/wcs/Actueel-Hoogtebestand-Nederland-3-WCS/checkwcsUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan80-download-wcs-Actueel-Hoogtebestand-Nederland-3-WCS-checkwcsUrl-feature_133.html">T4/Beheer-PDOK/Actueel-Hoogtebestan80/download/wcs/Actueel-Hoogtebestand-Nederland-3-WCS/checkwcsUrl.feature</a>
     </div>
   
   
@@ -180,7 +180,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.744</span>
+  <span class="lead-duration duration">0.900</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -221,7 +221,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">print &quot;testing url:&quot; + metadata.url</span>
   
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
   </div>
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:19:20.610 [print] testing url:http://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities</pre>
+        <pre>05:18:32.703 [print] testing url:http://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.703</span>
+  <span class="lead-duration duration">0.867</span>
 
   </div>
 
@@ -288,36 +288,35 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:19:20.611 request:
+        <pre>05:18:32.705 request:
 1 &gt; HEAD http://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.13)
 
-05:19:20.833 response time in milliseconds: 220.89
+05:18:32.983 response time in milliseconds: 277.27
 1 &lt; 302
 1 &lt; Connection: Keep-Alive
 1 &lt; Content-Length: 0
 1 &lt; Location: https://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities
 1 &lt; Server: BigIP
 
-05:19:20.838 request:
+05:18:32.986 request:
 2 &gt; HEAD http://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities
 2 &gt; Accept-Encoding: gzip,deflate
 2 &gt; Connection: Keep-Alive
 2 &gt; Host: service.pdok.nl
 2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.13)
 
-05:19:21.313 response time in milliseconds: 472.90
+05:18:33.571 response time in milliseconds: 584.25
 2 &lt; 200
 2 &lt; Access-Control-Allow-Headers: Content-Type
 2 &lt; Access-Control-Allow-Method: GET,POST,OPTIONS
 2 &lt; Access-Control-Allow-Origin: *
 2 &lt; Content-Length: 73
 2 &lt; Content-Type: text/html
-2 &lt; Date: Mon, 19 Dec 2022 05:19:21 GMT
-2 &lt; Server: lighttpd/1.4.53-devel-lighttpd-1.4.53
+2 &lt; Date: Tue, 20 Dec 2022 05:18:33 GMT
 2 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
     </div>
@@ -355,7 +354,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
   
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.009</span>
 
   </div>
 
@@ -376,7 +375,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
   
-  <span class="lead-duration duration">0.023</span>
+  <span class="lead-duration duration">0.015</span>
 
   </div>
 
@@ -397,7 +396,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">assert filesize &gt; 50</span>
   
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.006</span>
 
   </div>
 
