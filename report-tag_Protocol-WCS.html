@@ -75,7 +75,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>NLTEST</td>
-            <td>09 May 2023, 05:18</td>
+            <td>10 May 2023, 05:19</td>
     </tr>
   </tbody>
 </table>
@@ -139,7 +139,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="430880142">0.430</td>
+          <td class="duration" data-value="525217833">0.525</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -172,7 +172,7 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan212-download-wcs-Actueel-Hoogtebestand-Nederland-3-WCS-checkwcsUrl-feature_30.html">T4/Beheer-PDOK/Actueel-Hoogtebestan212/download/wcs/Actueel-Hoogtebestand-Nederland-3-WCS/checkwcsUrl.feature</a>
+      <a href="report-feature_T4-Beheer-PDOK-Actueel-Hoogtebestan148-download-wcs-Actueel-Hoogtebestand-Nederland-3-WCS-checkwcsUrl-feature_112.html">T4/Beheer-PDOK/Actueel-Hoogtebestan148/download/wcs/Actueel-Hoogtebestand-Nederland-3-WCS/checkwcsUrl.feature</a>
     </div>
   
   
@@ -180,7 +180,7 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">0.430</span>
+  <span class="lead-duration duration">0.525</span>
 
 
     <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -236,7 +236,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>05:16:31.529 [print] testing url:https://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities</pre>
+        <pre>05:16:44.307 [print] testing url:https://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities</pre>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method HEAD</span>
   
-  <span class="lead-duration duration">0.378</span>
+  <span class="lead-duration duration">0.489</span>
 
   </div>
 
@@ -288,14 +288,14 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>05:16:31.531 request:
+        <pre>05:16:44.309 request:
 1 &gt; HEAD https://service.pdok.nl/rws/ahn3/wcs/v1_0?&amp;service=wcs&amp;request=GetCapabilities
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: service.pdok.nl
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/13.0.14)
 
-05:16:31.908 response time in milliseconds: 376.72
+05:16:44.798 response time in milliseconds: 487.60
 1 &lt; 200
 1 &lt; Accept-Ranges: bytes
 1 &lt; Access-Control-Allow-Headers: Content-Type
@@ -303,7 +303,7 @@ $(document).ready(function() {
 1 &lt; Access-Control-Allow-Origin: *
 1 &lt; Content-Length: 73
 1 &lt; Content-Type: text/html
-1 &lt; Date: Tue, 09 May 2023 05:16:31 GMT
+1 &lt; Date: Wed, 10 May 2023 05:16:44 GMT
 1 &lt; Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</pre>
       </div>
     </div>
@@ -341,7 +341,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match responseHeaders['Content-Length'][0] == '#notnull'</span>
   
-  <span class="lead-duration duration">0.008</span>
+  <span class="lead-duration duration">0.009</span>
 
   </div>
 
@@ -362,7 +362,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">def filesize =  responseHeaders['Content-Length'][0]</span>
   
-  <span class="lead-duration duration">0.030</span>
+  <span class="lead-duration duration">0.017</span>
 
   </div>
 
@@ -383,7 +383,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">assert filesize &gt; 50</span>
   
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.007</span>
 
   </div>
 
